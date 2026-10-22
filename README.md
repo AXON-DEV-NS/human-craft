@@ -1,16 +1,35 @@
-# Before & After Examples (10 Cases)
+# human-craft
 
-Each folder contains a runnable `before/` project stuffed with real-world AI tells, a scrubbed `after/` project built with `human-craft`, a `diff.md` breakdown, captured `scan-before.json` and `scan-after.json` reports, and visual previews.
+`human-craft` is an open-source Agent Skill and static verification suite for building, auditing, and scrubbing websites, web applications, English and Arabic copy, source code, git repositories, and code-generated motion so that no layer reads as machine-made.
 
-| Case | Domain | Key transformation |
-|---|---|---|
-| [01-saas-landing](01-saas-landing/diff.md) | B2B customs & freight SaaS landing page | Archetype 03 (Technical Manual) — replaced indigo-violet-pink hero gradient, sparkle badge, and 3-icon feature cards with an interactive Alexandria Port demurrage calculator and audited tariff table. |
-| [02-portfolio](02-portfolio/diff.md) | Industrial & structural engineering portfolio | Archetype 01 (Editorial Swiss) — replaced 'passionate team of creators' copy and hover-zoom bento boxes with an indexed project ledger showing client, tonnage, completion date, and CAD drawings. |
-| [03-restaurant-ar-rtl](03-restaurant-ar-rtl/diff.md) | مخبز ومطعم محلي باللغة العربية (Arabic RTL bakery & kitchen) | الاتجاه 04 (الحرفة والمواد الطبيعية) — إزالة خط Cairo ذي التباعد المقطّع (`letter-spacing: 3px`) وعبارات 'سفرة تأخذك إلى عالم السحر'، واستبدالها بقائمة أسعار حقيقية بالفرن الحجري مع ضبط `dir="rtl"` و`line-height: 1.85`. |
-| [04-agency-site](04-agency-site/diff.md) | Technical localization & print production studio | Archetype 02 (Print Broadsheet) — replaced 'We elevate your brand in today's fast-paced world' and fake logo marquee with a rate card, supported script specimen table, and production turnaround SLAs. |
-| [05-ecommerce-product](05-ecommerce-product/diff.md) | Precision hardware & workshop tool product page | Archetype 03 (Technical Manual) — replaced fake countdown timers and 'Unparalleled quality' hype with DIN tolerance tables, spindle runout specs, and spare-part SKU diagrams. |
-| [06-docs-site](06-docs-site/diff.md) | Developer API & webhook documentation | Archetype 08 (Data-Dense) — replaced marketing fluff and `foo/bar` stubs with copy-pasteable cURL requests, RFC 8785 signature verification code, and HTTP error status tables. |
-| [07-dashboard-ui](07-dashboard-ui/diff.md) | Cold-chain fleet & warehouse operations dashboard | Archetype 08 (Data-Dense) — replaced glassmorphic neon gauges and `Acme Inc` demo switchers with a high-contrast tabular shipment ledger, keyboard navigation, and live reefer temperature alerts. |
-| [08-code-animation-video](08-code-animation-video/diff.md) | Choreographed canvas telemetry visualizer | Archetype 06 (Typographic Poster + Storyboarded Canvas) — replaced spinning `THREE.TorusKnotGeometry` and `O(n^2)` particle webs with a 3-beat storyboarded crane load-curve animation that respects `prefers-reduced-motion` and pauses off-screen. |
-| [09-copy-rewrite](09-copy-rewrite/diff.md) | Bilingual English & Arabic SaaS copy overhaul | Side-by-side rewrite removing 24 banned English and Arabic LLM clichés ('seamless', 'elevate', 'ارتقِ بتجربتك', 'حلول متكاملة') and replacing them with concrete numbers, protocols, and native Arabic syntax. |
-| [10-repo-scrub](10-repo-scrub/diff.md) | Repository, package.json, and git metadata scrub | Removed `.cursorrules`, `CLAUDE.md`, `lovable-tagger`, `gptengineer.js`, and `vite-project` defaults; replaced with clean package metadata, accessible HTML landmarks, and verified asset names. |
+![human-craft banner](assets/banner.png)
+
+## Why this exists
+
+Code and UI generators converge on the same statistical averages: indigo-to-pink hero gradients, sparkle pills, three identical icon cards, `Inter` or `Cairo` defaults, translated marketing clichés, `href="#"` placeholders, and `lovable-tagger` or `.cursorrules` leftovers. Deleting tells is not enough. `human-craft` pairs every blocked pattern with a specific design or engineering replacement and verifies the result with 16 zero-dependency Node.js scanners.
+
+## Quick start
+
+```bash
+# Run the full verification suite against a project directory
+node scripts/scan-all.mjs /path/to/project
+
+# Run the unit and pattern test suite
+npm test
+```
+
+## Repository structure
+
+- [`SKILL.md`](SKILL.md) - Agent entry point, progressive-disclosure routing table, and severity gate.
+- [`workflow/`](workflow/00-intake.md) - Seven sequential phases (`00-intake` through `06-handoff`).
+- [`references/ai-tells/`](references/ai-tells/00-index.md) - 29 layer-specific catalogs of machine tells and human replacements.
+- [`references/directions/`](references/directions/README.md) - 12 distinct design archetypes with Latin and Arabic type pairings and 60/30/10 palettes.
+- [`references/localization/`](references/localization/arabic-rtl.md) - Native Arabic typography, logical CSS RTL engineering, and dialect/register guides.
+- [`patterns/`](patterns/schema.json) - Machine-readable JSON rule sets validated against `patterns/schema.json`.
+- [`scripts/`](scripts/scan-all.mjs) - 16 ESM scanners plus report renderer and metadata scrubber.
+- [`examples/`](examples/README.md) - 10 before/after projects with captured `scan-before.json` and `scan-after.json` evidence.
+- [`adapters/`](adapters/install.sh) - Drop-in configurations for Claude Code, Claude.ai, Cursor, Codex, GitHub Copilot, Windsurf, Gemini, and Cline.
+
+## License
+
+MIT - see [LICENSE](LICENSE).

@@ -1,0 +1,519 @@
+{
+  "scanner": "scan-all",
+  "target": "tests/fixtures/ai-site-bad",
+  "timestamp": "2026-10-21T00:00:00.000Z",
+  "counts": {
+    "S0": 28,
+    "S1": 17,
+    "S2": 11,
+    "S3": 0,
+    "total": 56
+  },
+  "passed": false,
+  "findings": [
+    {
+      "ruleId": "en-unlock",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 14,
+      "excerpt": "<p>Lorem ipsum dolor sit amet. Unlock the power of AI with our seamless integration.</p>",
+      "message": "Metaphorical cliche used in generic SaaS copy.",
+      "fix": "Name the capability the user gains."
+    },
+    {
+      "ruleId": "en-seamless",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 14,
+      "excerpt": "<p>Lorem ipsum dolor sit amet. Unlock the power of AI with our seamless integration.</p>",
+      "message": "Filler adjective claiming zero friction without proof.",
+      "fix": "Explain how the integration works in practice."
+    },
+    {
+      "ruleId": "en-supercharge",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 12,
+      "excerpt": "Supercharge your workflow in today's fast-paced world",
+      "message": "Exaggerated action verb.",
+      "fix": "State the throughput or speed gain."
+    },
+    {
+      "ruleId": "en-fast-paced-world",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 12,
+      "excerpt": "Supercharge your workflow in today's fast-paced world",
+      "message": "Classic LLM throat-clearing opener.",
+      "fix": "Delete the opener and start with the problem."
+    },
+    {
+      "ruleId": "en-crafted-with-love",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 21,
+      "excerpt": "<section class=\"py-20\"><footer>Crafted with ❤️ by John Doe at Acme Corp.</footer></section>",
+      "message": "Template footer cliche.",
+      "fix": "State the company name, location, or year."
+    },
+    {
+      "ruleId": "en-unlock-power-ai",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 14,
+      "excerpt": "<p>Lorem ipsum dolor sit amet. Unlock the power of AI with our seamless integration.</p>",
+      "message": "Canonical AI wrapper slogan.",
+      "fix": "Describe the exact task the model performs."
+    },
+    {
+      "ruleId": "en-trusted-by-thousands",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 19,
+      "excerpt": "<section class=\"py-20\"><p>Trusted by thousands of companies worldwide.</p></section>",
+      "message": "Unverified social proof cliche.",
+      "fix": "Use exact verified customer counts and real names, or remove."
+    },
+    {
+      "ruleId": "en-10k-happy-users",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 20,
+      "excerpt": "<section class=\"py-20\"><p>Join 10,000+ happy users.</p></section>",
+      "message": "Template social proof number.",
+      "fix": "Replace with a real audited metric or cut the counter."
+    },
+    {
+      "ruleId": "en-learn-more-cta",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 15,
+      "excerpt": "<a href=\"#\">Learn More</a>",
+      "message": "Vague link label that fails screen-reader context.",
+      "fix": "Name the destination page."
+    },
+    {
+      "ruleId": "en-click-here-link",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 16,
+      "excerpt": "<a href=\"https://example.com/signup\">Click Here</a>",
+      "message": "Non-descriptive anchor text.",
+      "fix": "Describe where the link leads."
+    },
+    {
+      "ruleId": "en-lorem-ipsum",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 14,
+      "excerpt": "<p>Lorem ipsum dolor sit amet. Unlock the power of AI with our seamless integration.</p>",
+      "message": "Explicit placeholder Latin copy.",
+      "fix": "Replace with real copy or [CLIENT INPUT NEEDED]."
+    },
+    {
+      "ruleId": "en-dolor-sit-amet",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 14,
+      "excerpt": "<p>Lorem ipsum dolor sit amet. Unlock the power of AI with our seamless integration.</p>",
+      "message": "Explicit placeholder Latin copy.",
+      "fix": "Write the actual paragraph."
+    },
+    {
+      "ruleId": "en-john-doe",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 21,
+      "excerpt": "<section class=\"py-20\"><footer>Crafted with ❤️ by John Doe at Acme Corp.</footer></section>",
+      "message": "Placeholder persona name.",
+      "fix": "Use a real person with permission or a domain-authentic example."
+    },
+    {
+      "ruleId": "en-acme-corp",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 21,
+      "excerpt": "<section class=\"py-20\"><footer>Crafted with ❤️ by John Doe at Acme Corp.</footer></section>",
+      "message": "Cartoon placeholder company.",
+      "fix": "Use a realistic domain scenario or real client."
+    },
+    {
+      "ruleId": "en-supercharge-workflow",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 12,
+      "excerpt": "Supercharge your workflow in today's fast-paced world",
+      "message": "Canonical AI landing page H1.",
+      "fix": "State the exact task automated."
+    },
+    {
+      "ruleId": "ph-john-jane-doe",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 21,
+      "excerpt": "<section class=\"py-20\"><footer>Crafted with ❤️ by John Doe at Acme Corp.</footer></section>",
+      "message": "Generic placeholder person name.",
+      "fix": "Use a real team member or culturally grounded domain example."
+    },
+    {
+      "ruleId": "ph-acme-globex-initech",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 21,
+      "excerpt": "<section class=\"py-20\"><footer>Crafted with ❤️ by John Doe at Acme Corp.</footer></section>",
+      "message": "Pop-culture fictional corporation name.",
+      "fix": "Use a real organization or realistic industry description."
+    },
+    {
+      "ruleId": "ph-lorem-ipsum-short",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 14,
+      "excerpt": "<p>Lorem ipsum dolor sit amet. Unlock the power of AI with our seamless integration.</p>",
+      "message": "Placeholder ipsum generator text.",
+      "fix": "Write real domain copy."
+    },
+    {
+      "ruleId": "code-console-log-emoji",
+      "severity": "S1",
+      "file": "app.tsx",
+      "line": 6,
+      "excerpt": "console.log('🚀 Clicked!');",
+      "message": "Emoji-prefixed `console.log` statement typical of LLM debugging output.",
+      "fix": "Use structured logger calls or remove debug logs before committing."
+    },
+    {
+      "ruleId": "code-todo-implement-later",
+      "severity": "S0",
+      "file": "app.tsx",
+      "line": 9,
+      "excerpt": "// TODO: implement real logic later",
+      "message": "Unfinished LLM stub comment (`// TODO: implement later`).",
+      "fix": "Implement the required behavior before shipping."
+    },
+    {
+      "ruleId": "code-typescript-explicit-any",
+      "severity": "S2",
+      "file": "app.tsx",
+      "line": 3,
+      "excerpt": "function MyComponent(props: any) {",
+      "message": "Explicit `: any` type annotation.",
+      "fix": "Use `unknown` with validation or a concrete domain type."
+    },
+    {
+      "ruleId": "code-react-component-1",
+      "severity": "S0",
+      "file": "app.tsx",
+      "line": 3,
+      "excerpt": "function MyComponent(props: any) {",
+      "message": "Placeholder React component name.",
+      "fix": "Name the component after its domain responsibility (`WaybillStatusBadge`)."
+    },
+    {
+      "ruleId": "code-alert-window-form-submit",
+      "severity": "S0",
+      "file": "app.tsx",
+      "line": 7,
+      "excerpt": "alert('Thank you for contacting us!');",
+      "message": "Browser `alert('Thank you...')` used instead of inline form feedback.",
+      "fix": "Render an inline confirmation banner with a reference number."
+    },
+    {
+      "ruleId": "code-dummy-data-array",
+      "severity": "S0",
+      "file": "app.tsx",
+      "line": 4,
+      "excerpt": "const dummyData = [{ id: 1, name: 'Sarah Jenkins', company: 'TechFlow' }];",
+      "message": "Hardcoded `dummyData` / `mockData` array in application code.",
+      "fix": "Load real records from the data layer or name domain fixtures accurately in test files."
+    },
+    {
+      "ruleId": "code-handle-click-generic",
+      "severity": "S2",
+      "file": "app.tsx",
+      "line": 5,
+      "excerpt": "const handleClick = () => {",
+      "message": "Generic `handleClick` identifier that hides what action occurs.",
+      "fix": "Name handlers after the domain effect (`handleApproveInvoice`, `handleExportCsv`)."
+    },
+    {
+      "ruleId": "code-comment-initialize-state",
+      "severity": "S2",
+      "file": "app.tsx",
+      "line": 2,
+      "excerpt": "// Initialize state",
+      "message": "Redundant comment restating syntax (`// Initialize state`).",
+      "fix": "Delete comments that merely narrate the next line of syntax."
+    },
+    {
+      "ruleId": "code-ai-generated-header-comment",
+      "severity": "S0",
+      "file": "app.tsx",
+      "line": 1,
+      "excerpt": "// Generated by Claude 3.5 Sonnet",
+      "message": "Source header comment attributing file to an AI generator.",
+      "fix": "Remove generator attribution comments."
+    },
+    {
+      "ruleId": "code-fake-testimonial-array",
+      "severity": "S0",
+      "file": "app.tsx",
+      "line": 4,
+      "excerpt": "const dummyData = [{ id: 1, name: 'Sarah Jenkins', company: 'TechFlow' }];",
+      "message": "Canonical LLM fictional testimonial persona names (`Sarah Jenkins`, `Michael Chen`, `Emily Rodriguez`).",
+      "fix": "Never invent testimonials. Use verified client quotes with permission or `[CLIENT INPUT NEEDED]`."
+    },
+    {
+      "ruleId": "code-techflow-innovatecorp-names",
+      "severity": "S0",
+      "file": "app.tsx",
+      "line": 4,
+      "excerpt": "const dummyData = [{ id: 1, name: 'Sarah Jenkins', company: 'TechFlow' }];",
+      "message": "Synthetic LLM company names used in fake case studies or testimonials.",
+      "fix": "Use real client names with permission or remove the fictional company."
+    },
+    {
+      "ruleId": "css-indigo-purple-pink",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 11,
+      "excerpt": "<h1 class=\"bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500\">",
+      "message": "Canonical default AI hero gradient.",
+      "fix": "Use a solid surface or a two-stop gradient sampled from brand photography."
+    },
+    {
+      "ruleId": "css-purple-pink-clip",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 11,
+      "excerpt": "<h1 class=\"bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500\">",
+      "message": "Gradient-clipped headline text tell.",
+      "fix": "Set headlines in a high-contrast solid ink color and let weight carry hierarchy."
+    },
+    {
+      "ruleId": "css-bg-slate-900-text-slate-100-ai",
+      "severity": "S2",
+      "file": "index.html",
+      "line": 7,
+      "excerpt": "<body class=\"bg-slate-950 text-slate-50 selection:bg-indigo-500\">",
+      "message": "Default dark-mode SaaS body classes with indigo selection.",
+      "fix": "Use a bespoke dark surface palette tuned to the brand."
+    },
+    {
+      "ruleId": "css-linear-gradient-indigo-violet",
+      "severity": "S1",
+      "file": "styles.css",
+      "line": 6,
+      "excerpt": "background: linear-gradient(135deg, #6366f1, #8b5cf6);",
+      "message": "Hardcoded Tailwind indigo-to-violet linear gradient.",
+      "fix": "Replace with a domain-grounded color token from tokens.css."
+    },
+    {
+      "ruleId": "css-transition-all-ease-in-out",
+      "severity": "S2",
+      "file": "styles.css",
+      "line": 2,
+      "excerpt": "transition: all 0.3s ease;",
+      "message": "Blanket transition: all causing layout and paint thrashing.",
+      "fix": "Transition only specific compositor or color properties (`opacity`, `transform`, `color`)."
+    },
+    {
+      "ruleId": "css-hardcoded-indigo-hex",
+      "severity": "S1",
+      "file": "styles.css",
+      "line": 6,
+      "excerpt": "background: linear-gradient(135deg, #6366f1, #8b5cf6);",
+      "message": "Raw Tailwind indigo-500 hex literal in stylesheet.",
+      "fix": "Define a brand-specific semantic token in tokens.css."
+    },
+    {
+      "ruleId": "css-hardcoded-violet-hex",
+      "severity": "S1",
+      "file": "styles.css",
+      "line": 6,
+      "excerpt": "background: linear-gradient(135deg, #6366f1, #8b5cf6);",
+      "message": "Raw Tailwind violet-500 hex literal in stylesheet.",
+      "fix": "Define a brand-specific semantic token in tokens.css."
+    },
+    {
+      "ruleId": "css-100vh-mobile-bug",
+      "severity": "S2",
+      "file": "styles.css",
+      "line": 5,
+      "excerpt": "height: 100vh;",
+      "message": "100vh clips content behind mobile browser toolbars.",
+      "fix": "Use `min-height: 100dvh` with a `100vh` fallback."
+    },
+    {
+      "ruleId": "css-outline-none-no-replacement",
+      "severity": "S0",
+      "file": "styles.css",
+      "line": 9,
+      "excerpt": "outline: none;",
+      "message": "Removes keyboard focus ring without providing a visible replacement.",
+      "fix": "Use `:focus-visible` with a high-contrast 2px outline and offset."
+    },
+    {
+      "ruleId": "html-href-hash-empty",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 15,
+      "excerpt": "<a href=\"#\">Learn More</a>",
+      "message": "Dead placeholder anchor `href=\"#\"`.",
+      "fix": "Point to a real route, a real section ID (`#pricing`), or use a `<button type=\"button\">` for actions."
+    },
+    {
+      "ruleId": "html-href-example-com",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 16,
+      "excerpt": "<a href=\"https://example.com/signup\">Click Here</a>",
+      "message": "Placeholder `example.com` link left in markup.",
+      "fix": "Replace with the real production URL or remove the link."
+    },
+    {
+      "ruleId": "html-title-vite-default",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 4,
+      "excerpt": "<title>Vite + React + TS</title>",
+      "message": "Unedited framework starter `<title>`.",
+      "fix": "Write a specific page title (`Page Name — Brand Name`)."
+    },
+    {
+      "ruleId": "html-meta-generator-ai",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 5,
+      "excerpt": "<meta name=\"generator\" content=\"Lovable AI\">",
+      "message": "Generator meta tag exposing an AI scaffolding tool.",
+      "fix": "Remove the `<meta name=\"generator\">` tag."
+    },
+    {
+      "ruleId": "html-img-alt-image-of",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 17,
+      "excerpt": "<img src=\"https://picsum.photos/800/600\" alt=\"Photo of dashboard\">",
+      "message": "Redundant `Image of` / `Photo of` prefix in alt text.",
+      "fix": "Describe what the image shows directly without saying 'Image of'."
+    },
+    {
+      "ruleId": "html-img-src-pravatar-placeholder",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 17,
+      "excerpt": "<img src=\"https://picsum.photos/800/600\" alt=\"Photo of dashboard\">",
+      "message": "Placeholder avatar or dummy image service URL.",
+      "fix": "Use real team/product photos or remove the avatar."
+    },
+    {
+      "ruleId": "html-missing-lang-attr",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 2,
+      "excerpt": "<html>",
+      "message": "`<html>` root tag missing `lang` attribute.",
+      "fix": "Add `lang=\"en\"` or `lang=\"ar\" dir=\"rtl\"` to `<html>`."
+    },
+    {
+      "ruleId": "html-hero-sparkle-badge",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 10,
+      "excerpt": "<span class=\"rounded-full\">✨ Introducing NexusAI</span>",
+      "message": "Emoji sparkle pill badge above the hero H1.",
+      "fix": "Remove the decorative pill or use a plain dated changelog link (`v2.4 released Oct 12`)."
+    },
+    {
+      "ruleId": "html-comment-section-divider-ai",
+      "severity": "S2",
+      "file": "index.html",
+      "line": 8,
+      "excerpt": "<!-- === HERO SECTION === -->",
+      "message": "Template banner comment (`<!-- === HERO SECTION === -->`).",
+      "fix": "Remove section-banner comments; clean semantic markup is self-documenting."
+    },
+    {
+      "ruleId": "html-lorem-picsum-url",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 17,
+      "excerpt": "<img src=\"https://picsum.photos/800/600\" alt=\"Photo of dashboard\">",
+      "message": "Picsum random placeholder image URL.",
+      "fix": "Replace with a real asset."
+    },
+    {
+      "ruleId": "link-dead-placeholder",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 15,
+      "excerpt": "href=\"#\"",
+      "message": "Dead placeholder link \"#\".",
+      "fix": "Point to a valid route, section anchor, or convert to <button type=\"button\">."
+    },
+    {
+      "ruleId": "link-example-domain",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 16,
+      "excerpt": "href=\"https://example.com/signup\"",
+      "message": "Placeholder domain in \"https://example.com/signup\".",
+      "fix": "Replace with the production URL or remove the link."
+    },
+    {
+      "ruleId": "seo-missing-description",
+      "severity": "S2",
+      "file": "index.html",
+      "line": 1,
+      "excerpt": "<head>",
+      "message": "HTML document is missing a <meta name=\"description\"> of at least 20 characters.",
+      "fix": "Add a concrete 120-155 character meta description."
+    },
+    {
+      "ruleId": "seo-generator-meta",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 1,
+      "excerpt": "<meta name=\"generator\">",
+      "message": "Document exposes a <meta name=\"generator\"> fingerprint.",
+      "fix": "Remove the generator meta tag."
+    },
+    {
+      "ruleId": "motion-missing-reduced-motion",
+      "severity": "S2",
+      "file": "styles.css",
+      "line": 1,
+      "excerpt": "@keyframes without @media (prefers-reduced-motion)",
+      "message": "Stylesheet defines @keyframes animations without a prefers-reduced-motion guard.",
+      "fix": "Add @media (prefers-reduced-motion: reduce) to disable or simplify non-essential motion."
+    },
+    {
+      "ruleId": "motion-transition-all",
+      "severity": "S2",
+      "file": "styles.css",
+      "line": 2,
+      "excerpt": "transition: all 0.3s ease;",
+      "message": "transition: all animates layout properties and causes frame drops.",
+      "fix": "Transition only transform, opacity, or color."
+    },
+    {
+      "ruleId": "rhythm-uniform-section-padding",
+      "severity": "S2",
+      "file": "index.html",
+      "line": 1,
+      "excerpt": "4 sections all use py-20",
+      "message": "Zero vertical spacing variance across 4 consecutive sections (py-20).",
+      "fix": "Vary section padding according to content density (compact vs open breathing room)."
+    },
+    {
+      "ruleId": "contrast-wcag-aa",
+      "severity": "S1",
+      "file": "styles.css",
+      "line": 11,
+      "excerpt": "color: #d1d5db on background: #ffffff (1.47:1)",
+      "message": "Contrast ratio 1.47:1 is below the WCAG 2.2 AA 4.5:1 minimum.",
+      "fix": "Darken the foreground ink or lighten the background surface until contrast >= 4.5:1."
+    }
+  ]
+}

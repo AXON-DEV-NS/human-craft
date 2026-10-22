@@ -1,0 +1,382 @@
+[
+  {
+    "id": "cmt-section-banner-equals",
+    "severity": "S2",
+    "pattern": "(//|/\\*|<!--)\\s*={4,}\\s*[A-Z0-9\\s]+\\s*={4,}",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "ASCII banner comment (`// ====== HERO ======`).",
+    "fix": "Delete ASCII banner dividers; keep files small and well-named.",
+    "positiveExample": "// ====== HELPER FUNCTIONS ======",
+    "negativeExample": "export function calculateVat(netCents: number): number {"
+  },
+  {
+    "id": "cmt-section-banner-dashes",
+    "severity": "S2",
+    "pattern": "(//|/\\*|<!--)\\s*-{5,}\\s*[A-Z0-9\\s]+\\s*-{5,}",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Dashed banner comment (`// ------ STATE ------`).",
+    "fix": "Delete dashed section dividers.",
+    "positiveExample": "// ------ COMPONENT STATE ------",
+    "negativeExample": "const [selectedTab, setSelectedTab] = useState('overview');"
+  },
+  {
+    "id": "cmt-narrate-import",
+    "severity": "S2",
+    "pattern": "//\\s*Import\\s+(necessary|required|external|react)\\s+(modules|libraries|packages|dependencies|components)",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Comment narrating `import` statements.",
+    "fix": "Delete the comment; imports are self-explanatory.",
+    "positiveExample": "// Import necessary libraries",
+    "negativeExample": "import { readFileSync } from 'node:fs';"
+  },
+  {
+    "id": "cmt-narrate-export",
+    "severity": "S2",
+    "pattern": "//\\s*Export\\s+the\\s+(component|function|default|module)\\s*$",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Comment narrating `export default`.",
+    "fix": "Delete the comment.",
+    "positiveExample": "// Export the component",
+    "negativeExample": "export default WaybillTable;"
+  },
+  {
+    "id": "cmt-narrate-state",
+    "severity": "S2",
+    "pattern": "//\\s*State\\s+(for|to\\s+hold|to\\s+manage|variables)\\b",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Comment narrating React/Vue state declarations.",
+    "fix": "Give the state variable a clear name and delete the comment.",
+    "positiveExample": "// State to manage loading",
+    "negativeExample": "const [isSubmitting, setIsSubmitting] = useState(false);"
+  },
+  {
+    "id": "cmt-narrate-effect",
+    "severity": "S2",
+    "pattern": "//\\s*Effect\\s+to\\s+(fetch|load|update|handle)\\b",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Comment restating what `useEffect` does.",
+    "fix": "Extract a named custom hook or delete the redundant comment.",
+    "positiveExample": "// Effect to fetch user data on mount",
+    "negativeExample": "useEffect(() => { loadAccountSummary(accountId); }, [accountId]);"
+  },
+  {
+    "id": "cmt-narrate-return-jsx",
+    "severity": "S2",
+    "pattern": "//\\s*Return\\s+the\\s+JSX\\b",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Comment saying `// Return the JSX`.",
+    "fix": "Delete the comment.",
+    "positiveExample": "// Return the JSX",
+    "negativeExample": "return <article className='report-card'>;"
+  },
+  {
+    "id": "cmt-ai-rest-of-code",
+    "severity": "S0",
+    "pattern": "//\\s*\\.\\.\\.\\s*(rest\\s+of\\s+(the\\s+)?(code|component|implementation|file)\\s*(remains\\s+the\\s+same|here)?|existing\\s+code)\\s*\\.\\.\\.",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Lazy LLM truncation comment (`// ... rest of code remains the same ...`).",
+    "fix": "Write the complete implementation without truncation.",
+    "positiveExample": "// ... rest of the code remains the same ...",
+    "negativeExample": "export function closeConnection(conn: Connection): void { conn.end(); }"
+  },
+  {
+    "id": "cmt-ai-add-more-items",
+    "severity": "S0",
+    "pattern": "//\\s*Add\\s+more\\s+(items|fields|routes|cases|features)\\s+as\\s+needed",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Template stub comment (`// Add more items as needed`).",
+    "fix": "Include the complete set of domain items.",
+    "positiveExample": "// Add more items as needed",
+    "negativeExample": "{ code: 'EGALY', name: 'Alexandria Port' }"
+  },
+  {
+    "id": "cmt-ai-replace-with-actual",
+    "severity": "S0",
+    "pattern": "//\\s*Replace\\s+with\\s+(your\\s+)?actual\\s+(API|endpoint|logic|data|implementation)",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Unfinished scaffold instruction (`// Replace with actual API`).",
+    "fix": "Implement the real endpoint call.",
+    "positiveExample": "// Replace with your actual API endpoint",
+    "negativeExample": "const ENDPOINT = '/api/v1/clearance';"
+  },
+  {
+    "id": "cmt-jsdoc-trivial-getter",
+    "severity": "S3",
+    "pattern": "/\\*\\*\\s*\\n\\s*\\*\\s*Gets\\s+the\\s+[a-z]+\\.\\s*\\n\\s*\\*\\s*@returns\\s+\\{[a-zA-Z]+\\}\\s+The\\s+[a-z]+\\.\\s*\\n\\s*\\*/",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Trivial JSDoc block that repeats the function name word for word.",
+    "fix": "Remove redundant JSDoc on self-evident getters; document units, edge cases, or invariants instead.",
+    "positiveExample": "/**\n * Gets the name.\n * @returns {string} The name.\n */",
+    "negativeExample": "// Returns the legal Arabic trade name as registered on the tax card"
+  },
+  {
+    "id": "cmt-html-end-div",
+    "severity": "S3",
+    "pattern": "<!--\\s*/?(end\\s+of\\s+)?(div|container|wrapper|section|row)\\s*-->",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Closing `<!-- end div -->` comment clutter.",
+    "fix": "Keep components small enough that closing tags are visible on one screen.",
+    "positiveExample": "<!-- end of container -->",
+    "negativeExample": "</section>"
+  },
+  {
+    "id": "cmt-css-basic-reset",
+    "severity": "S2",
+    "pattern": "/\\*\\s*(Basic\\s+Reset|Global\\s+Styles|Typography\\s+Styles|Utility\\s+Classes|Responsive\\s+Design)\\s*\\*/",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Tutorial stylesheet section header comment.",
+    "fix": "Split into clear modular files (`reset.css`, `tokens.css`) or use concise domain headers.",
+    "positiveExample": "/* Basic Reset */",
+    "negativeExample": "*, *::before, *::after { box-sizing: border-box; }"
+  },
+  {
+    "id": "cmt-this-function-does",
+    "severity": "S2",
+    "pattern": "//\\s*This\\s+(function|component|hook|method|class)\\s+(is\\s+responsible\\s+for|handles|takes\\s+care\\s+of)\\b",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Verbose comment opening (`// This function is responsible for...`).",
+    "fix": "Write a direct imperative summary of why the constraint exists, or let the function name speak.",
+    "positiveExample": "// This function is responsible for calculating the total",
+    "negativeExample": "// Rounds half-even per Egyptian Tax Authority e-invoice spec v1.0"
+  },
+  {
+    "id": "cmt-step-1-2-3",
+    "severity": "S2",
+    "pattern": "//\\s*Step\\s+[1-9]:\\s+(Validate|Fetch|Process|Return|Transform)\\b",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Textbook `// Step 1: Validate` narration comments inside a short function.",
+    "fix": "Remove step-by-step narration or extract well-named helper functions.",
+    "positiveExample": "// Step 1: Validate input",
+    "negativeExample": "if (!isValidTaxId(taxId)) return { ok: false };"
+  },
+  {
+    "id": "cmt-feel-free-to",
+    "severity": "S0",
+    "pattern": "//\\s*Feel\\s+free\\s+to\\s+(customize|modify|adjust|change)\\s+this",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Conversational LLM comment (`// Feel free to customize this`).",
+    "fix": "Remove conversational comments.",
+    "positiveExample": "// Feel free to customize this color palette",
+    "negativeExample": "--color-ink: #18181b;"
+  },
+  {
+    "id": "cmt-note-make-sure",
+    "severity": "S1",
+    "pattern": "//\\s*Note:\\s*Make\\s+sure\\s+to\\s+install\\b",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Chat instruction left inside source file (`// Note: Make sure to install...`).",
+    "fix": "Put dependencies in `package.json` and delete the comment.",
+    "positiveExample": "// Note: Make sure to install lucide-react",
+    "negativeExample": "import { readFile } from 'node:fs/promises';"
+  },
+  {
+    "id": "cmt-example-usage",
+    "severity": "S2",
+    "pattern": "//\\s*Example\\s+usage:\\s*$",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Commented-out `// Example usage:` block at the bottom of a module.",
+    "fix": "Move usage examples to unit tests under `tests/`.",
+    "positiveExample": "// Example usage:",
+    "negativeExample": "export { parseManifest };"
+  },
+  {
+    "id": "cmt-mock-response",
+    "severity": "S0",
+    "pattern": "//\\s*Simulate\\s+(API\\s+call|network\\s+request|backend\\s+response|loading)",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Comment admitting simulated backend behavior.",
+    "fix": "Connect to the real API handler.",
+    "positiveExample": "// Simulate API call",
+    "negativeExample": "const res = await fetch('/api/verify');"
+  },
+  {
+    "id": "cmt-tailwind-cdn-prod-warning",
+    "severity": "S0",
+    "pattern": "cdn\\.tailwindcss\\.com",
+    "flags": "im",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "css",
+      "html",
+      "mjs"
+    ],
+    "message": "Play CDN `cdn.tailwindcss.com` script used in production HTML.",
+    "fix": "Compile CSS at build time or use native CSS with `tokens.css`.",
+    "positiveExample": "<script src=\"https://cdn.tailwindcss.com\"></script>",
+    "negativeExample": "<link rel=\"stylesheet\" href=\"/styles/main.css\">"
+  }
+]

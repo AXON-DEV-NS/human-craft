@@ -1,0 +1,33 @@
+{
+  "scanner": "scan-all",
+  "target": "tests/fixtures/assets-bad",
+  "timestamp": "2026-10-21T00:00:00.000Z",
+  "counts": {
+    "S0": 0,
+    "S1": 2,
+    "S2": 0,
+    "S3": 0,
+    "total": 2
+  },
+  "passed": false,
+  "findings": [
+    {
+      "ruleId": "asset-generic-filename",
+      "severity": "S1",
+      "file": "DALL-E-screenshot (1).png",
+      "line": 1,
+      "excerpt": "DALL-E-screenshot (1).png",
+      "message": "Asset filename uses a raw generator or screenshot default name.",
+      "fix": "Rename the asset with a descriptive kebab-case domain slug."
+    },
+    {
+      "ruleId": "asset-meta-midjourney",
+      "severity": "S1",
+      "file": "DALL-E-screenshot (1).png",
+      "line": 1,
+      "excerpt": "Midjourney",
+      "message": "Asset metadata contains \"Midjourney\" generator signature.",
+      "fix": "Replace with real photography or strip non-provenance tool tags via scripts/strip-metadata.sh."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HumanCraftPatternList",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "severity",
+      "pattern",
+      "flags",
+      "scope",
+      "message",
+      "fix",
+      "positiveExample",
+      "negativeExample"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "severity": {
+        "type": "string",
+        "enum": [
+          "S0",
+          "S1",
+          "S2",
+          "S3"
+        ]
+      },
+      "pattern": {
+        "type": "string",
+        "minLength": 1
+      },
+      "flags": {
+        "type": "string"
+      },
+      "scope": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1
+      },
+      "message": {
+        "type": "string",
+        "minLength": 5
+      },
+      "fix": {
+        "type": "string",
+        "minLength": 5
+      },
+      "positiveExample": {
+        "type": "string",
+        "minLength": 1
+      },
+      "negativeExample": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "scanner": "scan-all",
+  "target": "tests/fixtures/ar-bad",
+  "timestamp": "2026-10-21T00:00:00.000Z",
+  "counts": {
+    "S0": 7,
+    "S1": 4,
+    "S2": 0,
+    "S3": 0,
+    "total": 11
+  },
+  "passed": false,
+  "findings": [
+    {
+      "ruleId": "ar-irtaqi-bitajribatik",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 8,
+      "excerpt": "<h1 style=\"letter-spacing: 3px;\">في عالم يتسارع، ارتقِ بتجربتك الرقمية معنا</h1>",
+      "message": "كليشيه دعائي مترجم عن Elevate your.",
+      "fix": "اذكر النتيجة العملية مباشرة بالأرقام أو الأفعال."
+    },
+    {
+      "ruleId": "ar-hulul-mubtakara",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 4,
+      "excerpt": "<title>حلول مبتكرة</title>",
+      "message": "عبارة عامة لا تشرح طبيعة الخدمة.",
+      "fix": "سمّ الخدمة أو الأداة بدقة."
+    },
+    {
+      "ruleId": "ar-fi-alam-yatasara",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 5,
+      "excerpt": "<meta name=\"description\" content=\"نقدم لك أفضل الخدمات والحلول المتكاملة في عالم يتسارع.\">",
+      "message": "مقدمة إنشائية كلاسيكية من نماذج اللغة.",
+      "fix": "احذف المقدمة وابدأ بالمشكلة مباشرة."
+    },
+    {
+      "ruleId": "ar-fi-alam-yatasara",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 8,
+      "excerpt": "<h1 style=\"letter-spacing: 3px;\">في عالم يتسارع، ارتقِ بتجربتك الرقمية معنا</h1>",
+      "message": "مقدمة إنشائية كلاسيكية من نماذج اللغة.",
+      "fix": "احذف المقدمة وابدأ بالمشكلة مباشرة."
+    },
+    {
+      "ruleId": "ar-nuqaddim-afdhal",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 5,
+      "excerpt": "<meta name=\"description\" content=\"نقدم لك أفضل الخدمات والحلول المتكاملة في عالم يتسارع.\">",
+      "message": "ادعاء تفوق بلا دليل.",
+      "fix": "اشرح ما الذي تقدمه وكيف يُقاس."
+    },
+    {
+      "ruleId": "ar-idghat-huna",
+      "severity": "S1",
+      "file": "index.html",
+      "line": 10,
+      "excerpt": "<a href=\"/brochure.pdf\">اضغط هنا</a>",
+      "message": "نص رابط مبهم يضر قارئات الشاشة.",
+      "fix": "سمّ الوجهة التي يفتحها الرابط."
+    },
+    {
+      "ruleId": "ar-indamm-ila-alaf",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 9,
+      "excerpt": "<p>هذا النص هو مثال لنص يمكن أن يستبدل. انضم إلى آلاف العملاء الراضين.</p>",
+      "message": "دليل اجتماعي مختلق أو قالبي.",
+      "fix": "اذكر رقمًا حقيقيًا موثقًا أو احذف العبارة."
+    },
+    {
+      "ruleId": "ar-nass-tajribi",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 9,
+      "excerpt": "<p>هذا النص هو مثال لنص يمكن أن يستبدل. انضم إلى آلاف العملاء الراضين.</p>",
+      "message": "نص وهمي صريح في الواجهة العربية.",
+      "fix": "استبدله بمحتوى حقيقي أو بوسم [مطلوب من العميل]."
+    },
+    {
+      "ruleId": "html-ar-missing-dir-rtl",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 2,
+      "excerpt": "<html lang=\"ar\">",
+      "message": "Arabic `<html lang=\"ar\">` missing `dir=\"rtl\"`.",
+      "fix": "Add `dir=\"rtl\"` whenever `lang=\"ar\"` is set."
+    },
+    {
+      "ruleId": "rtl-missing-dir",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 2,
+      "excerpt": "<html lang=\"ar\">",
+      "message": "Arabic HTML document is missing dir=\"rtl\" on <html>.",
+      "fix": "Add dir=\"rtl\" to <html lang=\"ar\">."
+    },
+    {
+      "ruleId": "rtl-arabic-letter-spacing",
+      "severity": "S0",
+      "file": "index.html",
+      "line": 8,
+      "excerpt": "<h1 style=\"letter-spacing: 3px;\">في عالم يتسارع، ارتقِ بتجربتك الرقمية معنا</h1>",
+      "message": "Positive letter-spacing breaks connected Arabic script.",
+      "fix": "Set letter-spacing: 0 on Arabic typography."
+    }
+  ]
+}

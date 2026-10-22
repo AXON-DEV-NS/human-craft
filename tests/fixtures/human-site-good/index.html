@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Port Tariff &amp; Demurrage Calculator — PortSaid Logistics</title>
+  <meta name="description" content="Calculate container customs duties, storage tiers, and CIF surcharges for Alexandria, Damietta, and East Port Said terminals.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="main-content">
+    <header class="page-header">
+      <h1>Container Demurrage &amp; Customs Estimator</h1>
+      <p>Updated October 2026 per Alexandria Port Authority tariff circular 14/2026.</p>
+    </header>
+    <section aria-labelledby="calc-heading" class="calculator-panel">
+      <h2 id="calc-heading">Shipment Parameters</h2>
+      <form action="/api/estimate" method="post">
+        <label for="container-size">Container length</label>
+        <select id="container-size" name="size">
+          <option value="20">20ft Standard Dry</option>
+          <option value="40">40ft High Cube</option>
+        </select>
+        <button type="submit" class="btn-primary">Calculate terminal fees</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,257 @@
+[
+  {
+    "id": "font-inter-unjustified",
+    "severity": "S2",
+    "pattern": "family=Inter(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default Google Fonts `Inter` request without a documented typographic pairing.",
+    "fix": "Select a purposeful typeface in the Direction Statement (e.g. `Instrument Sans`, `Plus Jakarta Sans`, `Source Serif 4`, `IBM Plex Sans`).",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
+    "negativeExample": "/fonts/instrument-sans-var.woff2"
+  },
+  {
+    "id": "font-poppins-unjustified",
+    "severity": "S2",
+    "pattern": "family=Poppins(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default `Poppins` Google Fonts request.",
+    "fix": "Replace with a deliberately chosen display/body pairing.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700",
+    "negativeExample": "/fonts/familjen-grotesk.woff2"
+  },
+  {
+    "id": "font-space-grotesk-ai-cliche",
+    "severity": "S2",
+    "pattern": "family=Space\\+Grotesk(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Overused `Space Grotesk` AI/Web3 template heading font.",
+    "fix": "Choose a typeface matched to the client's industry rather than the default AI landing-page font.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700",
+    "negativeExample": "/fonts/newsreader-regular.woff2"
+  },
+  {
+    "id": "font-cairo-default-arabic",
+    "severity": "S2",
+    "pattern": "family=Cairo(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default `Cairo` Arabic Google Font used without register evaluation.",
+    "fix": "Consider `IBM Plex Sans Arabic` (technical/UI), `Noto Naskh Arabic` (editorial), `Readex Pro`, or `Almarai`.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Cairo:wght@400;700",
+    "negativeExample": "/fonts/ibm-plex-sans-arabic.woff2"
+  },
+  {
+    "id": "font-tajawal-default-arabic",
+    "severity": "S2",
+    "pattern": "family=Tajawal(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default `Tajawal` Arabic font.",
+    "fix": "Use a font with stronger stroke modulation and pair with `line-height: 1.8`.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700",
+    "negativeExample": "/fonts/readex-pro.woff2"
+  },
+  {
+    "id": "font-roboto-unjustified",
+    "severity": "S2",
+    "pattern": "family=Roboto(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default `Roboto` webfont import.",
+    "fix": "Use system UI fonts or a distinctive editorial/technical typeface.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500",
+    "negativeExample": "font-family: -apple-system, BlinkMacSystemFont, sans-serif"
+  },
+  {
+    "id": "font-open-sans-unjustified",
+    "severity": "S2",
+    "pattern": "family=Open\\+Sans(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default `Open Sans` webfont import.",
+    "fix": "Select a contemporary humanist or serif pairing.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600",
+    "negativeExample": "/fonts/source-sans-3.woff2"
+  },
+  {
+    "id": "font-montserrat-unjustified",
+    "severity": "S2",
+    "pattern": "family=Montserrat(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Overused `Montserrat` geometric heading font.",
+    "fix": "Use a font with narrower proportions and better numeral legibility.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Montserrat:wght@700",
+    "negativeExample": "/fonts/instrument-serif.woff2"
+  },
+  {
+    "id": "font-lato-unjustified",
+    "severity": "S3",
+    "pattern": "family=Lato(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Generic `Lato` webfont import.",
+    "fix": "Choose a font family tied to the project's Direction Statement.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Lato:wght@400;700",
+    "negativeExample": "/fonts/atkinson-hyperlegible.woff2"
+  },
+  {
+    "id": "font-outfit-ai-template",
+    "severity": "S2",
+    "pattern": "family=Outfit(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Frequent `Outfit` SaaS template font.",
+    "fix": "Document why `Outfit` fits the brand or pick a domain-specific pairing.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;600",
+    "negativeExample": "/fonts/ibm-plex-mono.woff2"
+  },
+  {
+    "id": "font-dm-sans-default",
+    "severity": "S3",
+    "pattern": "family=DM\\+Sans(:|&|['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default `DM Sans` startup template font.",
+    "fix": "Pair with a contrasting serif or technical mono.",
+    "positiveExample": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500",
+    "negativeExample": "/fonts/fraunces.woff2"
+  },
+  {
+    "id": "font-arial-helvetica-only",
+    "severity": "S2",
+    "pattern": "font-family:\\s*Arial,\\s*Helvetica,\\s*sans-serif\\s*;",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Unstyled legacy `Arial, Helvetica, sans-serif` stack.",
+    "fix": "Define a deliberate webfont or full modern system stack.",
+    "positiveExample": "font-family: Arial, Helvetica, sans-serif;",
+    "negativeExample": "font-family: var(--font-sans);"
+  },
+  {
+    "id": "font-times-new-roman-default",
+    "severity": "S2",
+    "pattern": "font-family:\\s*['\\\"]?Times\\s+New\\s+Roman['\\\"]?,\\s*Times,\\s*serif",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Unstyled browser-default `Times New Roman` stack.",
+    "fix": "Use an editorial serif (`Newsreader`, `Source Serif 4`, `Amiri`) with tuned line height.",
+    "positiveExample": "font-family: 'Times New Roman', Times, serif;",
+    "negativeExample": "font-family: 'Source Serif 4', Georgia, serif;"
+  },
+  {
+    "id": "font-courier-new-code",
+    "severity": "S2",
+    "pattern": "font-family:\\s*['\\\"]?Courier\\s+New['\\\"]?,\\s*Courier,\\s*monospace",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Low-legibility `Courier New` monospace stack.",
+    "fix": "Use `IBM Plex Mono`, `JetBrains Mono`, or `ui-monospace, SFMono-Regular, Menlo, monospace`.",
+    "positiveExample": "font-family: 'Courier New', Courier, monospace;",
+    "negativeExample": "font-family: 'IBM Plex Mono', ui-monospace, monospace;"
+  },
+  {
+    "id": "font-comic-sans",
+    "severity": "S1",
+    "pattern": "Comic\\s+Sans\\s+MS",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "`Comic Sans MS` in stylesheet.",
+    "fix": "Use a crafted rounded or humanist typeface.",
+    "positiveExample": "font-family: 'Comic Sans MS', cursive;",
+    "negativeExample": "font-family: 'Fredoka', sans-serif;"
+  }
+]

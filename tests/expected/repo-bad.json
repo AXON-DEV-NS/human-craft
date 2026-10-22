@@ -1,0 +1,42 @@
+{
+  "scanner": "scan-all",
+  "target": "tests/fixtures/repo-bad",
+  "timestamp": "2026-10-21T00:00:00.000Z",
+  "counts": {
+    "S0": 3,
+    "S1": 0,
+    "S2": 0,
+    "S3": 0,
+    "total": 3
+  },
+  "passed": false,
+  "findings": [
+    {
+      "ruleId": "repo-agent-config-file",
+      "severity": "S0",
+      "file": ".cursorrules",
+      "line": 1,
+      "excerpt": ".cursorrules",
+      "message": "Agent configuration file \".cursorrules\" left in repository root.",
+      "fix": "Remove agent config files before delivering the repository."
+    },
+    {
+      "ruleId": "fp-lovable-tagger-pkg",
+      "severity": "S0",
+      "file": "package.json",
+      "line": 4,
+      "excerpt": "\"lovable-tagger\": \"^1.0.0\"",
+      "message": "`lovable-tagger` package dependency in `package.json`.",
+      "fix": "Remove `lovable-tagger` from `package.json` and `vite.config.ts`."
+    },
+    {
+      "ruleId": "fp-package-name-my-app",
+      "severity": "S0",
+      "file": "package.json",
+      "line": 2,
+      "excerpt": "\"name\": \"vite-project\",",
+      "message": "Default scaffold package name in `package.json`.",
+      "fix": "Set `name` in `package.json` to the actual project slug."
+    }
+  ]
+}

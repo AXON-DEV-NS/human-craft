@@ -1,0 +1,80 @@
+{
+  "description": "Per-project exceptions for human-craft scanners. Every entry must specify path, ruleId (or *), and a concrete reason.",
+  "entries": [
+    {
+      "path": "tests/fixtures/",
+      "ruleId": "*",
+      "reason": "Intentional negative test fixtures used to verify scanner detection."
+    },
+    {
+      "path": "MASTER_PLAN.md",
+      "ruleId": "*",
+      "reason": "Specification document listing banned phrases, tool fingerprints, and placeholder examples verbatim."
+    },
+    {
+      "path": "patterns/",
+      "ruleId": "*",
+      "reason": "Machine-readable pattern definitions containing regexes and positive test strings."
+    },
+    {
+      "path": "references/",
+      "ruleId": "*",
+      "reason": "Reference documentation quoting machine tells alongside human replacements."
+    },
+    {
+      "path": "docs/",
+      "ruleId": "*",
+      "reason": "Documentation explaining banned patterns, severity gates, and tool signatures."
+    },
+    {
+      "path": "workflow/",
+      "ruleId": "*",
+      "reason": "Workflow guides referencing scanner rules and audit examples."
+    },
+    {
+      "path": "checklists/",
+      "ruleId": "*",
+      "reason": "Verification checklists naming specific tells to inspect."
+    },
+    {
+      "path": "checklist.md",
+      "ruleId": "*",
+      "reason": "Root pre-delivery checklist naming specific tells to verify."
+    },
+    {
+      "path": "SKILL.md",
+      "ruleId": "*",
+      "reason": "Skill entrypoint listing trigger phrases and banned tell examples."
+    },
+    {
+      "path": "README.md",
+      "ruleId": "*",
+      "reason": "Repository overview illustrating before and after examples."
+    },
+    {
+      "path": "README.ar.md",
+      "ruleId": "*",
+      "reason": "Arabic repository overview illustrating banned phrases and replacements."
+    },
+    {
+      "path": "templates/",
+      "ruleId": "*",
+      "reason": "Starter and report templates showing how to document findings."
+    },
+    {
+      "path": "adapters/",
+      "ruleId": "*",
+      "reason": "Agent integration files that ship as part of the skill distribution."
+    },
+    {
+      "path": "examples/",
+      "ruleId": "*",
+      "reason": "Before/after demonstration pairs and captured scanner JSON outputs."
+    },
+    {
+      "path": "tests/",
+      "ruleId": "*",
+      "reason": "Unit test suites and expected scanner fixtures."
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+[
+  {
+    "id": "pal-indigo-600-bg",
+    "severity": "S2",
+    "pattern": "\\bbg-indigo-600\\s+hover:bg-indigo-700\\s+text-white\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default Tailwind UI `bg-indigo-600 hover:bg-indigo-700` primary button palette.",
+    "fix": "Use the brand's actual primary ink or accent token.",
+    "positiveExample": "class='bg-indigo-600 hover:bg-indigo-700 text-white'",
+    "negativeExample": "class='bg-[#1c2b24] hover:bg-[#111c17] text-[#f4f1ea]'"
+  },
+  {
+    "id": "pal-violet-600-cta",
+    "severity": "S1",
+    "pattern": "\\bbg-violet-600\\s+hover:bg-violet-500\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default AI SaaS violet primary button.",
+    "fix": "Derive primary button color from client identity assets.",
+    "positiveExample": "class='bg-violet-600 hover:bg-violet-500'",
+    "negativeExample": "class='bg-stone-900 hover:bg-stone-800'"
+  },
+  {
+    "id": "pal-purple-pink-gradient-bg",
+    "severity": "S1",
+    "pattern": "\\bbg-gradient-to-br\\s+from-purple-600\\s+to-pink-500\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default purple-to-pink card or button gradient.",
+    "fix": "Use a flat surface color with clear border contrast.",
+    "positiveExample": "class='bg-gradient-to-br from-purple-600 to-pink-500'",
+    "negativeExample": "class='bg-amber-950 text-amber-50'"
+  },
+  {
+    "id": "pal-blue-purple-gradient-hero",
+    "severity": "S1",
+    "pattern": "\\bbg-gradient-to-r\\s+from-blue-500\\s+to-purple-600\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Generic blue-to-purple banner gradient.",
+    "fix": "Replace with a solid background or photographic header.",
+    "positiveExample": "class='bg-gradient-to-r from-blue-500 to-purple-600'",
+    "negativeExample": "class='bg-slate-900 border-b border-slate-800'"
+  },
+  {
+    "id": "pal-cyan-blue-ai-glow",
+    "severity": "S1",
+    "pattern": "\\bfrom-cyan-400\\s+via-blue-500\\s+to-purple-600\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Cyber-AI cyan-blue-purple three-stop gradient.",
+    "fix": "Limit palette to a 60/30/10 distribution of grounded neutrals and one accent.",
+    "positiveExample": "class='from-cyan-400 via-blue-500 to-purple-600'",
+    "negativeExample": "class='bg-[#f6f4f0] text-[#1a1917]'"
+  },
+  {
+    "id": "pal-slate-900-indigo-500-combo",
+    "severity": "S2",
+    "pattern": "bg-slate-900[^\\n]*text-indigo-400",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default dark slate + indigo-400 accent combination.",
+    "fix": "Warm or cool the dark surface intentionally (`#121316` or `#171614`) and pair with a custom accent.",
+    "positiveExample": "<div class='bg-slate-900 text-indigo-400'>",
+    "negativeExample": "<div class='bg-[#161514] text-[#d97736]'>"
+  },
+  {
+    "id": "pal-hex-indigo-violet-pair",
+    "severity": "S1",
+    "pattern": "#4f46e5[^;\\}]{0,40}#7c3aed",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Paired Tailwind indigo-600 (`#4f46e5`) and violet-600 (`#7c3aed`) hex codes.",
+    "fix": "Replace with project color tokens.",
+    "positiveExample": "background: linear-gradient(#4f46e5, #7c3aed);",
+    "negativeExample": "background: var(--surface-brand);"
+  },
+  {
+    "id": "pal-hex-violet-pink-pair",
+    "severity": "S1",
+    "pattern": "#8b5cf6[^;\\}]{0,40}#ec4899",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Paired violet-500 (`#8b5cf6`) and pink-500 (`#ec4899`) hex codes.",
+    "fix": "Replace with project color tokens.",
+    "positiveExample": "background: linear-gradient(#8b5cf6, #ec4899);",
+    "negativeExample": "background: var(--surface-accent);"
+  },
+  {
+    "id": "pal-hex-pure-black-on-neon",
+    "severity": "S2",
+    "pattern": "background(-color)?:\\s*#000000\\s*;\\s*color:\\s*#00ffcc",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Harsh `#000000` with `#00ffcc` matrix/cyberpunk palette.",
+    "fix": "Use off-black (`#111210`) and calibrated contrast tokens.",
+    "positiveExample": "background-color: #000000; color: #00ffcc;",
+    "negativeExample": "background-color: #111210; color: #e6e4dd;"
+  },
+  {
+    "id": "pal-shadcn-default-hsl-unmodified",
+    "severity": "S2",
+    "pattern": "--primary:\\s*222\\.2\\s+47\\.4%\\s+11\\.2%\\s*;\\s*--primary-foreground:\\s*210\\s+40%\\s+98%",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Unmodified default `shadcn/ui` `slate` CSS variable block.",
+    "fix": "Customize `--primary`, `--background`, and `--border` in `tokens.css` to match the Direction Statement.",
+    "positiveExample": "--primary: 222.2 47.4% 11.2%; --primary-foreground: 210 40% 98%;",
+    "negativeExample": "--primary: 158 36% 18%; --primary-foreground: 42 33% 96%;"
+  },
+  {
+    "id": "pal-emerald-teal-crypto-gradient",
+    "severity": "S2",
+    "pattern": "from-emerald-400\\s+to-cyan-400",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Default Web3/fintech emerald-to-cyan neon gradient.",
+    "fix": "Use solid forest, brass, or slate tones for financial interfaces.",
+    "positiveExample": "class='bg-gradient-to-r from-emerald-400 to-cyan-400'",
+    "negativeExample": "class='bg-[#0f291e] text-[#f2efe9]'"
+  },
+  {
+    "id": "pal-fuchsia-violet-orb",
+    "severity": "S1",
+    "pattern": "bg-fuchsia-500/(20|30|40)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Translucent fuchsia glow orb utility.",
+    "fix": "Remove decorative neon orbs.",
+    "positiveExample": "class='bg-fuchsia-500/30 blur-3xl'",
+    "negativeExample": "class='bg-stone-200'"
+  },
+  {
+    "id": "pal-rainbow-conic-gradient",
+    "severity": "S1",
+    "pattern": "conic-gradient\\(from\\s+[0-9]+deg,\\s*#ff0000,\\s*#ff00ff",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "Rainbow conic border/background gradient.",
+    "fix": "Use a solid 1px border.",
+    "positiveExample": "background: conic-gradient(from 90deg, #ff0000, #ff00ff, #0000ff);",
+    "negativeExample": "border: 1px solid var(--border-default);"
+  },
+  {
+    "id": "pal-gray-500-on-gray-100-low-contrast",
+    "severity": "S2",
+    "pattern": "bg-gray-100\\s+text-gray-400",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "`text-gray-400` on `bg-gray-100` fails WCAG 4.5:1 contrast (ratio ~2.5:1).",
+    "fix": "Use `text-gray-700` or darker on light gray surfaces.",
+    "positiveExample": "class='bg-gray-100 text-gray-400'",
+    "negativeExample": "class='bg-gray-100 text-gray-800'"
+  },
+  {
+    "id": "pal-slate-400-on-white-body",
+    "severity": "S2",
+    "pattern": "bg-white\\s+text-slate-400",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "scss",
+      "jsx",
+      "tsx"
+    ],
+    "message": "`text-slate-400` on `bg-white` fails WCAG AA contrast.",
+    "fix": "Use `text-slate-700` or `text-stone-700` for secondary copy on white.",
+    "positiveExample": "class='bg-white text-slate-400'",
+    "negativeExample": "class='bg-white text-stone-700'"
+  }
+]

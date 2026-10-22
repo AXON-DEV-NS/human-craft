@@ -1,0 +1,402 @@
+[
+  {
+    "id": "ph-example-email",
+    "severity": "S0",
+    "pattern": "\\b[a-zA-Z0-9._%+-]+@(example|test|domain|yourcompany|company)\\.(com|org|net)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Placeholder email domain (`@example.com`, `@yourcompany.com`).",
+    "fix": "Use the real organization email or `[CLIENT INPUT NEEDED: email]`.",
+    "positiveExample": "Contact us at support@example.com",
+    "negativeExample": "Contact us at customs@portsaidlogistics.com"
+  },
+  {
+    "id": "ph-us-555-phone",
+    "severity": "S0",
+    "pattern": "\\+?1?[-.\\s]?\\(?555\\)?[-.\\s]?[0-9]{3}[-.\\s]?[0-9]{4}\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Fictional North American 555 phone number.",
+    "fix": "Use the real business telephone number.",
+    "positiveExample": "Call +1 (555) 019-2834",
+    "negativeExample": "Call +20 2 2794 0112"
+  },
+  {
+    "id": "ph-sequential-phone",
+    "severity": "S0",
+    "pattern": "\\b123[-.\\s]?456[-.\\s]?7890\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Placeholder `123-456-7890` phone number.",
+    "fix": "Use the real phone number.",
+    "positiveExample": "Phone: 123-456-7890",
+    "negativeExample": "Phone: +966 11 402 8810"
+  },
+  {
+    "id": "ph-123-main-st",
+    "severity": "S0",
+    "pattern": "\\b123\\s+(Main|Elm|Oak|Market|Business)\\s+(St|Street|Ave|Avenue|Blvd|Road)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Fictional `123 Main Street` address.",
+    "fix": "Use the actual street address or `[CLIENT INPUT NEEDED: address]`.",
+    "positiveExample": "123 Main Street, Suite 100",
+    "negativeExample": "14 Talaat Harb Street, Floor 4, Cairo"
+  },
+  {
+    "id": "ph-john-jane-doe",
+    "severity": "S0",
+    "pattern": "\\b(John\\s+Doe|Jane\\s+Doe|John\\s+Smith|Jane\\s+Smith)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic placeholder person name.",
+    "fix": "Use a real team member or culturally grounded domain example.",
+    "positiveExample": "Author: John Doe",
+    "negativeExample": "Author: Eng. Mahmoud El-Shenawy"
+  },
+  {
+    "id": "ph-acme-globex-initech",
+    "severity": "S0",
+    "pattern": "\\b(Acme\\s+(Corp|Inc|LLC)|Globex|Initech|Soylent\\s+Corp|Umbrella\\s+Corp|Hooli|Pied\\s+Piper)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Pop-culture fictional corporation name.",
+    "fix": "Use a real organization or realistic industry description.",
+    "positiveExample": "Client: Initech",
+    "negativeExample": "Client: Delta Spinning & Weaving Co."
+  },
+  {
+    "id": "ph-todo-bracket",
+    "severity": "S0",
+    "pattern": "\\[(TODO|TBD|INSERT\\s+[^\\]]+|PLACEHOLDER[^\\]]*)\\]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unresolved `[TODO]` / `[TBD]` / `[INSERT ...]` bracket placeholder.",
+    "fix": "Fill in the real data or use the structured `[CLIENT INPUT NEEDED: specific item]` marker tracked in `client-todo.md`.",
+    "positiveExample": "Price: [TBD]",
+    "negativeExample": "Price: [CLIENT INPUT NEEDED: Q4 wholesale price per ton]"
+  },
+  {
+    "id": "ph-lorem-ipsum-short",
+    "severity": "S0",
+    "pattern": "\\b(lorem\\s+ipsum|hipsum|cupcake\\s+ipsum|bacon\\s+ipsum)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Placeholder ipsum generator text.",
+    "fix": "Write real domain copy.",
+    "positiveExample": "Lorem ipsum text here",
+    "negativeExample": "Cold-rolled steel coils per DIN EN 10130"
+  },
+  {
+    "id": "ph-99-99-price-xx",
+    "severity": "S0",
+    "pattern": "\\$\\s*(XX(\\.XX)?|0\\.00\\s*/\\s*mo\\s*\\(placeholder\\)|\\?\\?\\?)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Placeholder `$XX` price string.",
+    "fix": "Insert actual pricing or `[CLIENT INPUT NEEDED: tier pricing]`.",
+    "positiveExample": "Plan costs $XX/month",
+    "negativeExample": "Plan costs $45/month per customs broker seat"
+  },
+  {
+    "id": "ph-social-handle-yourbrand",
+    "severity": "S0",
+    "pattern": "https?://(x\\.com|twitter\\.com|instagram\\.com|linkedin\\.com/company)/(yourbrand|yourcompany|username|handle|example)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Placeholder social media handle URL.",
+    "fix": "Use the verified profile URL or remove the social link.",
+    "positiveExample": "https://x.com/yourbrand",
+    "negativeExample": "https://linkedin.com/company/portsaid-logistics"
+  },
+  {
+    "id": "ph-google-analytics-ua-xxx",
+    "severity": "S0",
+    "pattern": "\\b(UA-XXXXX-Y|G-XXXXXXXXXX|GTM-XXXXXXX)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Dummy Google Analytics / Tag Manager ID.",
+    "fix": "Configure the real measurement ID via environment variable or remove the tracker.",
+    "positiveExample": "gtag('config', 'G-XXXXXXXXXX');",
+    "negativeExample": "gtag('config', window.__ENV__.GA_MEASUREMENT_ID);"
+  },
+  {
+    "id": "ph-stripe-pk-test-sample",
+    "severity": "S0",
+    "pattern": "\\bpk_test_51[a-zA-Z0-9]{10,}|pk_test_TYooMQauvdEDq54NiTphI7jx\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hardcoded Stripe documentation test key.",
+    "fix": "Read `PUBLIC_STRIPE_KEY` from environment configuration.",
+    "positiveExample": "loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx')",
+    "negativeExample": "loadStripe(import.meta.env.PUBLIC_STRIPE_KEY)"
+  },
+  {
+    "id": "ph-sentry-example-dsn",
+    "severity": "S0",
+    "pattern": "https://examplePublicKey@o0\\.ingest\\.sentry\\.io/0",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Dummy Sentry documentation DSN.",
+    "fix": "Read `SENTRY_DSN` from environment variables.",
+    "positiveExample": "Sentry.init({ dsn: 'https://examplePublicKey@o0.ingest.sentry.io/0' });",
+    "negativeExample": "Sentry.init({ dsn: process.env.SENTRY_DSN });"
+  },
+  {
+    "id": "ph-copyright-202x",
+    "severity": "S0",
+    "pattern": "©\\s*202X\\b|\\(c\\)\\s*20XX\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unfilled `© 202X` copyright year.",
+    "fix": "Use the current four-digit year (`© 2026`).",
+    "positiveExample": "© 202X Company",
+    "negativeExample": "© 2026 PortSaid Logistics SAE"
+  },
+  {
+    "id": "ph-arabic-company-placeholder",
+    "severity": "S0",
+    "pattern": "(اسم\\s+الشركة\\s+هنا|عنوان\\s+الموقع\\s+هنا|أدخل\\s+النص\\s+هنا|رقم\\s+الهاتف\\s+هنا)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unfilled Arabic template placeholder.",
+    "fix": "Write the real Arabic business details.",
+    "positiveExample": "اسم الشركة هنا",
+    "negativeExample": "شركة الدلتا للصناعات الهندسية"
+  },
+  {
+    "id": "ph-fake-vat-number",
+    "severity": "S0",
+    "pattern": "\\b(VAT|Tax\\s+ID):\\s*(123456789|000-000-000|XX-XXXXXXX)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Fake sequential tax/VAT registration number.",
+    "fix": "Use the real tax registration number or `[CLIENT INPUT NEEDED: tax registration number]`.",
+    "positiveExample": "Tax ID: 123456789",
+    "negativeExample": "Tax Registration: 418-290-512"
+  },
+  {
+    "id": "ph-image-coming-soon",
+    "severity": "S0",
+    "pattern": "\\b(Image\\s+Coming\\s+Soon|Photo\\s+Coming\\s+Soon|Content\\s+Coming\\s+Soon|Under\\s+Construction)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Visible 'Coming Soon' / 'Under Construction' placeholder.",
+    "fix": "Cut the section until real content is ready.",
+    "positiveExample": "<div class='box'>Photo Coming Soon</div>",
+    "negativeExample": "<figure><img src='/images/lathe.webp' alt='CNC Lathe'></figure>"
+  },
+  {
+    "id": "ph-user-1-user-2",
+    "severity": "S1",
+    "pattern": "\\b(User\\s+1|User\\s+2|Client\\s+1|Client\\s+2|Customer\\s+A|Customer\\s+B|Project\\s+1|Project\\s+2)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Numbered placeholder entity names in UI.",
+    "fix": "Use real project or customer names.",
+    "positiveExample": "<h3>Project 1</h3>",
+    "negativeExample": "<h3>Suez Canal Container Terminal Crane Retrofit</h3>"
+  },
+  {
+    "id": "ph-blog-post-title-1",
+    "severity": "S0",
+    "pattern": "\\b(Blog\\s+Post\\s+Title\\s+[1-9]|Article\\s+Title\\s+Here|Sample\\s+Post\\s+[1-9])\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Placeholder blog post title.",
+    "fix": "Write real articles or omit the blog section.",
+    "positiveExample": "<h2>Blog Post Title 1</h2>",
+    "negativeExample": "<h2>How Demurrage Is Calculated on Weekend Arrivals at Sokhna Port</h2>"
+  },
+  {
+    "id": "ph-uuid-all-zeros",
+    "severity": "S1",
+    "pattern": "\\b00000000-0000-0000-0000-000000000000\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Nil UUID hardcoded in UI or payload.",
+    "fix": "Use real record IDs.",
+    "positiveExample": "id: '00000000-0000-0000-0000-000000000000'",
+    "negativeExample": "id: shipment.id"
+  }
+]

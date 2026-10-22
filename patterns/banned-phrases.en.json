@@ -1,0 +1,3890 @@
+[
+  {
+    "id": "en-elevate",
+    "severity": "S1",
+    "pattern": "\\belevate(s|d|ing)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Marketing verb that hides the actual improvement.",
+    "fix": "State the measurable change, such as cutting checkout from 4 steps to 2.",
+    "positiveExample": "Elevate your workflow today.",
+    "negativeExample": "Cut checkout from four steps to two."
+  },
+  {
+    "id": "en-unlock",
+    "severity": "S1",
+    "pattern": "\\bunlock(s|ed|ing)?\\s+(the\\s+)?(full\\s+)?(potential|power|value|insights|growth)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Metaphorical cliche used in generic SaaS copy.",
+    "fix": "Name the capability the user gains.",
+    "positiveExample": "Unlock the full potential of your team.",
+    "negativeExample": "Give every analyst direct SQL read access."
+  },
+  {
+    "id": "en-seamless",
+    "severity": "S1",
+    "pattern": "\\bseamless(ly)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Filler adjective claiming zero friction without proof.",
+    "fix": "Explain how the integration works in practice.",
+    "positiveExample": "Enjoy a seamless integration with Stripe.",
+    "negativeExample": "Connect Stripe in two clicks using OAuth."
+  },
+  {
+    "id": "en-empower",
+    "severity": "S1",
+    "pattern": "\\bempower(s|ed|ing|ment)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague verb that avoids stating what the user can do.",
+    "fix": "Specify the permission or tool given to the user.",
+    "positiveExample": "Empowering developers to build faster.",
+    "negativeExample": "Letting developers deploy preview branches in 14 seconds."
+  },
+  {
+    "id": "en-revolutionize",
+    "severity": "S1",
+    "pattern": "\\brevolutioniz(e|es|ed|ing)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hyperbolic claim that erodes credibility.",
+    "fix": "Describe the specific mechanism that changed.",
+    "positiveExample": "Revolutionize how you manage inventory.",
+    "negativeExample": "Reconcile warehouse stock counts via barcode scan."
+  },
+  {
+    "id": "en-leverage",
+    "severity": "S1",
+    "pattern": "\\bleverag(e|es|ed|ing)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Corporate jargon used where 'use' belongs.",
+    "fix": "Use 'use', 'apply', or name the exact tool.",
+    "positiveExample": "Leverage our API to sync records.",
+    "negativeExample": "Use the REST API to sync customer records."
+  },
+  {
+    "id": "en-cutting-edge",
+    "severity": "S1",
+    "pattern": "\\bcutting[- ]edge\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unverifiable claim of novelty.",
+    "fix": "Cite the architecture, protocol, or release date.",
+    "positiveExample": "Built on cutting-edge technology.",
+    "negativeExample": "Built on PostgreSQL 16 and WebAssembly."
+  },
+  {
+    "id": "en-game-changer",
+    "severity": "S1",
+    "pattern": "\\bgame[- ]chang(er|ing)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Empty superlative.",
+    "fix": "Provide the before and after numbers.",
+    "positiveExample": "A game-changer for logistics teams.",
+    "negativeExample": "Reduces dispatch scheduling from 3 hours to 12 minutes."
+  },
+  {
+    "id": "en-delve",
+    "severity": "S1",
+    "pattern": "\\bdelv(e|es|ed|ing)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused LLM transition verb.",
+    "fix": "Use 'examine', 'inspect', or go straight to the subject.",
+    "positiveExample": "Let us delve into the database schema.",
+    "negativeExample": "Here is the database schema for billing."
+  },
+  {
+    "id": "en-tapestry",
+    "severity": "S1",
+    "pattern": "\\btapestry\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Figurative LLM cliche.",
+    "fix": "Describe the actual system or group of items.",
+    "positiveExample": "A rich tapestry of microservices.",
+    "negativeExample": "Twelve Go services communicating over gRPC."
+  },
+  {
+    "id": "en-robust",
+    "severity": "S1",
+    "pattern": "\\brobust\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic praise word that hides failure tolerances.",
+    "fix": "State the retry policy, SLA, or test coverage.",
+    "positiveExample": "A robust authentication pipeline.",
+    "negativeExample": "An authentication pipeline with hardware-key MFA and 5-minute token rotation."
+  },
+  {
+    "id": "en-streamline",
+    "severity": "S1",
+    "pattern": "\\bstreamlin(e|es|ed|ing)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague efficiency claim.",
+    "fix": "Say which steps were removed.",
+    "positiveExample": "Streamline your hiring process.",
+    "negativeExample": "Remove manual calendar emails from interview scheduling."
+  },
+  {
+    "id": "en-holistic",
+    "severity": "S1",
+    "pattern": "\\bholistic(ally)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Abstract buzzword.",
+    "fix": "List the concrete parts included.",
+    "positiveExample": "A holistic view of customer health.",
+    "negativeExample": "Support tickets, invoice status, and weekly logins on one screen."
+  },
+  {
+    "id": "en-next-level",
+    "severity": "S1",
+    "pattern": "\\bnext[- ]level\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Informal hype adjective.",
+    "fix": "Describe the specific upgrade.",
+    "positiveExample": "Take your analytics to the next level.",
+    "negativeExample": "Break down cohort retention by acquisition channel."
+  },
+  {
+    "id": "en-supercharge",
+    "severity": "S1",
+    "pattern": "\\bsupercharg(e|es|ed|ing)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Exaggerated action verb.",
+    "fix": "State the throughput or speed gain.",
+    "positiveExample": "Supercharge your outbound sales.",
+    "negativeExample": "Send 400 verified follow-ups per rep each week."
+  },
+  {
+    "id": "en-synergy",
+    "severity": "S1",
+    "pattern": "\\bsynerg(y|ies|istic)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Corporate filler.",
+    "fix": "Explain how the two systems share data.",
+    "positiveExample": "Creating synergy between sales and support.",
+    "negativeExample": "Showing live Zendesk tickets inside the Salesforce account view."
+  },
+  {
+    "id": "en-paradigm-shift",
+    "severity": "S1",
+    "pattern": "\\bparadigm\\s+shift\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Inflated academic cliche.",
+    "fix": "State what changed and why.",
+    "positiveExample": "A paradigm shift in cloud storage.",
+    "negativeExample": "Object storage priced per request without egress fees."
+  },
+  {
+    "id": "en-beacon",
+    "severity": "S1",
+    "pattern": "\\bbeacon\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Rhetorical flourish common in generated essays.",
+    "fix": "State the organization's track record.",
+    "positiveExample": "A beacon of innovation in healthcare.",
+    "negativeExample": "A clinic operating 14 diagnostic labs across Cairo."
+  },
+  {
+    "id": "en-testament",
+    "severity": "S1",
+    "pattern": "\\btestament\\s+to\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Formulaic praise phrase.",
+    "fix": "Present the evidence directly.",
+    "positiveExample": "This uptime is a testament to our engineering.",
+    "negativeExample": "We maintained 99.98% uptime across 2025."
+  },
+  {
+    "id": "en-realm",
+    "severity": "S1",
+    "pattern": "\\bin\\s+the\\s+realm\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Verbose prepositional padding.",
+    "fix": "Name the field directly.",
+    "positiveExample": "In the realm of distributed systems, latency matters.",
+    "negativeExample": "In distributed systems, tail latency sets the user experience."
+  },
+  {
+    "id": "en-fast-paced-world",
+    "severity": "S0",
+    "pattern": "\\bin\\s+today'?s\\s+(fast[- ]paced|digital|modern|ever[- ]changing)\\s+(world|landscape|era)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Classic LLM throat-clearing opener.",
+    "fix": "Delete the opener and start with the problem.",
+    "positiveExample": "In today's fast-paced world, teams need speed.",
+    "negativeExample": "Shipping delays cost mid-size retailers 4% of quarterly revenue."
+  },
+  {
+    "id": "en-whether-youre",
+    "severity": "S1",
+    "pattern": "\\bwhether\\s+you'?re\\s+a\\s+[^,.]+,\\s+a\\s+[^,.]+,\\s+or\\s+a\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Formulaic three-persona opener.",
+    "fix": "Name the actual target buyer and their job.",
+    "positiveExample": "Whether you're a startup, a freelancer, or a Fortune 500 enterprise.",
+    "negativeExample": "Built for freelance bookkeepers managing 10 to 50 client ledgers."
+  },
+  {
+    "id": "en-say-goodbye",
+    "severity": "S1",
+    "pattern": "\\bsay\\s+goodbye\\s+to\\s+[^,.]+\\s+and\\s+(say\\s+)?hello\\s+to\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Infomercial contrast cliche.",
+    "fix": "State what the tool replaces.",
+    "positiveExample": "Say goodbye to spreadsheets and hello to clarity.",
+    "negativeExample": "Replace five weekly CSV exports with one live ledger."
+  },
+  {
+    "id": "en-not-just-its",
+    "severity": "S1",
+    "pattern": "\\bit'?s\\s+not\\s+just\\s+[^,;—-]+[,;—-]\\s*it'?s\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Synthetic rhetorical contrast.",
+    "fix": "Say what the product is in a single direct clause.",
+    "positiveExample": "It's not just a calendar, it's your time command center.",
+    "negativeExample": "A shared team calendar that blocks focus hours automatically."
+  },
+  {
+    "id": "en-crafted-with-love",
+    "severity": "S1",
+    "pattern": "\\b(crafted|built|made)\\s+with\\s+(❤️|♥️|<3|love)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Template footer cliche.",
+    "fix": "State the company name, location, or year.",
+    "positiveExample": "Crafted with ❤️ in San Francisco.",
+    "negativeExample": "Built by Northwind Tools in Portland, Oregon."
+  },
+  {
+    "id": "en-transformative",
+    "severity": "S1",
+    "pattern": "\\btransformative\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unfounded impact adjective.",
+    "fix": "State the outcome in concrete numbers.",
+    "positiveExample": "A transformative platform for educators.",
+    "negativeExample": "A grading tool that saves high-school teachers 5 hours a week."
+  },
+  {
+    "id": "en-unleash",
+    "severity": "S1",
+    "pattern": "\\bunleash(es|ed|ing)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hype verb.",
+    "fix": "Use a plain verb describing the action.",
+    "positiveExample": "Unleash your creative workflow.",
+    "negativeExample": "Batch-export 60 print layouts in one run."
+  },
+  {
+    "id": "en-harness",
+    "severity": "S1",
+    "pattern": "\\bharness(es|ed|ing)?\\s+the\\s+power\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Padding around 'use'.",
+    "fix": "Replace with 'use' and the specific mechanism.",
+    "positiveExample": "Harness the power of machine learning.",
+    "negativeExample": "Use gradient-boosted trees to score fraud risk."
+  },
+  {
+    "id": "en-skyrocket",
+    "severity": "S1",
+    "pattern": "\\bskyrocket(s|ed|ing)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hyperbolic growth verb.",
+    "fix": "Give the percentage or multiplier.",
+    "positiveExample": "Watch your conversions skyrocket.",
+    "negativeExample": "Trial-to-paid conversion rose from 3.1% to 4.8%."
+  },
+  {
+    "id": "en-tailored-to",
+    "severity": "S2",
+    "pattern": "\\btailored\\s+to\\s+your\\s+unique\\s+needs\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic customization promise.",
+    "fix": "List the parameters the user can configure.",
+    "positiveExample": "Solutions tailored to your unique needs.",
+    "negativeExample": "Configure tax rules by state, currency, and fiscal calendar."
+  },
+  {
+    "id": "en-one-stop-shop",
+    "severity": "S1",
+    "pattern": "\\bone[- ]stop[- ]shop\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Tired retail idiom.",
+    "fix": "List the specific tools bundled together.",
+    "positiveExample": "Your one-stop-shop for payroll and compliance.",
+    "negativeExample": "Payroll, W-2 filing, and state unemployment registration in one account."
+  },
+  {
+    "id": "en-best-in-class",
+    "severity": "S1",
+    "pattern": "\\bbest[- ]in[- ]class\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Self-awarded superlative.",
+    "fix": "Cite an independent benchmark or metric.",
+    "positiveExample": "Best-in-class encryption.",
+    "negativeExample": "AES-256-GCM encryption with customer-managed KMS keys."
+  },
+  {
+    "id": "en-world-class",
+    "severity": "S1",
+    "pattern": "\\bworld[- ]class\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unverifiable boast.",
+    "fix": "Show credentials or specific work.",
+    "positiveExample": "Backed by world-class support.",
+    "negativeExample": "Support engineers respond within 15 minutes, 24/7."
+  },
+  {
+    "id": "en-state-of-the-art",
+    "severity": "S1",
+    "pattern": "\\bstate[- ]of[- ]the[- ]art\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Filler technical praise.",
+    "fix": "Specify the exact model, hardware, or spec.",
+    "positiveExample": "Our state-of-the-art data centers.",
+    "negativeExample": "Tier III facilities in Frankfurt and Dublin with dual-grid power."
+  },
+  {
+    "id": "en-frictionless",
+    "severity": "S1",
+    "pattern": "\\bfrictionless(ly)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overpromised UX adjective.",
+    "fix": "State how many steps or seconds the flow takes.",
+    "positiveExample": "Frictionless onboarding for new hires.",
+    "negativeExample": "New hires sign tax forms and get laptop tracking in 6 minutes."
+  },
+  {
+    "id": "en-future-proof",
+    "severity": "S1",
+    "pattern": "\\bfuture[- ]proof(ed|ing)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Impossible guarantee.",
+    "fix": "Explain the migration path or open standard used.",
+    "positiveExample": "Future-proof your frontend architecture.",
+    "negativeExample": "Export standard Web Components that run in any framework."
+  },
+  {
+    "id": "en-mission-critical",
+    "severity": "S2",
+    "pattern": "\\bmission[- ]critical\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused enterprise adjective.",
+    "fix": "Name the consequence of downtime.",
+    "positiveExample": "Built for mission-critical workloads.",
+    "negativeExample": "Built for hospital paging systems that cannot drop messages."
+  },
+  {
+    "id": "en-actionable-insights",
+    "severity": "S1",
+    "pattern": "\\bactionable\\s+insights\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Analytics cliche.",
+    "fix": "Name the decision the report tells the user to make.",
+    "positiveExample": "Turn raw data into actionable insights.",
+    "negativeExample": "Spot which SKUs will run out of stock within 14 days."
+  },
+  {
+    "id": "en-single-pane-of-glass",
+    "severity": "S1",
+    "pattern": "\\bsingle\\s+pane\\s+of\\s+glass\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "IT vendor cliche.",
+    "fix": "Name the data sources shown on the dashboard.",
+    "positiveExample": "A single pane of glass for your infrastructure.",
+    "negativeExample": "One view combining Prometheus metrics, AWS billing, and PagerDuty alerts."
+  },
+  {
+    "id": "en-at-the-heart-of",
+    "severity": "S2",
+    "pattern": "\\bat\\s+the\\s+heart\\s+of\\s+everything\\s+we\\s+do\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Corporate boilerplate.",
+    "fix": "State the concrete policy.",
+    "positiveExample": "Security is at the heart of everything we do.",
+    "negativeExample": "Every pull request passes static analysis and two peer reviews."
+  },
+  {
+    "id": "en-unlock-power-ai",
+    "severity": "S0",
+    "pattern": "\\bunlock\\s+the\\s+power\\s+of\\s+ai\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Canonical AI wrapper slogan.",
+    "fix": "Describe the exact task the model performs.",
+    "positiveExample": "Unlock the power of AI for your legal team.",
+    "negativeExample": "Extract renewal dates and liability caps from PDF leases."
+  },
+  {
+    "id": "en-ai-powered-magic",
+    "severity": "S0",
+    "pattern": "\\bai[- ]powered\\s+magic\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague magic framing.",
+    "fix": "Explain how the feature works and where it can fail.",
+    "positiveExample": "Clean up audio with AI-powered magic.",
+    "negativeExample": "Attenuate background hum using a spectral noise gate."
+  },
+  {
+    "id": "en-effortless",
+    "severity": "S1",
+    "pattern": "\\beffortless(ly)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Exaggerated ease claim.",
+    "fix": "Describe the actual user action required.",
+    "positiveExample": "Effortlessly migrate your database.",
+    "negativeExample": "Migrate your database with a single pg_dump import command."
+  },
+  {
+    "id": "en-intuitively-designed",
+    "severity": "S1",
+    "pattern": "\\bintuitively\\s+designed\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Self-congratulatory UI claim.",
+    "fix": "Let the interface speak or describe the layout.",
+    "positiveExample": "An intuitively designed editor.",
+    "negativeExample": "A two-pane Markdown editor with live math preview."
+  },
+  {
+    "id": "en-reimagine",
+    "severity": "S1",
+    "pattern": "\\breimagin(e|es|ed|ing)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Grandiose verb.",
+    "fix": "Say what you changed.",
+    "positiveExample": "Reimagining urban mobility.",
+    "negativeExample": "Renting electric cargo bikes by the hour across 40 neighborhood docks."
+  },
+  {
+    "id": "en-redefine",
+    "severity": "S1",
+    "pattern": "\\bredefin(e|es|ed|ing)\\s+the\\s+way\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Grandiose phrase.",
+    "fix": "Describe the new workflow.",
+    "positiveExample": "Redefining the way teams collaborate.",
+    "negativeExample": "Commenting directly on video frames with timecode links."
+  },
+  {
+    "id": "en-dive-deep",
+    "severity": "S1",
+    "pattern": "\\bdive\\s+deep(er)?\\s+into\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche transition.",
+    "fix": "Use 'inspect', 'filter', or 'read'.",
+    "positiveExample": "Dive deep into your server logs.",
+    "negativeExample": "Filter server logs by status code and request latency."
+  },
+  {
+    "id": "en-embark-journey",
+    "severity": "S1",
+    "pattern": "\\bembark\\s+on\\s+(a|your)\\s+journey\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Melodramatic onboarding phrase.",
+    "fix": "Use 'start' or name the first step.",
+    "positiveExample": "Embark on your journey to financial freedom.",
+    "negativeExample": "Open a low-fee index retirement account in 10 minutes."
+  },
+  {
+    "id": "en-foster",
+    "severity": "S2",
+    "pattern": "\\bfoster(s|ed|ing)?\\s+(innovation|collaboration|growth)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Abstract institutional verb.",
+    "fix": "Specify the practice or policy.",
+    "positiveExample": "Fostering collaboration across time zones.",
+    "negativeExample": "Recording 3-minute async standups every morning."
+  },
+  {
+    "id": "en-cultivate",
+    "severity": "S2",
+    "pattern": "\\bcultivat(e|es|ed|ing)\\s+a\\s+culture\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "HR boilerplate.",
+    "fix": "Describe the concrete team habit.",
+    "positiveExample": "Cultivating a culture of transparency.",
+    "negativeExample": "Publishing board slides and salary bands to every employee."
+  },
+  {
+    "id": "en-bespoke",
+    "severity": "S2",
+    "pattern": "\\bbespoke\\s+solutions\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Pretentious agency phrase.",
+    "fix": "Describe what you custom-build.",
+    "positiveExample": "We deliver bespoke solutions for retail.",
+    "negativeExample": "We build custom Shopify checkout extensions in Rust."
+  },
+  {
+    "id": "en-turnkey",
+    "severity": "S1",
+    "pattern": "\\bturnkey\\s+solution\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague vendor jargon.",
+    "fix": "Specify what is included on day one.",
+    "positiveExample": "A turnkey solution for fleet telematics.",
+    "negativeExample": "OBD-II GPS hardware pre-provisioned with European SIM cards."
+  },
+  {
+    "id": "en-end-to-end",
+    "severity": "S2",
+    "pattern": "\\bend[- ]to[- ]end\\s+solution\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused systems phrase.",
+    "fix": "Name the first and last steps covered.",
+    "positiveExample": "An end-to-end solution for invoicing.",
+    "negativeExample": "From quote approval to ACH bank reconciliation."
+  },
+  {
+    "id": "en-scalable-architecture",
+    "severity": "S2",
+    "pattern": "\\binfinitely\\s+scalable\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Physically impossible engineering claim.",
+    "fix": "State the tested throughput limit.",
+    "positiveExample": "Built on an infinitely scalable architecture.",
+    "negativeExample": "Tested to 120,000 concurrent WebSocket connections per node."
+  },
+  {
+    "id": "en-blazingly-fast",
+    "severity": "S1",
+    "pattern": "\\bblazing(ly)?\\s+fast\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hype speed adjective.",
+    "fix": "Give the p95 latency or build time in milliseconds.",
+    "positiveExample": "A blazingly fast search engine.",
+    "negativeExample": "Median query latency of 11 ms across 4 million documents."
+  },
+  {
+    "id": "en-lightning-fast",
+    "severity": "S1",
+    "pattern": "\\blightning[- ]fast\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche speed claim.",
+    "fix": "Provide measured benchmarks.",
+    "positiveExample": "Lightning-fast page loads.",
+    "negativeExample": "First Contentful Paint under 450 ms on 4G."
+  },
+  {
+    "id": "en-crystal-clear",
+    "severity": "S2",
+    "pattern": "\\bcrystal[- ]clear\\s+(insights|visibility|audio)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche modifier.",
+    "fix": "State the resolution, bitrate, or breakdown.",
+    "positiveExample": "Crystal-clear visibility into cloud spend.",
+    "negativeExample": "Daily AWS cost breakdown by IAM role and EC2 tag."
+  },
+  {
+    "id": "en-peace-of-mind",
+    "severity": "S1",
+    "pattern": "\\bpeace\\s+of\\s+mind\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Insurance cliche.",
+    "fix": "State the warranty, backup frequency, or SLA.",
+    "positiveExample": "Enjoy complete peace of mind.",
+    "negativeExample": "Point-in-time backups every 5 minutes retained for 90 days."
+  },
+  {
+    "id": "en-heavy-lifting",
+    "severity": "S2",
+    "pattern": "\\bdo\\s+the\\s+heavy\\s+lifting\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overworn idiom.",
+    "fix": "Name the automated task.",
+    "positiveExample": "Let our platform do the heavy lifting.",
+    "negativeExample": "Our worker queue resizes, watermarks, and uploads every photo."
+  },
+  {
+    "id": "en-under-the-hood",
+    "severity": "S2",
+    "pattern": "\\bmagic\\s+under\\s+the\\s+hood\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hand-wavy technical explanation.",
+    "fix": "Explain the algorithm or data structure.",
+    "positiveExample": "There is a lot of magic under the hood.",
+    "negativeExample": "We index trigram tokens in a memory-mapped B-tree."
+  },
+  {
+    "id": "en-out-of-the-box",
+    "severity": "S2",
+    "pattern": "\\bworks\\s+like\\s+magic\\s+out\\s+of\\s+the\\s+box\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague setup claim.",
+    "fix": "State the default configuration.",
+    "positiveExample": "It works like magic out of the box.",
+    "negativeExample": "Ships with preconfigured rules for Next.js and TypeScript."
+  },
+  {
+    "id": "en-built-from-ground-up",
+    "severity": "S2",
+    "pattern": "\\bbuilt\\s+from\\s+the\\s+ground\\s+up\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche origin story.",
+    "fix": "Explain the architectural choice that mattered.",
+    "positiveExample": "Built from the ground up for privacy.",
+    "negativeExample": "Zero-knowledge client-side encryption before any byte leaves the browser."
+  },
+  {
+    "id": "en-designed-with-you",
+    "severity": "S1",
+    "pattern": "\\bdesigned\\s+with\\s+you\\s+in\\s+mind\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Empty user-centric claim.",
+    "fix": "Show the feature that solves a user frustration.",
+    "positiveExample": "Designed with you in mind.",
+    "negativeExample": "Supports full keyboard navigation and vim keybindings."
+  },
+  {
+    "id": "en-trusted-by-thousands",
+    "severity": "S0",
+    "pattern": "\\btrusted\\s+by\\s+(thousands|millions)\\s+of\\s+(teams|users|companies)\\s+worldwide\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unverified social proof cliche.",
+    "fix": "Use exact verified customer counts and real names, or remove.",
+    "positiveExample": "Trusted by thousands of companies worldwide.",
+    "negativeExample": "Used by 340 independent pharmacies across Ontario."
+  },
+  {
+    "id": "en-10k-happy-users",
+    "severity": "S0",
+    "pattern": "\\b10,?000\\+\\s+happy\\s+(users|customers)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Template social proof number.",
+    "fix": "Replace with a real audited metric or cut the counter.",
+    "positiveExample": "Join 10,000+ happy users.",
+    "negativeExample": "412 teams shipped production releases with this tool last month."
+  },
+  {
+    "id": "en-99-9-uptime-badge",
+    "severity": "S1",
+    "pattern": "\\b99\\.9%\\s+uptime\\s+guarantee\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unlinked SLA claim common in hero stats.",
+    "fix": "Link to the public status page and SLA credit terms.",
+    "positiveExample": "99.9% uptime guarantee.",
+    "negativeExample": "See 12-month uptime history at status.northwind.dev."
+  },
+  {
+    "id": "en-ready-to-transform",
+    "severity": "S1",
+    "pattern": "\\bready\\s+to\\s+transform\\s+your\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic bottom-of-page CTA heading.",
+    "fix": "Ask a concrete question tied to the product.",
+    "positiveExample": "Ready to transform your workflow?",
+    "negativeExample": "Want to test the importer on your own CSV file?"
+  },
+  {
+    "id": "en-start-free-trial-today",
+    "severity": "S2",
+    "pattern": "\\bstart\\s+your\\s+free\\s+trial\\s+today!",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Exclamatory template CTA.",
+    "fix": "State the trial terms plainly.",
+    "positiveExample": "Start your free trial today!",
+    "negativeExample": "Try all features free for 14 days. No credit card required."
+  },
+  {
+    "id": "en-learn-more-cta",
+    "severity": "S1",
+    "pattern": ">\\s*Learn\\s+[Mm]ore\\s*<",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague link label that fails screen-reader context.",
+    "fix": "Name the destination page.",
+    "positiveExample": "<a href='/pricing'>Learn More</a>",
+    "negativeExample": "<a href='/pricing'>Read the pricing breakdown</a>"
+  },
+  {
+    "id": "en-click-here-link",
+    "severity": "S1",
+    "pattern": ">\\s*Click\\s+[Hh]ere\\s*<",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Non-descriptive anchor text.",
+    "fix": "Describe where the link leads.",
+    "positiveExample": "<a href='/docs'>Click Here</a>",
+    "negativeExample": "<a href='/docs'>Read the API reference</a>"
+  },
+  {
+    "id": "en-lorem-ipsum",
+    "severity": "S0",
+    "pattern": "\\blorem\\s+ipsum\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Explicit placeholder Latin copy.",
+    "fix": "Replace with real copy or [CLIENT INPUT NEEDED].",
+    "positiveExample": "Lorem ipsum dolor sit amet.",
+    "negativeExample": "Our winter roast comes from two cooperatives in Huila, Colombia."
+  },
+  {
+    "id": "en-dolor-sit-amet",
+    "severity": "S0",
+    "pattern": "\\bdolor\\s+sit\\s+amet\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Explicit placeholder Latin copy.",
+    "fix": "Write the actual paragraph.",
+    "positiveExample": "Consectetur adipiscing elit dolor sit amet.",
+    "negativeExample": "Orders placed before 2 PM ship the same business day."
+  },
+  {
+    "id": "en-your-company-here",
+    "severity": "S0",
+    "pattern": "\\b(Your\\s+Company\\s+Name|Company\\s+Name\\s+Here|Insert\\s+Title\\s+Here)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unfilled template slot.",
+    "fix": "Insert the real organization name.",
+    "positiveExample": "Welcome to Your Company Name.",
+    "negativeExample": "Welcome to Al-Masri Precision Machining."
+  },
+  {
+    "id": "en-john-doe",
+    "severity": "S0",
+    "pattern": "\\b(John\\s+Doe|Jane\\s+Doe|Jane\\s+Smith)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Placeholder persona name.",
+    "fix": "Use a real person with permission or a domain-authentic example.",
+    "positiveExample": "Reviewed by John Doe, CEO.",
+    "negativeExample": "Reviewed by Tariq Mansour, Lead Structural Engineer."
+  },
+  {
+    "id": "en-acme-corp",
+    "severity": "S0",
+    "pattern": "\\b(Acme\\s+Corp|Acme\\s+Inc|Globex\\s+Corporation)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cartoon placeholder company.",
+    "fix": "Use a realistic domain scenario or real client.",
+    "positiveExample": "How Acme Corp saved 40%.",
+    "negativeExample": "How a 60-bed regional clinic reduced missed appointments."
+  },
+  {
+    "id": "en-revolutionary-ai",
+    "severity": "S1",
+    "pattern": "\\brevolutionary\\s+AI\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hype phrase.",
+    "fix": "Specify the model task and accuracy.",
+    "positiveExample": "Our revolutionary AI writes code.",
+    "negativeExample": "Our static analyzer catches unhandled promise rejections."
+  },
+  {
+    "id": "en-seamlessly-connect",
+    "severity": "S1",
+    "pattern": "\\bseamlessly\\s+connect(s|ed|ing)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Filler adverb.",
+    "fix": "Describe the connection protocol.",
+    "positiveExample": "Seamlessly connect to your data warehouse.",
+    "negativeExample": "Query Snowflake directly using read-only service credentials."
+  },
+  {
+    "id": "en-navigate-complexities",
+    "severity": "S1",
+    "pattern": "\\bnavigate\\s+the\\s+complexities\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Consulting boilerplate.",
+    "fix": "Name the specific regulation or problem.",
+    "positiveExample": "Navigate the complexities of global tax.",
+    "negativeExample": "Calculate VAT and GST across 38 countries at checkout."
+  },
+  {
+    "id": "en-bridging-the-gap",
+    "severity": "S1",
+    "pattern": "\\bbridging\\s+the\\s+gap\\s+between\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche metaphor.",
+    "fix": "Explain how the two sides interact.",
+    "positiveExample": "Bridging the gap between design and engineering.",
+    "negativeExample": "Exporting Figma variables directly to CSS custom properties."
+  },
+  {
+    "id": "en-pave-the-way",
+    "severity": "S2",
+    "pattern": "\\bpav(e|es|ing)\\s+the\\s+way\\s+for\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague future promise.",
+    "fix": "State what the feature enables now.",
+    "positiveExample": "Paving the way for faster deployments.",
+    "negativeExample": "Cutting container image size from 1.2 GB to 94 MB."
+  },
+  {
+    "id": "en-at-your-fingertips",
+    "severity": "S1",
+    "pattern": "\\bat\\s+your\\s+fingertips\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche accessibility phrase.",
+    "fix": "Show how the user accesses the data.",
+    "positiveExample": "All your metrics at your fingertips.",
+    "negativeExample": "Press Cmd+K from any screen to query customer billing history."
+  },
+  {
+    "id": "en-unlock-insights",
+    "severity": "S1",
+    "pattern": "\\bunlock\\s+(hidden\\s+)?insights\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Analytics buzzword.",
+    "fix": "Say what question the chart answers.",
+    "positiveExample": "Unlock hidden insights in your churn data.",
+    "negativeExample": "See which onboarding step has the highest drop-off rate."
+  },
+  {
+    "id": "en-empower-your-team",
+    "severity": "S1",
+    "pattern": "\\bempower\\s+your\\s+team\\s+to\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague management promise.",
+    "fix": "State what team members can do without filing a ticket.",
+    "positiveExample": "Empower your team to ship content.",
+    "negativeExample": "Let editors publish landing page copy without an engineering deploy."
+  },
+  {
+    "id": "en-built-for-scale",
+    "severity": "S2",
+    "pattern": "\\bbuilt\\s+for\\s+scale\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unquantified engineering claim.",
+    "fix": "Give the throughput or dataset size.",
+    "positiveExample": "A database built for scale.",
+    "negativeExample": "Handles 50,000 writes per second on a single NVMe instance."
+  },
+  {
+    "id": "en-hyper-personalized",
+    "severity": "S1",
+    "pattern": "\\bhyper[- ]personalized\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "MarTech buzzword.",
+    "fix": "Explain what variables change per user.",
+    "positiveExample": "Deliver hyper-personalized emails.",
+    "negativeExample": "Filter product recommendations by past purchase category and size."
+  },
+  {
+    "id": "en-friction-free",
+    "severity": "S1",
+    "pattern": "\\bfriction[- ]free\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unrealistic UX promise.",
+    "fix": "Describe the actual flow.",
+    "positiveExample": "A friction-free return process.",
+    "negativeExample": "Print a prepaid return label by entering your order number."
+  },
+  {
+    "id": "en-all-in-one-platform",
+    "severity": "S1",
+    "pattern": "\\ball[- ]in[- ]one\\s+platform\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic SaaS positioning.",
+    "fix": "List the three or four tools it replaces.",
+    "positiveExample": "The all-in-one platform for creators.",
+    "negativeExample": "Course hosting, email broadcasts, and Stripe checkout in one dashboard."
+  },
+  {
+    "id": "en-supercharge-productivity",
+    "severity": "S1",
+    "pattern": "\\bsupercharge\\s+your\\s+productivity\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic productivity claim.",
+    "fix": "State how much time is saved on which task.",
+    "positiveExample": "Supercharge your productivity with shortcuts.",
+    "negativeExample": "Triage 50 inbox messages in 3 minutes using single-key shortcuts."
+  },
+  {
+    "id": "en-curated-selection",
+    "severity": "S2",
+    "pattern": "\\bcarefully\\s+curated\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused e-commerce phrase.",
+    "fix": "State the selection criteria.",
+    "positiveExample": "A carefully curated list of suppliers.",
+    "negativeExample": "Every supplier passes an on-site ISO 9001 audit."
+  },
+  {
+    "id": "en-unparalleled",
+    "severity": "S1",
+    "pattern": "\\bunparalleled\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unverifiable superlative.",
+    "fix": "Provide a concrete comparison.",
+    "positiveExample": "Unparalleled accuracy in OCR.",
+    "negativeExample": "99.4% character accuracy on scanned Arabic invoices."
+  },
+  {
+    "id": "en-unmatched",
+    "severity": "S1",
+    "pattern": "\\bunmatched\\s+(speed|quality|performance|security)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Boastful superlative.",
+    "fix": "Provide the measured figure.",
+    "positiveExample": "Unmatched speed in video rendering.",
+    "negativeExample": "Renders 4K H.264 timelines at 140 frames per second."
+  },
+  {
+    "id": "en-second-to-none",
+    "severity": "S1",
+    "pattern": "\\bsecond\\s+to\\s+none\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Empty boast.",
+    "fix": "Show the proof.",
+    "positiveExample": "Our customer service is second to none.",
+    "negativeExample": "94% of support tickets are resolved on the first reply."
+  },
+  {
+    "id": "en-from-day-one",
+    "severity": "S2",
+    "pattern": "\\bhit\\s+the\\s+ground\\s+running\\s+from\\s+day\\s+one\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Stacked idioms.",
+    "fix": "Explain how fast setup is.",
+    "positiveExample": "Hit the ground running from day one.",
+    "negativeExample": "Import your existing GitHub issues in under two minutes."
+  },
+  {
+    "id": "en-catalyst-for",
+    "severity": "S1",
+    "pattern": "\\bcatalyst\\s+for\\s+(change|growth|innovation)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Essayistic cliche.",
+    "fix": "State the direct cause and effect.",
+    "positiveExample": "A catalyst for growth in regional logistics.",
+    "negativeExample": "Added three cold-chain depots along the Alexandria highway."
+  },
+  {
+    "id": "en-symphony-of",
+    "severity": "S1",
+    "pattern": "\\ba\\s+symphony\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overwrought metaphor.",
+    "fix": "Describe the components plainly.",
+    "positiveExample": "A symphony of flavor and texture.",
+    "negativeExample": "Crisp phyllo layered with roasted pistachios and orange-blossom syrup."
+  },
+  {
+    "id": "en-treasure-trove",
+    "severity": "S1",
+    "pattern": "\\btreasure\\s+trove\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche metaphor for a dataset or archive.",
+    "fix": "Give the size and contents of the archive.",
+    "positiveExample": "A treasure trove of historical maps.",
+    "negativeExample": "An archive of 1,840 digitized survey maps from 1882 to 1954."
+  },
+  {
+    "id": "en-landscape-of",
+    "severity": "S2",
+    "pattern": "\\bthe\\s+ever[- ]evolving\\s+landscape\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "LLM essay filler.",
+    "fix": "Name the specific recent changes.",
+    "positiveExample": "In the ever-evolving landscape of browser privacy.",
+    "negativeExample": "Since Safari and Firefox blocked third-party cookies by default."
+  },
+  {
+    "id": "en-underscore-importance",
+    "severity": "S1",
+    "pattern": "\\bunderscore(s|d)?\\s+the\\s+importance\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "LLM analytical filler.",
+    "fix": "State why the thing matters.",
+    "positiveExample": "This outage underscores the importance of backups.",
+    "negativeExample": "Without off-site backups, a single rack failure wipes out billing history."
+  },
+  {
+    "id": "en-it-is-worth-noting",
+    "severity": "S2",
+    "pattern": "\\bit\\s+is\\s+(important|worth)\\s+(to\\s+note|noting)\\s+that\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Verbose throat-clearing.",
+    "fix": "State the fact directly.",
+    "positiveExample": "It is worth noting that the API rate-limits requests.",
+    "negativeExample": "The API limits each key to 120 requests per minute."
+  },
+  {
+    "id": "en-in-conclusion",
+    "severity": "S2",
+    "pattern": "\\bin\\s+conclusion,\\s+[^.]+is\\s+more\\s+than\\s+just\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Formulaic LLM wrap-up.",
+    "fix": "End with the final concrete point or action.",
+    "positiveExample": "In conclusion, Acme is more than just a tool.",
+    "negativeExample": "Run the CLI on your staging branch to see the report."
+  },
+  {
+    "id": "en-moreover-furthermore",
+    "severity": "S2",
+    "pattern": "\\b(Moreover|Furthermore),\\s+it\\s+enables\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Stiff academic transition in UI copy.",
+    "fix": "Use short direct sentences.",
+    "positiveExample": "Furthermore, it enables teams to export PDFs.",
+    "negativeExample": "Teams can also export signed PDFs."
+  },
+  {
+    "id": "en-delightful-experience",
+    "severity": "S1",
+    "pattern": "\\ba\\s+delightful\\s+user\\s+experience\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Self-praise.",
+    "fix": "Describe the interface behavior.",
+    "positiveExample": "We crafted a delightful user experience.",
+    "negativeExample": "Form errors appear inline as you tab out of a field."
+  },
+  {
+    "id": "en-pixel-perfect",
+    "severity": "S1",
+    "pattern": "\\bpixel[- ]perfect\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused design cliche.",
+    "fix": "Specify the grid, alignment, or responsive breakpoints.",
+    "positiveExample": "Pixel-perfect layouts on every screen.",
+    "negativeExample": "Tested at 320px, 768px, and 1440px with zero horizontal scroll."
+  },
+  {
+    "id": "en-clean-and-modern",
+    "severity": "S1",
+    "pattern": "\\bclean\\s+and\\s+modern\\s+(design|interface|look)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Non-decision aesthetic phrase.",
+    "fix": "Name the typography, contrast, and layout structure.",
+    "positiveExample": "A clean and modern interface.",
+    "negativeExample": "High-contrast tabular numerals set in IBM Plex Sans on a 12-column grid."
+  },
+  {
+    "id": "en-sleek-and-intuitive",
+    "severity": "S1",
+    "pattern": "\\bsleek\\s+and\\s+intuitive\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic design praise.",
+    "fix": "Describe how the controls work.",
+    "positiveExample": "A sleek and intuitive dashboard.",
+    "negativeExample": "A single-screen ledger where every row is editable inline."
+  },
+  {
+    "id": "en-boost-your-bottom-line",
+    "severity": "S1",
+    "pattern": "\\bboost\\s+your\\s+bottom\\s+line\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic B2B cliche.",
+    "fix": "State which cost drops or which revenue stream grows.",
+    "positiveExample": "Boost your bottom line with automation.",
+    "negativeExample": "Cut chargeback dispute fees by attaching delivery photos automatically."
+  },
+  {
+    "id": "en-maximize-roi",
+    "severity": "S1",
+    "pattern": "\\bmaximize\\s+your\\s+ROI\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague financial promise.",
+    "fix": "Show the payback calculation.",
+    "positiveExample": "Maximize your ROI on ad spend.",
+    "negativeExample": "Pause campaigns automatically when cost-per-acquisition exceeds $42."
+  },
+  {
+    "id": "en-drive-meaningful",
+    "severity": "S1",
+    "pattern": "\\bdrive\\s+meaningful\\s+(results|engagement|growth)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Corporate filler.",
+    "fix": "Specify the metric.",
+    "positiveExample": "Drive meaningful engagement with your readers.",
+    "negativeExample": "Increase article completion rates from 38% to 61%."
+  },
+  {
+    "id": "en-accelerate-your-growth",
+    "severity": "S1",
+    "pattern": "\\baccelerate\\s+your\\s+growth\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic growth slogan.",
+    "fix": "Explain how the product acquires or retains customers.",
+    "positiveExample": "Accelerate your growth with referrals.",
+    "negativeExample": "Give existing subscribers a one-click referral link that credits $20."
+  },
+  {
+    "id": "en-take-the-guesswork",
+    "severity": "S1",
+    "pattern": "\\btake\\s+the\\s+guesswork\\s+out\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Infomercial cliche.",
+    "fix": "Explain how the calculation is performed.",
+    "positiveExample": "Take the guesswork out of pricing.",
+    "negativeExample": "Compare your SKU margins against 14,000 verified distributor invoices."
+  },
+  {
+    "id": "en-built-by-experts",
+    "severity": "S1",
+    "pattern": "\\bbuilt\\s+by\\s+industry\\s+experts\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unverified authority claim.",
+    "fix": "Name the founders and their actual prior roles.",
+    "positiveExample": "Built by industry experts.",
+    "negativeExample": "Built by former customs brokers from Damietta Port."
+  },
+  {
+    "id": "en-passionate-team",
+    "severity": "S1",
+    "pattern": "\\ba\\s+passionate\\s+team\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic About-page cliche.",
+    "fix": "State who is on the team and what they have built.",
+    "positiveExample": "We are a passionate team of creators.",
+    "negativeExample": "We are eight mechanical engineers and two industrial designers in Munich."
+  },
+  {
+    "id": "en-we-believe-that",
+    "severity": "S2",
+    "pattern": "\\bat\\s+[A-Z][a-zA-Z]+,\\s+we\\s+believe\\s+that\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Manifesto cliche.",
+    "fix": "State what the company actually does.",
+    "positiveExample": "At Veloce, we believe that logistics should be simple.",
+    "negativeExample": "Veloce books customs clearance and flatbed trucking in one contract."
+  },
+  {
+    "id": "en-redefining-excellence",
+    "severity": "S1",
+    "pattern": "\\bredefining\\s+excellence\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Empty corporate slogan.",
+    "fix": "State your quality standard.",
+    "positiveExample": "Redefining excellence in dental care.",
+    "negativeExample": "Same-day ceramic crowns milled in our clinic with a 10-year warranty."
+  },
+  {
+    "id": "en-empowering-businesses",
+    "severity": "S1",
+    "pattern": "\\bempowering\\s+businesses\\s+of\\s+all\\s+sizes\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Catch-all positioning.",
+    "fix": "Specify the exact company size you serve best.",
+    "positiveExample": "Empowering businesses of all sizes.",
+    "negativeExample": "Designed for wholesale distributors with 20 to 200 warehouse staff."
+  },
+  {
+    "id": "en-digital-transformation",
+    "severity": "S1",
+    "pattern": "\\byour\\s+digital\\s+transformation\\s+journey\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Consulting buzzword.",
+    "fix": "Name the legacy system being replaced.",
+    "positiveExample": "Start your digital transformation journey.",
+    "negativeExample": "Move paper maintenance logs into an offline-capable tablet app."
+  },
+  {
+    "id": "en-data-driven-decisions",
+    "severity": "S2",
+    "pattern": "\\bmake\\s+data[- ]driven\\s+decisions\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche analytics phrase.",
+    "fix": "Name the specific decision and data source.",
+    "positiveExample": "Make data-driven decisions every day.",
+    "negativeExample": "Reorder raw cotton when mill inventory drops below 18 days of demand."
+  },
+  {
+    "id": "en-seamless-workflow",
+    "severity": "S1",
+    "pattern": "\\ba\\s+seamless\\s+workflow\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague workflow praise.",
+    "fix": "Trace the step-by-step handoff.",
+    "positiveExample": "Enjoy a seamless workflow from design to print.",
+    "negativeExample": "Send approved PDFs directly to the Heidelberg press queue."
+  },
+  {
+    "id": "en-unlock-new-possibilities",
+    "severity": "S1",
+    "pattern": "\\bunlock\\s+new\\s+possibilities\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague inspirational copy.",
+    "fix": "List two concrete things the user can now do.",
+    "positiveExample": "Unlock new possibilities with our SDK.",
+    "negativeExample": "Embed live 3D molecular models inside Jupyter notebooks."
+  },
+  {
+    "id": "en-robust-and-secure",
+    "severity": "S1",
+    "pattern": "\\brobust\\s+and\\s+secure\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Paired filler adjectives.",
+    "fix": "Specify the security controls.",
+    "positiveExample": "A robust and secure payment gateway.",
+    "negativeExample": "PCI-DSS Level 1 certified gateway with hardware security modules."
+  },
+  {
+    "id": "en-fast-and-reliable",
+    "severity": "S2",
+    "pattern": "\\bfast,\\s+reliable,\\s+and\\s+secure\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic rule-of-three adjective stack.",
+    "fix": "Replace each adjective with a number or mechanism.",
+    "positiveExample": "Fast, reliable, and secure DNS.",
+    "negativeExample": "Anycast DNS across 34 POPs with DNSSEC enabled by default."
+  },
+  {
+    "id": "en-simple-yet-powerful",
+    "severity": "S1",
+    "pattern": "\\bsimple\\s+yet\\s+powerful\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused SaaS oxymoron.",
+    "fix": "Explain why it is quick to learn and what advanced task it handles.",
+    "positiveExample": "A simple yet powerful video editor.",
+    "negativeExample": "Trim clips via transcript text or keyframe audio stems on 16 tracks."
+  },
+  {
+    "id": "en-powerful-yet-easy",
+    "severity": "S1",
+    "pattern": "\\bpowerful\\s+yet\\s+easy\\s+to\\s+use\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused SaaS cliche.",
+    "fix": "Show the interface instead of praising it.",
+    "positiveExample": "Powerful yet easy to use accounting.",
+    "negativeExample": "Double-entry ledger with automatic bank feed matching."
+  },
+  {
+    "id": "en-everything-you-need",
+    "severity": "S1",
+    "pattern": "\\beverything\\s+you\\s+need\\s+to\\s+succeed\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague completeness claim.",
+    "fix": "List the included features.",
+    "positiveExample": "Everything you need to succeed online.",
+    "negativeExample": "Domain registration, static hosting, and transactional email."
+  },
+  {
+    "id": "en-no-credit-card-asterisks",
+    "severity": "S2",
+    "pattern": "Free\\s+forever\\s+plan\\s+available!",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hype pricing exclamation.",
+    "fix": "State the free tier limits clearly.",
+    "positiveExample": "Free forever plan available!",
+    "negativeExample": "Free up to 1,000 monthly invoices and 2 team seats."
+  },
+  {
+    "id": "en-most-popular-badge",
+    "severity": "S1",
+    "pattern": "\\bMOST\\s+POPULAR\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Default middle-tier pricing badge.",
+    "fix": "Name the buyer profile the tier fits.",
+    "positiveExample": "MOST POPULAR",
+    "negativeExample": "For teams of 5-25"
+  },
+  {
+    "id": "en-get-started-for-free",
+    "severity": "S2",
+    "pattern": ">\\s*Get\\s+Started\\s+for\\s+Free\\s*<",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic SaaS hero CTA.",
+    "fix": "Name what happens after clicking.",
+    "positiveExample": "<button>Get Started for Free</button>",
+    "negativeExample": "<button>Create a sandbox database</button>"
+  },
+  {
+    "id": "en-book-a-demo-generic",
+    "severity": "S2",
+    "pattern": ">\\s*Schedule\\s+a\\s+Personalized\\s+Demo\\s*<",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Wordy enterprise CTA.",
+    "fix": "Say 'Book a 20-minute walkthrough' or show a live sandbox.",
+    "positiveExample": "<a>Schedule a Personalized Demo</a>",
+    "negativeExample": "<a>Book a 20-minute walkthrough</a>"
+  },
+  {
+    "id": "en-watch-the-magic",
+    "severity": "S1",
+    "pattern": "\\bwatch\\s+the\\s+magic\\s+happen\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague product process step.",
+    "fix": "Explain what the server actually computes.",
+    "positiveExample": "Upload your file and watch the magic happen.",
+    "negativeExample": "Upload your CAD file to calculate sheet-metal bend allowances."
+  },
+  {
+    "id": "en-in-three-easy-steps",
+    "severity": "S1",
+    "pattern": "\\bin\\s+3\\s+(easy|simple)\\s+steps\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Template 'How it works' heading.",
+    "fix": "Title the section after the actual process.",
+    "positiveExample": "Get started in 3 easy steps",
+    "negativeExample": "How customs clearance filing works"
+  },
+  {
+    "id": "en-frequently-asked-questions-sub",
+    "severity": "S1",
+    "pattern": "\\bEverything\\s+you\\s+need\\s+to\\s+know\\s+about\\s+the\\s+product\\s+and\\s+billing\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Verbatim Tailwind UI / Shadcn FAQ subtitle.",
+    "fix": "Write a subtitle specific to your customer's actual questions, or omit it.",
+    "positiveExample": "Everything you need to know about the product and billing.",
+    "negativeExample": "Shipping timelines, wholesale minimums, and return policies."
+  },
+  {
+    "id": "en-still-have-questions",
+    "severity": "S2",
+    "pattern": "Still\\s+have\\s+questions\\?\\s+Can'?t\\s+find\\s+the\\s+answer\\s+you'?re\\s+looking\\s+for\\?",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Verbatim template FAQ footer.",
+    "fix": "Provide a direct contact email or phone number.",
+    "positiveExample": "Still have questions? Can't find the answer you're looking for?",
+    "negativeExample": "Email billing@almasri-machining.com or call +20 2 2794 0112."
+  },
+  {
+    "id": "en-subscribe-newsletter-cliche",
+    "severity": "S1",
+    "pattern": "\\bSubscribe\\s+to\\s+our\\s+newsletter\\s+for\\s+the\\s+latest\\s+updates,\\s+tips,\\s+and\\s+exclusive\\s+offers\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic footer newsletter pitch.",
+    "fix": "Say how often you send and what is in it.",
+    "positiveExample": "Subscribe to our newsletter for the latest updates, tips, and exclusive offers.",
+    "negativeExample": "One email on the first Tuesday of each month with new CNC tooling specs."
+  },
+  {
+    "id": "en-oops-something-went-wrong",
+    "severity": "S1",
+    "pattern": "Oops!\\s+Something\\s+went\\s+wrong",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cutesy unhelpful error message.",
+    "fix": "State what failed and how the user can recover.",
+    "positiveExample": "Oops! Something went wrong.",
+    "negativeExample": "Payment gateway timed out (HTTP 504). Your card was not charged; please retry."
+  },
+  {
+    "id": "en-whoops-page-not-found",
+    "severity": "S1",
+    "pattern": "Whoops!\\s+Looks\\s+like\\s+you'?re\\s+lost",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cutesy 404 cliche.",
+    "fix": "State clearly that the page does not exist and offer a search or home link.",
+    "positiveExample": "Whoops! Looks like you're lost.",
+    "negativeExample": "Page not found (404). Check the URL or search the documentation below."
+  },
+  {
+    "id": "en-we-value-your-privacy-cookie",
+    "severity": "S2",
+    "pattern": "\\bWe\\s+use\\s+cookies\\s+to\\s+enhance\\s+your\\s+browsing\\s+experience\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Boilerplate cookie banner.",
+    "fix": "State specifically whether you use only session cookies or analytics.",
+    "positiveExample": "We use cookies to enhance your browsing experience.",
+    "negativeExample": "We use one session cookie to keep you signed in. No third-party ad trackers."
+  },
+  {
+    "id": "en-em-dash-overuse",
+    "severity": "S2",
+    "pattern": "—[^—\\n]{3,60}—",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Parenthetical double em-dash clause common in LLM prose.",
+    "fix": "Use commas, parentheses, or split into two sentences.",
+    "positiveExample": "Our engine—built in Rust—processes 10M rows.",
+    "negativeExample": "Our Rust engine processes 10 million rows per second."
+  },
+  {
+    "id": "en-not-only-but-also",
+    "severity": "S2",
+    "pattern": "\\bnot\\s+only\\s+does\\s+it\\s+[^,]+,\\s+but\\s+it\\s+also\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Formulaic rhetorical correlative.",
+    "fix": "State both facts directly.",
+    "positiveExample": "Not only does it save time, but it also reduces errors.",
+    "negativeExample": "It cuts reconciliation time in half and catches duplicate invoices."
+  },
+  {
+    "id": "en-imagine-a-world",
+    "severity": "S1",
+    "pattern": "\\bimagine\\s+a\\s+world\\s+where\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Movie-trailer pitch opener.",
+    "fix": "Describe the problem and your tool today.",
+    "positiveExample": "Imagine a world where meetings take 5 minutes.",
+    "negativeExample": "Most status meetings can be replaced by a 4-line written check-in."
+  },
+  {
+    "id": "en-gone-are-the-days",
+    "severity": "S1",
+    "pattern": "\\bgone\\s+are\\s+the\\s+days\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche historical contrast.",
+    "fix": "State what the user no longer has to do.",
+    "positiveExample": "Gone are the days of manual data entry.",
+    "negativeExample": "Stop copying invoice totals from PDFs into Excel by hand."
+  },
+  {
+    "id": "en-without-further-ado",
+    "severity": "S1",
+    "pattern": "\\bwithout\\s+further\\s+ado\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Filler transition.",
+    "fix": "Cut the phrase and start the section.",
+    "positiveExample": "Without further ado, here is the release.",
+    "negativeExample": "Here is what changed in v2.4."
+  },
+  {
+    "id": "en-in-a-nutshell",
+    "severity": "S2",
+    "pattern": "\\bin\\s+a\\s+nutshell\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Conversational filler.",
+    "fix": "State the summary directly.",
+    "positiveExample": "In a nutshell, we cache queries at the edge.",
+    "negativeExample": "We cache read queries for 30 seconds at 28 edge locations."
+  },
+  {
+    "id": "en-the-best-part",
+    "severity": "S1",
+    "pattern": "and\\s+the\\s+best\\s+part\\?\\s+It'?s\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Infomercial rhetorical question.",
+    "fix": "State the benefit in a declarative sentence.",
+    "positiveExample": "And the best part? It's completely free.",
+    "negativeExample": "The CLI is open source under the MIT license."
+  },
+  {
+    "id": "en-look-no-further",
+    "severity": "S1",
+    "pattern": "\\blook\\s+no\\s+further\\s+than\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Directory copy cliche.",
+    "fix": "State why this option fits.",
+    "positiveExample": "For reliable hosting, look no further than HostBox.",
+    "negativeExample": "HostBox includes daily ZFS snapshots on every VPS plan."
+  },
+  {
+    "id": "en-stand-out-from-crowd",
+    "severity": "S1",
+    "pattern": "\\bstand\\s+out\\s+from\\s+the\\s+crowd\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic portfolio/branding pitch.",
+    "fix": "Show the specific design distinction.",
+    "positiveExample": "Help your brand stand out from the crowd.",
+    "negativeExample": "Custom display lettering drawn for your packaging and signage."
+  },
+  {
+    "id": "en-leave-no-stone-unturned",
+    "severity": "S1",
+    "pattern": "\\bleave\\s+no\\s+stone\\s+unturned\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche idiom.",
+    "fix": "List the actual checks performed.",
+    "positiveExample": "Our auditors leave no stone unturned.",
+    "negativeExample": "We inspect every dependency license, Dockerfile layer, and IAM policy."
+  },
+  {
+    "id": "en-tip-of-the-iceberg",
+    "severity": "S1",
+    "pattern": "\\bjust\\s+the\\s+tip\\s+of\\s+the\\s+iceberg\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche idiom.",
+    "fix": "Link to the full changelog or feature list.",
+    "positiveExample": "This is just the tip of the iceberg.",
+    "negativeExample": "See all 42 supported file formats in the documentation."
+  },
+  {
+    "id": "en-game-changing-solution",
+    "severity": "S1",
+    "pattern": "\\bgame[- ]changing\\s+solution\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Stacked buzzwords.",
+    "fix": "Name the tool and what it does.",
+    "positiveExample": "A game-changing solution for HR.",
+    "negativeExample": "An automated payroll tax filer for remote contractors."
+  },
+  {
+    "id": "en-next-gen",
+    "severity": "S1",
+    "pattern": "\\bnext[- ]gen(eration)?\\s+([a-z]+\\s+)?(platform|solution|tool|ai)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague generational hype.",
+    "fix": "Describe how the architecture differs from older tools.",
+    "positiveExample": "A next-generation observability platform.",
+    "negativeExample": "An eBPF profiler that samples kernel stacks with <1% CPU overhead."
+  },
+  {
+    "id": "en-revolutionary-platform",
+    "severity": "S1",
+    "pattern": "\\brevolutionary\\s+platform\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Empty hype.",
+    "fix": "Name the actual product category.",
+    "positiveExample": "Join our revolutionary platform.",
+    "negativeExample": "Use our freight-bidding marketplace."
+  },
+  {
+    "id": "en-seamless-experience",
+    "severity": "S1",
+    "pattern": "\\bseamless\\s+experience\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague UX claim.",
+    "fix": "Explain how state persists across devices.",
+    "positiveExample": "A seamless experience across web and mobile.",
+    "negativeExample": "Drafts saved on your phone appear in the desktop app within 2 seconds."
+  },
+  {
+    "id": "en-tailor-made",
+    "severity": "S2",
+    "pattern": "\\btailor[- ]made\\s+for\\s+modern\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic positioning.",
+    "fix": "Name the exact user workflow.",
+    "positiveExample": "Tailor-made for modern finance teams.",
+    "negativeExample": "Built for controllers closing monthly books across multiple currencies."
+  },
+  {
+    "id": "en-supercharge-growth",
+    "severity": "S1",
+    "pattern": "\\bsupercharge\\s+your\\s+business\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic business hype.",
+    "fix": "Specify the operational change.",
+    "positiveExample": "Supercharge your business with AI.",
+    "negativeExample": "Route incoming WhatsApp orders directly to your kitchen printer."
+  },
+  {
+    "id": "en-unlock-true-potential",
+    "severity": "S1",
+    "pattern": "\\bunlock\\s+your\\s+true\\s+potential\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Self-help cliche.",
+    "fix": "State the skill or metric improved.",
+    "positiveExample": "Unlock your true potential as a writer.",
+    "negativeExample": "Track daily word counts and deadline pace per chapter."
+  },
+  {
+    "id": "en-elevate-your-brand",
+    "severity": "S1",
+    "pattern": "\\belevate\\s+your\\s+brand\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Agency cliche.",
+    "fix": "List the deliverables: type system, packaging, web.",
+    "positiveExample": "We elevate your brand.",
+    "negativeExample": "We redesign your packaging, identity manual, and Shopify storefront."
+  },
+  {
+    "id": "en-holistic-approach",
+    "severity": "S1",
+    "pattern": "\\ba\\s+holistic\\s+approach\\s+to\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague consulting phrase.",
+    "fix": "List the stages covered.",
+    "positiveExample": "A holistic approach to application security.",
+    "negativeExample": "Static code scanning, dependency pinning, and quarterly penetration tests."
+  },
+  {
+    "id": "en-foster-meaningful",
+    "severity": "S1",
+    "pattern": "\\bfoster\\s+meaningful\\s+connections\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Social app cliche.",
+    "fix": "Describe how people meet or talk in the app.",
+    "positiveExample": "Foster meaningful connections with peers.",
+    "negativeExample": "Match with three other engineers in your city for monthly coffee."
+  },
+  {
+    "id": "en-tapestry-of-innovation",
+    "severity": "S1",
+    "pattern": "\\bweave\\s+a\\s+tapestry\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "LLM metaphor.",
+    "fix": "Describe the integration plainly.",
+    "positiveExample": "Weave a tapestry of data sources.",
+    "negativeExample": "Join Postgres tables with Stripe webhook events."
+  },
+  {
+    "id": "en-unleash-the-full",
+    "severity": "S1",
+    "pattern": "\\bunleash\\s+the\\s+full\\s+power\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hyperbolic verb phrase.",
+    "fix": "State the capability unlocked.",
+    "positiveExample": "Unleash the full power of your GPU.",
+    "negativeExample": "Run FP16 matrix multiplication across all tensor cores."
+  },
+  {
+    "id": "en-spearhead",
+    "severity": "S2",
+    "pattern": "\\bspearhead(ed|ing|s)?\\s+(the\\s+)?(development|initiative|transformation)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Resume buzzword.",
+    "fix": "Say 'led' or 'built' and give the scope.",
+    "positiveExample": "Spearheaded the transformation of billing.",
+    "negativeExample": "Led the three-engineer team that rewrote billing in Go."
+  },
+  {
+    "id": "en-synergistic",
+    "severity": "S1",
+    "pattern": "\\bsynergistic\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Corporate filler adjective.",
+    "fix": "Describe how the parts work together.",
+    "positiveExample": "A synergistic partnership.",
+    "negativeExample": "Jointly operating six cold-storage warehouses."
+  },
+  {
+    "id": "en-deep-dive-noun",
+    "severity": "S2",
+    "pattern": "\\ba\\s+deep\\s+dive\\s+into\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused article title cliche.",
+    "fix": "Name the specific question or bug investigated.",
+    "positiveExample": "A deep dive into memory leaks.",
+    "negativeExample": "Finding a 40 MB/hour buffer leak in Node.js streams."
+  },
+  {
+    "id": "en-demystify",
+    "severity": "S1",
+    "pattern": "\\bdemystif(y|ies|ying)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Condescending tutorial verb.",
+    "fix": "Use 'explain' or state the topic.",
+    "positiveExample": "Demystifying Kubernetes networking.",
+    "negativeExample": "How Kubernetes routes packet traffic between pods."
+  },
+  {
+    "id": "en-masterclass",
+    "severity": "S1",
+    "pattern": "\\ba\\s+masterclass\\s+in\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hyperbolic praise.",
+    "fix": "Explain why the example works well.",
+    "positiveExample": "This UI is a masterclass in simplicity.",
+    "negativeExample": "This checkout form asks for only three fields."
+  },
+  {
+    "id": "en-gold-standard",
+    "severity": "S1",
+    "pattern": "\\bthe\\s+gold\\s+standard\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unverified superlative.",
+    "fix": "Cite the benchmark or certification.",
+    "positiveExample": "The gold standard of audio interfaces.",
+    "negativeExample": "Measured at 124 dB dynamic range on an Audio Precision analyzer."
+  },
+  {
+    "id": "en-swiss-army-knife",
+    "severity": "S1",
+    "pattern": "\\bthe\\s+Swiss\\s+Army\\s+knife\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Tired software metaphor.",
+    "fix": "List the three or four functions the tool performs.",
+    "positiveExample": "The Swiss Army knife of PDF tools.",
+    "negativeExample": "Merge, split, OCR, and redact PDFs from the command line."
+  },
+  {
+    "id": "en-on-steroids",
+    "severity": "S1",
+    "pattern": "\\blike\\s+[A-Za-z0-9_]+\\s+on\\s+steroids\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Cliche pitch comparison.",
+    "fix": "State what your tool does that the other tool does not.",
+    "positiveExample": "It is like cron on steroids.",
+    "negativeExample": "It runs scheduled jobs with automatic retries and dead-letter queues."
+  },
+  {
+    "id": "en-secret-sauce",
+    "severity": "S1",
+    "pattern": "\\bour\\s+secret\\s+sauce\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague proprietary boast.",
+    "fix": "Explain the method or engineering trade-off.",
+    "positiveExample": "Our secret sauce is our matching algorithm.",
+    "negativeExample": "We score candidates by verified git commits and timezone overlap."
+  },
+  {
+    "id": "en-redefine-possible",
+    "severity": "S1",
+    "pattern": "\\bredefine\\s+what'?s\\s+possible\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Empty inspirational slogan.",
+    "fix": "State the concrete benchmark.",
+    "positiveExample": "Redefine what's possible in 3D printing.",
+    "negativeExample": "Sinter titanium brackets with 0.05 mm layer tolerance."
+  },
+  {
+    "id": "en-built-for-you",
+    "severity": "S1",
+    "pattern": "\\bbuilt\\s+with\\s+love\\s+for\\s+modern\\s+teams\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic SaaS footer/hero line.",
+    "fix": "Name the actual audience.",
+    "positiveExample": "Built with love for modern teams.",
+    "negativeExample": "Built for structural engineering firms."
+  },
+  {
+    "id": "en-unlock-efficiency",
+    "severity": "S1",
+    "pattern": "\\bunlock\\s+unprecedented\\s+efficiency\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Stacked cliches.",
+    "fix": "Give the time or cost delta.",
+    "positiveExample": "Unlock unprecedented efficiency in warehousing.",
+    "negativeExample": "Cut order picking walks from 4 km per shift to 1.8 km."
+  },
+  {
+    "id": "en-unprecedented",
+    "severity": "S1",
+    "pattern": "\\bunprecedented\\s+(scale|speed|visibility|control)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hyperbolic modifier.",
+    "fix": "Give the exact figure.",
+    "positiveExample": "Unprecedented visibility into network traffic.",
+    "negativeExample": "Packet-level inspection across all 10GbE interfaces."
+  },
+  {
+    "id": "en-groundbreaking",
+    "severity": "S1",
+    "pattern": "\\bgroundbreaking\\s+(platform|technology|solution)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Self-awarded praise.",
+    "fix": "Explain what is new.",
+    "positiveExample": "Our groundbreaking platform.",
+    "negativeExample": "Our browser-based Gerber PCB viewer."
+  },
+  {
+    "id": "en-trailblazing",
+    "severity": "S1",
+    "pattern": "\\btrailblazing\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "PR hype word.",
+    "fix": "State the date or first-mover fact.",
+    "positiveExample": "A trailblazing approach to solar storage.",
+    "negativeExample": "Installed the first grid-scale iron-air battery in Upper Egypt."
+  },
+  {
+    "id": "en-visionary",
+    "severity": "S1",
+    "pattern": "\\bvisionary\\s+(leaders|team|platform)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Self-aggrandizing adjective.",
+    "fix": "State the team's track record.",
+    "positiveExample": "Led by visionary leaders.",
+    "negativeExample": "Founded by two former turbine maintenance engineers."
+  },
+  {
+    "id": "en-frictionless-checkout",
+    "severity": "S1",
+    "pattern": "\\ba\\s+truly\\s+frictionless\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Intensified buzzword.",
+    "fix": "Describe the step count.",
+    "positiveExample": "A truly frictionless login.",
+    "negativeExample": "Sign in with a passkey in one tap."
+  },
+  {
+    "id": "en-transform-the-way",
+    "severity": "S1",
+    "pattern": "\\btransform\\s+the\\s+way\\s+you\\s+work\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic hero promise.",
+    "fix": "Describe the daily task that changes.",
+    "positiveExample": "Transform the way you work.",
+    "negativeExample": "Review pull requests from your terminal."
+  },
+  {
+    "id": "en-powering-the-future",
+    "severity": "S1",
+    "pattern": "\\bpowering\\s+the\\s+future\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Venture-deck cliche.",
+    "fix": "State what you power today.",
+    "positiveExample": "Powering the future of freight.",
+    "negativeExample": "Routing 1,400 refrigerated trucks daily."
+  },
+  {
+    "id": "en-next-frontier",
+    "severity": "S1",
+    "pattern": "\\bthe\\s+next\\s+frontier\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Space-age cliche.",
+    "fix": "Name the specific technical domain.",
+    "positiveExample": "The next frontier of database indexing.",
+    "negativeExample": "Vector similarity search inside SQLite."
+  },
+  {
+    "id": "en-designed-to-delight",
+    "severity": "S1",
+    "pattern": "\\bdesigned\\s+to\\s+delight\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Self-congratulatory design phrase.",
+    "fix": "Show the feature.",
+    "positiveExample": "Every screen is designed to delight.",
+    "negativeExample": "Every table supports copy-paste directly into Excel."
+  },
+  {
+    "id": "en-seamlessly-scale",
+    "severity": "S1",
+    "pattern": "\\bseamlessly\\s+scale\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hype scaling promise.",
+    "fix": "Explain how shards or replicas are added.",
+    "positiveExample": "Seamlessly scale from 1 to 1M users.",
+    "negativeExample": "Add read replicas with zero downtime via logical replication."
+  },
+  {
+    "id": "en-effortless-collaboration",
+    "severity": "S1",
+    "pattern": "\\beffortless\\s+collaboration\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague teamwork promise.",
+    "fix": "Explain the concurrency model.",
+    "positiveExample": "Effortless collaboration for legal teams.",
+    "negativeExample": "Simultaneous redlining with per-clause blame history."
+  },
+  {
+    "id": "en-supercharge-workflow",
+    "severity": "S1",
+    "pattern": "\\bsupercharge\\s+your\\s+workflow\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Canonical AI landing page H1.",
+    "fix": "State the exact task automated.",
+    "positiveExample": "Supercharge your workflow with AI.",
+    "negativeExample": "Convert hand-drawn P&ID sketches into AutoCAD blocks."
+  },
+  {
+    "id": "en-elevate-experience",
+    "severity": "S1",
+    "pattern": "\\belevate\\s+the\\s+customer\\s+experience\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic CX slogan.",
+    "fix": "State how response time or resolution improves.",
+    "positiveExample": "Elevate the customer experience.",
+    "negativeExample": "Send automatic SMS links when a repair technician is 15 minutes away."
+  },
+  {
+    "id": "en-holistic-ecosystem",
+    "severity": "S1",
+    "pattern": "\\bholistic\\s+ecosystem\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Double buzzword.",
+    "fix": "List the products that interoperate.",
+    "positiveExample": "A holistic ecosystem for clinics.",
+    "negativeExample": "Appointment booking, EHR notes, and insurance claim submission."
+  },
+  {
+    "id": "en-robust-capabilities",
+    "severity": "S1",
+    "pattern": "\\brobust\\s+capabilities\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague enterprise filler.",
+    "fix": "List the capabilities.",
+    "positiveExample": "Offering robust capabilities for compliance.",
+    "negativeExample": "Automated SOC 2 evidence collection from GitHub and AWS."
+  },
+  {
+    "id": "en-cutting-edge-ai",
+    "severity": "S1",
+    "pattern": "\\bcutting[- ]edge\\s+AI\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hype AI phrase.",
+    "fix": "Name the model architecture and task.",
+    "positiveExample": "Powered by cutting-edge AI.",
+    "negativeExample": "Uses a fine-tuned Whisper model for medical dictation."
+  },
+  {
+    "id": "en-leverage-ai",
+    "severity": "S1",
+    "pattern": "\\bleverage\\s+the\\s+power\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Verbose padding around 'use'.",
+    "fix": "Replace with 'use'.",
+    "positiveExample": "Leverage the power of edge caching.",
+    "negativeExample": "Use edge caching to serve static catalogs in 18 ms."
+  },
+  {
+    "id": "en-delve-deeper",
+    "severity": "S1",
+    "pattern": "\\bdelve\\s+deeper\\s+into\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Redundant LLM phrase.",
+    "fix": "Use 'examine' or 'read'.",
+    "positiveExample": "Delve deeper into the benchmark results.",
+    "negativeExample": "Read the full benchmark methodology."
+  },
+  {
+    "id": "en-testament-commitment",
+    "severity": "S1",
+    "pattern": "\\ba\\s+testament\\s+to\\s+our\\s+commitment\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "PR boilerplate.",
+    "fix": "State the action taken.",
+    "positiveExample": "This certification is a testament to our commitment.",
+    "negativeExample": "We completed our ISO 27001 surveillance audit in May 2026."
+  },
+  {
+    "id": "en-beacon-of-hope",
+    "severity": "S1",
+    "pattern": "\\ba\\s+beacon\\s+of\\s+excellence\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overblown praise.",
+    "fix": "Give the factual history.",
+    "positiveExample": "A beacon of excellence in vocational training.",
+    "negativeExample": "Graduated 1,900 certified CNC machinists since 2014."
+  },
+  {
+    "id": "en-unlock-growth",
+    "severity": "S1",
+    "pattern": "\\bunlock\\s+sustainable\\s+growth\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Consulting slogan.",
+    "fix": "Explain the unit economics.",
+    "positiveExample": "Unlock sustainable growth.",
+    "negativeExample": "Reduce customer churn from 4.2% to 2.1% per month."
+  },
+  {
+    "id": "en-revolutionize-industry",
+    "severity": "S1",
+    "pattern": "\\brevolutionizing\\s+the\\s+[a-z]+\\s+industry\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Grandiose pitch cliche.",
+    "fix": "Describe the specific service.",
+    "positiveExample": "Revolutionizing the construction industry.",
+    "negativeExample": "Delivering ready-mix concrete with live slump-test telemetry."
+  },
+  {
+    "id": "en-empower-creators",
+    "severity": "S1",
+    "pattern": "\\bempowering\\s+the\\s+next\\s+generation\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic mission statement.",
+    "fix": "Say what you provide and to whom.",
+    "positiveExample": "Empowering the next generation of engineers.",
+    "negativeExample": "Providing free FPGA development kits to public university labs."
+  },
+  {
+    "id": "en-seamless-handoff",
+    "severity": "S1",
+    "pattern": "\\bseamless\\s+transition\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused transition phrase.",
+    "fix": "Explain how data moves from the old system to the new.",
+    "positiveExample": "Ensure a seamless transition from legacy ERP.",
+    "negativeExample": "Run both ledgers in parallel for 30 days with automated nightly diffs."
+  },
+  {
+    "id": "en-tailored-solutions",
+    "severity": "S1",
+    "pattern": "\\btailored\\s+solutions\\s+that\\s+drive\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Agency filler.",
+    "fix": "State the deliverable.",
+    "positiveExample": "Tailored solutions that drive growth.",
+    "negativeExample": "Custom B2B ordering portals connected to SAP Business One."
+  },
+  {
+    "id": "en-dynamic-landscape",
+    "severity": "S1",
+    "pattern": "\\bin\\s+a\\s+rapidly\\s+changing\\s+landscape\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "LLM intro cliche.",
+    "fix": "Name the actual market change.",
+    "positiveExample": "In a rapidly changing landscape, agility is key.",
+    "negativeExample": "When container spot rates swing 30% in a week, fixed contracts break."
+  },
+  {
+    "id": "en-pivotal-role",
+    "severity": "S1",
+    "pattern": "\\bplays\\s+a\\s+pivotal\\s+role\\s+in\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "LLM essay phrase.",
+    "fix": "Use a direct transitive verb.",
+    "positiveExample": "Caching plays a pivotal role in reducing load.",
+    "negativeExample": "Caching cuts database read load by 78%."
+  },
+  {
+    "id": "en-cornerstone-of",
+    "severity": "S2",
+    "pattern": "\\bthe\\s+cornerstone\\s+of\\s+our\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Rhetorical cliche.",
+    "fix": "State the core practice directly.",
+    "positiveExample": "Testing is the cornerstone of our workflow.",
+    "negativeExample": "Every commit runs 1,400 integration tests against a real Postgres instance."
+  },
+  {
+    "id": "en-poised-to",
+    "severity": "S2",
+    "pattern": "\\bpoised\\s+to\\s+transform\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Speculative hype.",
+    "fix": "State what the product does right now.",
+    "positiveExample": "Poised to transform supply chains.",
+    "negativeExample": "Tracks container temperature and door-open events via satellite."
+  },
+  {
+    "id": "en-plethora-of",
+    "severity": "S1",
+    "pattern": "\\ba\\s+plethora\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overused LLM quantity phrase.",
+    "fix": "Give the exact count.",
+    "positiveExample": "A plethora of integrations.",
+    "negativeExample": "24 native integrations including Slack, Jira, and PagerDuty."
+  },
+  {
+    "id": "en-myriad-of",
+    "severity": "S1",
+    "pattern": "\\ba\\s+myriad\\s+of\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Poetic filler word.",
+    "fix": "State the number.",
+    "positiveExample": "Solves a myriad of formatting issues.",
+    "negativeExample": "Fixes 18 common PDF font-embedding errors."
+  },
+  {
+    "id": "en-unleash-creativity",
+    "severity": "S1",
+    "pattern": "\\bunleash\\s+your\\s+creativity\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic creative-tool slogan.",
+    "fix": "Name the specific tool capability.",
+    "positiveExample": "Unleash your creativity with our brush engine.",
+    "negativeExample": "Import custom ABR pressure-sensitive brushes at 120 Hz."
+  },
+  {
+    "id": "en-streamline-operations",
+    "severity": "S1",
+    "pattern": "\\bstreamline\\s+your\\s+operations\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic B2B operations promise.",
+    "fix": "Name the exact bottleneck removed.",
+    "positiveExample": "Streamline your operations today.",
+    "negativeExample": "Dispatch drivers directly from incoming EDI purchase orders."
+  },
+  {
+    "id": "en-elevate-your-game",
+    "severity": "S1",
+    "pattern": "\\belevate\\s+your\\s+game\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Sports cliche in SaaS copy.",
+    "fix": "State the concrete improvement.",
+    "positiveExample": "Elevate your game in sales.",
+    "negativeExample": "Record and transcribe outbound calls with automatic CRM logging."
+  },
+  {
+    "id": "en-seamless-collaboration",
+    "severity": "S1",
+    "pattern": "\\bseamless\\s+collaboration\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic teamwork phrase.",
+    "fix": "Explain how two users edit or review together.",
+    "positiveExample": "Built for seamless collaboration.",
+    "negativeExample": "Two engineers can edit the same schematic with live cursor presence."
+  },
+  {
+    "id": "en-cutting-edge-solutions",
+    "severity": "S1",
+    "pattern": "\\bcutting[- ]edge\\s+solutions\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Generic tech vendor phrase.",
+    "fix": "Name the specific equipment or software.",
+    "positiveExample": "We provide cutting-edge solutions.",
+    "negativeExample": "We supply 5-axis CNC milling centers and tooling fixtures."
+  },
+  {
+    "id": "en-empower-individuals",
+    "severity": "S1",
+    "pattern": "\\bempower\\s+individuals\\s+and\\s+teams\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague mission phrase.",
+    "fix": "Say who uses the software and what it produces.",
+    "positiveExample": "We empower individuals and teams.",
+    "negativeExample": "Freelance translators and localization agencies use our CAT editor."
+  },
+  {
+    "id": "en-unlock-value",
+    "severity": "S1",
+    "pattern": "\\bunlock\\s+hidden\\s+value\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Consulting cliché.",
+    "fix": "Name the revenue or cost recovery source.",
+    "positiveExample": "Unlock hidden value in your warehouse.",
+    "negativeExample": "Liquidate slow-moving spare parts through our B2B surplus marketplace."
+  },
+  {
+    "id": "en-transform-your-business",
+    "severity": "S1",
+    "pattern": "\\btransform\\s+your\\s+business\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Overblown promise.",
+    "fix": "State the concrete problem solved.",
+    "positiveExample": "Transform your business with cloud accounting.",
+    "negativeExample": "Issue tax-compliant e-invoices from any browser."
+  },
+  {
+    "id": "en-revolutionize-workflow",
+    "severity": "S1",
+    "pattern": "\\brevolutionize\\s+your\\s+workflow\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hyperbolic workflow claim.",
+    "fix": "State how many steps or hours are saved.",
+    "positiveExample": "Revolutionize your workflow.",
+    "negativeExample": "Generate bill-of-materials spreadsheets directly from SolidWorks assemblies."
+  },
+  {
+    "id": "en-holistic-view",
+    "severity": "S1",
+    "pattern": "\\bget\\s+a\\s+holistic\\s+view\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Buzzword phrase.",
+    "fix": "List the specific metrics combined on the page.",
+    "positiveExample": "Get a holistic view of your fleet.",
+    "negativeExample": "See fuel burn, tire pressure, and driver hours on one map."
+  },
+  {
+    "id": "en-robust-security",
+    "severity": "S1",
+    "pattern": "\\brobust\\s+security\\s+measures\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Vague security reassurance.",
+    "fix": "Cite the encryption cipher, audit standard, or key storage.",
+    "positiveExample": "Protected by robust security measures.",
+    "negativeExample": "Encrypted at rest with AES-256 and audited annually for SOC 2 Type II."
+  },
+  {
+    "id": "en-supercharge-team",
+    "severity": "S1",
+    "pattern": "\\bsupercharge\\s+your\\s+team\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Hype verb phrase.",
+    "fix": "Describe what the team can ship or resolve faster.",
+    "positiveExample": "Supercharge your team with templates.",
+    "negativeExample": "Spin up a compliant staging environment in 90 seconds."
+  },
+  {
+    "id": "en-future-of-work",
+    "severity": "S1",
+    "pattern": "\\bbuilt\\s+for\\s+the\\s+future\\s+of\\s+work\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Post-2020 VC cliche.",
+    "fix": "Explain how async or remote teams use the tool.",
+    "positiveExample": "Built for the future of work.",
+    "negativeExample": "Designed for distributed engineering teams across 4 time zones."
+  },
+  {
+    "id": "en-next-level-performance",
+    "severity": "S1",
+    "pattern": "\\bnext[- ]level\\s+performance\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "Unquantified performance boast.",
+    "fix": "State throughput, FPS, or latency.",
+    "positiveExample": "Experience next-level performance.",
+    "negativeExample": "Sustains 120 fps while scrubbing 8K ProRes timelines."
+  }
+]

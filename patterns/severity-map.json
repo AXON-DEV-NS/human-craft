@@ -1,0 +1,31 @@
+{
+  "levels": {
+    "S0": {
+      "label": "Explicit machine or template fingerprint",
+      "maxAllowed": 0,
+      "blocksRelease": true,
+      "description": "Unedited generator artifacts, placeholder links, fake domains, agent config leftovers, or lorem ipsum."
+    },
+    "S1": {
+      "label": "High-confidence AI tell",
+      "maxAllowed": 0,
+      "blocksRelease": true,
+      "description": "Cliche marketing vocabulary, default indigo-violet-pink hero gradients, unmotivated three-card icon grids, or default framework titles."
+    },
+    "S2": {
+      "label": "Medium-confidence structural or stylistic tell",
+      "maxAllowed": 5,
+      "blocksRelease": false,
+      "requiresJustification": true,
+      "description": "Uniform section rhythm, generic handler identifiers, redundant comments explaining syntax, or uncalibrated type scales."
+    },
+    "S3": {
+      "label": "Soft stylistic signal",
+      "maxAllowed": 20,
+      "blocksRelease": false,
+      "requiresJustification": false,
+      "description": "Minor stylistic habits recorded in the audit report for review."
+    }
+  },
+  "defaultAllowlistFile": "allowlist.json"
+}

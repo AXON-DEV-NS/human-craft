@@ -1,0 +1,362 @@
+[
+  {
+    "id": "cid-hero-blob",
+    "severity": "S1",
+    "pattern": "\\b(hero-blob|glow-blob|purple-blob|gradient-blob)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Decorative background blob class/ID.",
+    "fix": "Remove decorative blobs.",
+    "positiveExample": "<div id='hero-blob'></div>",
+    "negativeExample": "<div class='hero-media'></div>"
+  },
+  {
+    "id": "cid-bento-card",
+    "severity": "S2",
+    "pattern": "\\b(bento-grid|bento-item|bento-box)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Generic bento template class.",
+    "fix": "Name the grid after its content (`spec-grid`, `dispatch-summary`).",
+    "positiveExample": "<div class='bento-grid'>",
+    "negativeExample": "<div class='spec-grid'>"
+  },
+  {
+    "id": "cid-glass-panel",
+    "severity": "S1",
+    "pattern": "\\b(glass-card|glass-panel|glassmorphism)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Generic glassmorphism class.",
+    "fix": "Use semantic surface names (`surface-card`, `modal-sheet`).",
+    "positiveExample": "<div class='glass-card'>",
+    "negativeExample": "<div class='modal-sheet'>"
+  },
+  {
+    "id": "cid-gradient-text",
+    "severity": "S1",
+    "pattern": "\\b(gradient-text|text-gradient|rainbow-text)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Gradient text utility class.",
+    "fix": "Use solid typography tokens.",
+    "positiveExample": "<span class='gradient-text'>Fast</span>",
+    "negativeExample": "<span class='font-semibold'>14 ms</span>"
+  },
+  {
+    "id": "cid-feature-card-numbered",
+    "severity": "S2",
+    "pattern": "\\b(feature-1|feature-2|feature-3|card-1|card-2|card-3)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Numbered placeholder class or ID (`feature-1`, `card-2`).",
+    "fix": "Name elements after the specific feature (`feature-customs-calc`).",
+    "positiveExample": "<div id='feature-1'>",
+    "negativeExample": "<div id='feature-customs-calc'>"
+  },
+  {
+    "id": "cid-section-1-2-3",
+    "severity": "S2",
+    "pattern": "\\b(section-1|section-2|section-3|sec1|sec2)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Numbered section ID.",
+    "fix": "Use descriptive landmark IDs (`#pricing`, `#specifications`).",
+    "positiveExample": "<section id='section-1'>",
+    "negativeExample": "<section id='specifications'>"
+  },
+  {
+    "id": "cid-my-button",
+    "severity": "S2",
+    "pattern": "\\b(my-button|my-card|my-modal|my-input|custom-div)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "`my-*` tutorial class or ID.",
+    "fix": "Use semantic component classes (`.btn-primary`, `.dialog-frame`).",
+    "positiveExample": "<button id='my-button'>",
+    "negativeExample": "<button class='btn-primary'>"
+  },
+  {
+    "id": "cid-test-div",
+    "severity": "S1",
+    "pattern": "\\b(test-div|temp-container|dummy-box|foo-bar)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Temporary debugging class or ID left in markup.",
+    "fix": "Rename to reflect the content role.",
+    "positiveExample": "<div class='temp-container'>",
+    "negativeExample": "<div class='invoice-preview'>"
+  },
+  {
+    "id": "cid-ai-badge",
+    "severity": "S1",
+    "pattern": "\\b(ai-badge|magic-pill|sparkle-icon|glow-button)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "AI hype UI class name.",
+    "fix": "Use plain functional names (`.status-badge`, `.btn-submit`).",
+    "positiveExample": "<span class='magic-pill'>New</span>",
+    "negativeExample": "<span class='release-tag'>v2.4</span>"
+  },
+  {
+    "id": "cid-floating-card-1",
+    "severity": "S2",
+    "pattern": "\\b(floating-card-1|floating-card-2|floating-ui-mockup)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Floating decorative UI mockup class.",
+    "fix": "Show a real product screenshot or interactive figure.",
+    "positiveExample": "<div class='floating-card-1'>",
+    "negativeExample": "<figure class='product-capture'>"
+  },
+  {
+    "id": "cid-marquee-track",
+    "severity": "S2",
+    "pattern": "\\b(marquee-track|infinite-scroll-logos|logo-ticker-track)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Infinite logo marquee class.",
+    "fix": "Use a static logo grid.",
+    "positiveExample": "<div class='logo-ticker-track'>",
+    "negativeExample": "<ul class='client-list'>"
+  },
+  {
+    "id": "cid-counter-up",
+    "severity": "S2",
+    "pattern": "\\b(counter-up|stat-counter-animate|number-ticker)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Animated vanity stat counter class.",
+    "fix": "Display verified figures statically.",
+    "positiveExample": "<span class='counter-up'>10000</span>",
+    "negativeExample": "<span class='tabular-nums'>340</span>"
+  },
+  {
+    "id": "cid-testimonial-carousel-ai",
+    "severity": "S2",
+    "pattern": "\\b(testimonial-slider-auto|fake-review-card)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Auto-rotating testimonial carousel class.",
+    "fix": "Display 1-3 verified quotes statically so readers can finish reading at their own pace.",
+    "positiveExample": "<div class='testimonial-slider-auto'>",
+    "negativeExample": "<blockquote class='client-quote'>"
+  },
+  {
+    "id": "cid-pricing-popular-ribbon",
+    "severity": "S1",
+    "pattern": "\\b(popular-ribbon|most-popular-tag|best-value-badge)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Template 'Most Popular' ribbon class.",
+    "fix": "State who the plan is for in plain text.",
+    "positiveExample": "<span class='most-popular-tag'>Popular</span>",
+    "negativeExample": "<span class='tier-audience'>Up to 20 seats</span>"
+  },
+  {
+    "id": "cid-cursor-follower",
+    "severity": "S1",
+    "pattern": "\\b(cursor-follower|custom-cursor-dot|mouse-glow-tracker)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Custom cursor follower element.",
+    "fix": "Remove custom cursor overlays.",
+    "positiveExample": "<div id='mouse-glow-tracker'></div>",
+    "negativeExample": "<main id='main-content'></main>"
+  },
+  {
+    "id": "cid-particles-js",
+    "severity": "S1",
+    "pattern": "\\b(particles-js|ts-particles-bg|starfield-canvas)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Particle background container ID.",
+    "fix": "Remove decorative particle canvases.",
+    "positiveExample": "<div id='particles-js'></div>",
+    "negativeExample": "<header class='site-header'></header>"
+  },
+  {
+    "id": "cid-lorem-text",
+    "severity": "S0",
+    "pattern": "\\b(lorem-text|placeholder-copy|dummy-paragraph)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Class explicitly marking placeholder text.",
+    "fix": "Replace with final copy.",
+    "positiveExample": "<p class='placeholder-copy'>...</p>",
+    "negativeExample": "<p class='lead-summary'>...</p>"
+  },
+  {
+    "id": "cid-shadcn-demo-wrapper",
+    "severity": "S1",
+    "pattern": "\\b(shadcn-demo|v0-preview-wrapper|lovable-canvas)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Generator wrapper class.",
+    "fix": "Use project layout classes.",
+    "positiveExample": "<div class='v0-preview-wrapper'>",
+    "negativeExample": "<div class='page-shell'>"
+  },
+  {
+    "id": "cid-wrapper-1-2",
+    "severity": "S2",
+    "pattern": "\\b(wrapper-1|wrapper-2|inner-wrapper-1|container-outer-2)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Numbered wrapper soup class.",
+    "fix": "Flatten the DOM and use CSS Grid on the parent.",
+    "positiveExample": "<div class='wrapper-1'><div class='inner-wrapper-1'>",
+    "negativeExample": "<section class='layout-grid'>"
+  },
+  {
+    "id": "cid-neon-text",
+    "severity": "S1",
+    "pattern": "\\b(neon-text|cyber-glow|futuristic-heading)\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "css",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Cyberpunk/neon template class on non-gaming site.",
+    "fix": "Use typographic scale and contrast.",
+    "positiveExample": "<h1 class='neon-text'>",
+    "negativeExample": "<h1 class='page-title'>"
+  }
+]

@@ -1,0 +1,2270 @@
+[
+  {
+    "id": "ar-irtaqi-bitajribatik",
+    "severity": "S1",
+    "pattern": "ارتقِ\\s+ب(تجربتك|أعمالك|مشروعك|مستواك)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه دعائي مترجم عن Elevate your.",
+    "fix": "اذكر النتيجة العملية مباشرة بالأرقام أو الأفعال.",
+    "positiveExample": "ارتقِ بتجربتك الرقمية معنا اليوم.",
+    "negativeExample": "قلّل وقت إصدار الفواتير من عشر دقائق إلى ثلاثين ثانية."
+  },
+  {
+    "id": "ar-hulul-mubtakara",
+    "severity": "S1",
+    "pattern": "حلول(نا)?\\s+(مبتكرة|إبداعية)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عبارة عامة لا تشرح طبيعة الخدمة.",
+    "fix": "سمّ الخدمة أو الأداة بدقة.",
+    "positiveExample": "نقدم حلول مبتكرة للشركات الناشئة.",
+    "negativeExample": "نصمّم ونبرمج متاجر إلكترونية مربوطة ببوابات الدفع المحلية."
+  },
+  {
+    "id": "ar-hulul-mutakamila",
+    "severity": "S1",
+    "pattern": "حلول\\s+متكاملة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "حشو تسويقي شائع في مواقع الشركات.",
+    "fix": "عدّد الخدمات المشمولة فعليًا.",
+    "positiveExample": "نوفر حلول متكاملة لإدارة المطاعم.",
+    "negativeExample": "نظام نقاط بيع، وشاشة مطبخ، وإدارة مخزون في برنامج واحد."
+  },
+  {
+    "id": "ar-nasa-lil-tamayyuz",
+    "severity": "S1",
+    "pattern": "نسعى\\s+(دائمًا\\s+)?لتحقيق\\s+التميز",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "جملة إنشائية لا تضيف معلومة.",
+    "fix": "اذكر معيار الجودة أو الضمان الذي تلتزم به.",
+    "positiveExample": "نسعى لتحقيق التميز في كل مشروع.",
+    "negativeExample": "نسلّم كل مشروع مع ضمان صيانة مجاني لمدة ستة أشهر."
+  },
+  {
+    "id": "ar-bikulli-shaghaf",
+    "severity": "S1",
+    "pattern": "بكل\\s+شغف",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تعبير عاطفي مستهلك في النصوص المولدة.",
+    "fix": "استبدله بخبرة الفريق أو عدد سنوات العمل.",
+    "positiveExample": "نعمل بكل شغف لخدمة عملائنا.",
+    "negativeExample": "ندير شحنات التبريد بين القاهرة والإسكندرية منذ 2016."
+  },
+  {
+    "id": "ar-rihlatuka-nahwa",
+    "severity": "S1",
+    "pattern": "رحلتك\\s+نحو\\s+(النجاح|التميز|المستقبل|التحول)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "استعارة درامية مترجمة عن Your journey toward.",
+    "fix": "سمّ الخطوة الأولى التي يقوم بها المستخدم.",
+    "positiveExample": "ابدأ رحلتك نحو التحول الرقمي.",
+    "negativeExample": "انقل دفاتر الحسابات الورقية إلى نظام سحابي خلال يومين."
+  },
+  {
+    "id": "ar-fi-alam-yatasara",
+    "severity": "S0",
+    "pattern": "في\\s+عالم\\s+(يتسارع|سريع\\s+التغير|رقمي\\s+متسارع)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مقدمة إنشائية كلاسيكية من نماذج اللغة.",
+    "fix": "احذف المقدمة وابدأ بالمشكلة مباشرة.",
+    "positiveExample": "في عالم يتسارع، تحتاج شركتك إلى السرعة.",
+    "negativeExample": "تأخر الرد على رسائل العملاء يضيّع ثلث المبيعات اليومية."
+  },
+  {
+    "id": "ar-nuqaddim-afdhal",
+    "severity": "S1",
+    "pattern": "نقدم\\s+لك\\s+أفضل\\s+الخدمات",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ادعاء تفوق بلا دليل.",
+    "fix": "اشرح ما الذي تقدمه وكيف يُقاس.",
+    "positiveExample": "نقدم لك أفضل الخدمات المحاسبية.",
+    "negativeExample": "نراجع الإقرارات الضريبية الشهرية ونرفعها قبل الموعد بـ 48 ساعة."
+  },
+  {
+    "id": "ar-iktashif-alaman",
+    "severity": "S1",
+    "pattern": "اكتشف\\s+عالمًا\\s+من\\s+(الإمكانيات|الفرص|الإبداع)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عبارة إعلانية جوفاء.",
+    "fix": "اذكر الميزات المتاحة بوضوح.",
+    "positiveExample": "اكتشف عالمًا من الإمكانيات مع منصتنا.",
+    "negativeExample": "أنشئ تقارير المبيعات اليومية وصدّرها إلى إكسل بضغطة واحدة."
+  },
+  {
+    "id": "ar-atliq-inan",
+    "severity": "S1",
+    "pattern": "أطلق\\s+العنان\\s+ل(إبداعك|قدراتك|إمكانياتك|مشروعك)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لعبارة Unleash your potential.",
+    "fix": "اشرح ما الذي يستطيع المستخدم فعله بالأداة.",
+    "positiveExample": "أطلق العنان لإبداعك في التصميم.",
+    "negativeExample": "عدّل ألوان القالب وخطوطه مباشرة من المتصفح."
+  },
+  {
+    "id": "ar-tajriba-farida",
+    "severity": "S1",
+    "pattern": "تجربة\\s+(فريدة|استثنائية)\\s+لا\\s+مثيل\\s+لها",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مبالغة دعائية غير قابلة للإثبات.",
+    "fix": "صف تفاصيل الخدمة التي تميزها.",
+    "positiveExample": "نضمن لك تجربة فريدة لا مثيل لها.",
+    "negativeExample": "تحضير القهوة المختصة من محاصيل محمصة أسبوعيًا في المعادي."
+  },
+  {
+    "id": "ar-tajriba-salisa",
+    "severity": "S1",
+    "pattern": "تجربة\\s+(سلسة|مريحة)\\s+ومبتكرة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Seamless experience.",
+    "fix": "اذكر عدد الخطوات أو الوقت المستغرق.",
+    "positiveExample": "استمتع بتجربة سلسة ومبتكرة في الدفع.",
+    "negativeExample": "ادفع عبر فوري أو البطاقة البنكية في خطوتين دون إنشاء حساب."
+  },
+  {
+    "id": "ar-afaq-jadida",
+    "severity": "S1",
+    "pattern": "نفتح\\s+(لك\\s+)?آفاقًا\\s+جديدة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مجاز عام لا يوضح الفائدة.",
+    "fix": "سمّ السوق أو القناة الجديدة التي تفتحها.",
+    "positiveExample": "نفتح لك آفاقًا جديدة في التجارة.",
+    "negativeExample": "نربط متجرك بشركات الشحن في 27 محافظة."
+  },
+  {
+    "id": "ar-sharikuka-mithali",
+    "severity": "S1",
+    "pattern": "شريكك\\s+(المثالي|الاستراتيجي|الأول)\\s+للنجاح",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "لقب ذاتي مستهلك.",
+    "fix": "اذكر طبيعة التعاقد ونوع الشركات التي تخدمها.",
+    "positiveExample": "نحن شريكك المثالي للنجاح.",
+    "negativeExample": "ندير الحملات الإعلانية لعيادات الأسنان والمراكز الطبية."
+  },
+  {
+    "id": "ar-mustaqbal-yabda",
+    "severity": "S1",
+    "pattern": "المستقبل\\s+يبدأ\\s+هنا",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار إنشائي عام.",
+    "fix": "استبدله بعنوان يصف المنتج نفسه.",
+    "positiveExample": "المستقبل يبدأ هنا مع تقنياتنا.",
+    "negativeExample": "نظام حجز مواعيد العيادات عبر واتساب."
+  },
+  {
+    "id": "ar-bina-mustaqbal",
+    "severity": "S1",
+    "pattern": "نبني\\s+المستقبل\\s+معًا",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار شركات عام.",
+    "fix": "وضح ما الذي تبنيه الشركة فعليًا.",
+    "positiveExample": "نبني المستقبل معًا بخطى واثقة.",
+    "negativeExample": "نطوّر برمجيات إدارة المخازن لمصانع العاشر من رمضان."
+  },
+  {
+    "id": "ar-nahnu-huna-linusaedak",
+    "severity": "S2",
+    "pattern": "نحن\\s+هنا\\s+لمساعدتك\\s+على\\s+تحقيق\\s+أهدافك",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "جملة حشو عامة.",
+    "fix": "اذكر قناة التواصل وساعات العمل.",
+    "positiveExample": "نحن هنا لمساعدتك على تحقيق أهدافك.",
+    "negativeExample": "فريق الدعم متاح يوميًا من 9 صباحًا حتى 6 مساءً عبر الهاتف وواتساب."
+  },
+  {
+    "id": "ar-sawaa-kunta",
+    "severity": "S1",
+    "pattern": "سواء\\s+كنت\\s+[^،,]+\\s+أو\\s+[^،,]+[،,]?\\s*فإن",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لقالب Whether you are X or Y.",
+    "fix": "وجّه الكلام مباشرة إلى الفئة المستهدفة.",
+    "positiveExample": "سواء كنت مبتدئًا أو محترفًا فإن دورتنا تناسبك.",
+    "negativeExample": "الدورة مصممة لمحاسبي الشركات الذين يعرفون أساسيات إكسل."
+  },
+  {
+    "id": "ar-laysa-mujarrad",
+    "severity": "S1",
+    "pattern": "ليس\\s+مجرد\\s+[^،,]+[،,]?\\s*بل\\s+هو",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لقالب Not just X, it's Y.",
+    "fix": "عرّف المنتج في جملة خبرية مباشرة.",
+    "positiveExample": "ليس مجرد تطبيق مهام، بل هو أسلوب حياة.",
+    "negativeExample": "تطبيق يرتّب مهام الفريق اليومية ويربطها بمواعيد التسليم."
+  },
+  {
+    "id": "ar-wadaan-lil",
+    "severity": "S1",
+    "pattern": "قل\\s+وداعًا\\s+ل[^،,]+\\s+ومرحبًا\\s+ب",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لأسلوب الإعلانات التجارية.",
+    "fix": "اشرح ما الذي يستغني عنه المستخدم.",
+    "positiveExample": "قل وداعًا للفوضى ومرحبًا بالتنظيم.",
+    "negativeExample": "استغنِ عن دفاتر الحضور الورقية وسجّل البصمة من هاتف المشرف."
+  },
+  {
+    "id": "ar-kull-ma-tahtajuhu",
+    "severity": "S1",
+    "pattern": "كل\\s+ما\\s+تحتاجه\\s+في\\s+مكان\\s+واحد",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عبارة عامة مكررة في صفحات الهبوط.",
+    "fix": "عدّد الأدوات الثلاث أو الأربع الموجودة داخل النظام.",
+    "positiveExample": "كل ما تحتاجه في مكان واحد.",
+    "negativeExample": "الفواتير، والمخزون، ورواتب الموظفين في لوحة واحدة."
+  },
+  {
+    "id": "ar-bi-daghtat-zirr",
+    "severity": "S1",
+    "pattern": "بضغطة\\s+زر\\s+واحدة\\s+فقط",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مبالغة شائعة.",
+    "fix": "اذكر الخطوات الفعلية بدقة.",
+    "positiveExample": "أنجز جميع معاملاتك بضغطة زر واحدة فقط.",
+    "negativeExample": "اعتمد مسير الرواتب الشهري وصدّر ملف البنك في دقيقتين."
+  },
+  {
+    "id": "ar-fariq-mutahammis",
+    "severity": "S1",
+    "pattern": "فريق\\s+(متحمس|شغوف|متميز)\\s+من\\s+الخبراء",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "وصف ذاتي عام في صفحة من نحن.",
+    "fix": "اذكر تخصصات الفريق وخبراتهم الحقيقية.",
+    "positiveExample": "لدينا فريق شغوف من الخبراء.",
+    "negativeExample": "يضم المكتب أربعة مهندسين معماريين ومهندسيْ إنشائيين."
+  },
+  {
+    "id": "ar-khibra-tawila",
+    "severity": "S1",
+    "pattern": "خبرة\\s+طويلة\\s+في\\s+مجال",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عبارة مبهمة.",
+    "fix": "اذكر سنة التأسيس أو عدد المشاريع المنفذة.",
+    "positiveExample": "نمتلك خبرة طويلة في مجال الطباعة.",
+    "negativeExample": "نطبع الكتب والمجلات منذ عام 2008 في مطبعتنا بالجيزة."
+  },
+  {
+    "id": "ar-jawda-la-tudhaha",
+    "severity": "S1",
+    "pattern": "جودة\\s+لا\\s+تُضاهى",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ادعاء بلا معيار.",
+    "fix": "اذكر خامة التصنيع أو شهادة الفحص.",
+    "positiveExample": "نقدم منتجات بجودة لا تُضاهى.",
+    "negativeExample": "أخشاب زان روماني مجففة حراريًا بضمان خمس سنوات ضد التقوس."
+  },
+  {
+    "id": "ar-asaar-tanafusiya",
+    "severity": "S1",
+    "pattern": "بأسعار\\s+تنافسية\\s+للغاية",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه تجاري يهرب من ذكر السعر.",
+    "fix": "اعرض الأسعار الفعلية أو نطاق التكلفة.",
+    "positiveExample": "خدماتنا متاحة بأسعار تنافسية للغاية.",
+    "negativeExample": "تبدأ باقات مسك الدفاتر من 2,500 جنيه شهريًا."
+  },
+  {
+    "id": "ar-riaya-faiqa",
+    "severity": "S1",
+    "pattern": "عناية\\s+فائقة\\s+بأدق\\s+التفاصيل",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "حشو إنشائي.",
+    "fix": "اضرب مثالًا على تفصيلة حقيقية تعتني بها.",
+    "positiveExample": "نصنع كل قطعة بعناية فائقة بأدق التفاصيل.",
+    "negativeExample": "نخيط الحواف يدويًا بخيط كتان مشمّع مقاوم للقطع."
+  },
+  {
+    "id": "ar-tahqiq-ruyatak",
+    "severity": "S1",
+    "pattern": "نحوّل\\s+(رؤيتك|أحلامك)\\s+إلى\\s+واقع(\\s+ملموس)?",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار وكالات مستهلك.",
+    "fix": "اشرح خطوات العمل من الفكرة إلى التسليم.",
+    "positiveExample": "نحوّل أحلامك إلى واقع ملموس.",
+    "negativeExample": "نستلم المخطط المعماري ونسلّم الشقة مشطّبة خلال 90 يومًا."
+  },
+  {
+    "id": "ar-tamkin-al-sharikat",
+    "severity": "S1",
+    "pattern": "تمكين\\s+(الشركات|الأفراد|المؤسسات)\\s+من",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة مصدرية ثقيلة لكلمة Empowering.",
+    "fix": "استخدم فعلًا مضارعًا مباشرًا.",
+    "positiveExample": "نهدف إلى تمكين الشركات من النمو.",
+    "negativeExample": "نساعد المصانع على تتبع استهلاك الكهرباء لكل خط إنتاج."
+  },
+  {
+    "id": "ar-istafid-min-quwwat",
+    "severity": "S1",
+    "pattern": "استفد\\s+من\\s+قوة\\s+الذكاء\\s+الاصطناعي",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Harness the power of AI.",
+    "fix": "سمّ المهمة التي ينجزها النموذج.",
+    "positiveExample": "استفد من قوة الذكاء الاصطناعي في عملك.",
+    "negativeExample": "فرّغ المكالمات المسجلة إلى نص عربي قابل للبحث."
+  },
+  {
+    "id": "ar-madoum-bil-dhaka",
+    "severity": "S1",
+    "pattern": "مدعوم\\s+بأحدث\\s+تقنيات\\s+الذكاء\\s+الاصطناعي",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "حشو تقني عام.",
+    "fix": "اذكر ما يفعله النظام وكيف يدقق المستخدم النتيجة.",
+    "positiveExample": "نظامنا مدعوم بأحدث تقنيات الذكاء الاصطناعي.",
+    "negativeExample": "يقرأ النظام فواتير الموردين المصورة ويقترح قيد اليومية للمراجعة."
+  },
+  {
+    "id": "ar-naqla-nawiya",
+    "severity": "S1",
+    "pattern": "نقلة\\s+نوعية\\s+في\\s+عالم",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مبالغة صحفية.",
+    "fix": "اشرح الفرق العملي عن الطريقة السابقة.",
+    "positiveExample": "نقدم نقلة نوعية في عالم التعليم.",
+    "negativeExample": "حصص مسجلة مدتها 12 دقيقة مع تمارين تفاعلية تُصحَّح فوريًا."
+  },
+  {
+    "id": "ar-thawra-haqiqiya",
+    "severity": "S1",
+    "pattern": "ثورة\\s+حقيقية\\s+في\\s+مجال",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مبالغة دعائية.",
+    "fix": "صف الميزة بلغة هادئة ودقيقة.",
+    "positiveExample": "تطبيقنا يمثل ثورة حقيقية في مجال التوصيل.",
+    "negativeExample": "يوصل المندوب الطلبات داخل نفس الحي خلال 25 دقيقة."
+  },
+  {
+    "id": "ar-maayir-alamiya",
+    "severity": "S1",
+    "pattern": "وفق\\s+أعلى\\s+المعايير\\s+العالمية",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عبارة فضفاضة.",
+    "fix": "سمّ المعيار الدولي (مثل ISO 27001 أو WCAG 2.2 AA).",
+    "positiveExample": "نصمم المواقع وفق أعلى المعايير العالمية.",
+    "negativeExample": "نلتزم بمعيار WCAG 2.2 AA لتباين الألوان والتنقل بلوحة المفاتيح."
+  },
+  {
+    "id": "ar-nada-al-amil",
+    "severity": "S1",
+    "pattern": "نضع\\s+العميل\\s+في\\s+قلب\\s+اهتمامنا",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار علاقات عامة.",
+    "fix": "اذكر سياسة الاسترجاع أو الاستبدال الفعلية.",
+    "positiveExample": "نضع العميل في قلب اهتمامنا دائمًا.",
+    "negativeExample": "يمكنك استبدال أو استرجاع أي منتج خلال 14 يومًا دون سؤال."
+  },
+  {
+    "id": "ar-rahat-al-bal",
+    "severity": "S1",
+    "pattern": "نمنحك\\s+راحة\\s+البال\\s+التامة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لـ Complete peace of mind.",
+    "fix": "اذكر الضمان أو النسخ الاحتياطي.",
+    "positiveExample": "نمنحك راحة البال التامة مع خوادمنا.",
+    "negativeExample": "نأخذ نسخة احتياطية كل ساعة ونحتفظ بها في مركزين منفصلين."
+  },
+  {
+    "id": "ar-bikulli-suhula",
+    "severity": "S1",
+    "pattern": "بكل\\s+سهولة\\s+ويسر",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "حشو ظرفي مكرر.",
+    "fix": "اذكر كيف تتم العملية.",
+    "positiveExample": "سدد فواتيرك بكل سهولة ويسر.",
+    "negativeExample": "سدد فاتورة الإنترنت برقم الهاتف عبر المحفظة الإلكترونية."
+  },
+  {
+    "id": "ar-minassa-raida",
+    "severity": "S1",
+    "pattern": "المنصة\\s+الرائدة\\s+في\\s+(المنطقة|الشرق\\s+الأوسط)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ادعاء ريادة غير موثق.",
+    "fix": "اذكر عدد العملاء الفعليين أو نطاق العمل.",
+    "positiveExample": "نحن المنصة الرائدة في الشرق الأوسط.",
+    "negativeExample": "يستخدم البرنامج 180 مكتب محاماة في مصر والسعودية."
+  },
+  {
+    "id": "ar-nukhba-min",
+    "severity": "S1",
+    "pattern": "نخبة\\s+من\\s+أفضل\\s+(الخبراء|المتخصصين|الأطباء)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تعبير دعائي مستهلك.",
+    "fix": "اذكر أسماء الأطباء أو المتخصصين ومؤهلاتهم.",
+    "positiveExample": "يضم المركز نخبة من أفضل الأطباء.",
+    "negativeExample": "يشرف على العيادة ثلاثة استشاريين زملاء كلية الجراحين الملكية."
+  },
+  {
+    "id": "ar-tawasal-maana-alan",
+    "severity": "S2",
+    "pattern": "لا\\s+تتردد\\s+في\\s+التواصل\\s+معنا\\s+اليوم",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "خاتمة قالبية.",
+    "fix": "ضع رقم الهاتف أو نموذج الطلب مع وقت الرد المتوقع.",
+    "positiveExample": "لا تتردد في التواصل معنا اليوم.",
+    "negativeExample": "أرسل مقاسات المطبخ على واتساب وسنرد بمقايسة مفصلة خلال يوم عمل."
+  },
+  {
+    "id": "ar-idghat-huna",
+    "severity": "S1",
+    "pattern": ">\\s*اضغط\\s+هنا\\s*<",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "نص رابط مبهم يضر قارئات الشاشة.",
+    "fix": "سمّ الوجهة التي يفتحها الرابط.",
+    "positiveExample": "<a href='/menu.pdf'>اضغط هنا</a>",
+    "negativeExample": "<a href='/menu.pdf'>حمّل قائمة الطعام والأسعار (PDF)</a>"
+  },
+  {
+    "id": "ar-irif-al-mazid",
+    "severity": "S1",
+    "pattern": ">\\s*اعرف\\s+المزيد\\s*<",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "زر عام بلا سياق.",
+    "fix": "حدد ما الذي سيعرفه القارئ عند الضغط.",
+    "positiveExample": "<a href='/shipping'>اعرف المزيد</a>",
+    "negativeExample": "<a href='/shipping'>راجع مواعيد وتكلفة الشحن للمحافظات</a>"
+  },
+  {
+    "id": "ar-ibda-alan",
+    "severity": "S2",
+    "pattern": ">\\s*ابدأ\\s+الآن\\s*<",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "زر عام لا يوضح الخطوة التالية.",
+    "fix": "سمّ الإجراء الفعلي (مثل: أنشئ حسابك، احجز معاينة).",
+    "positiveExample": "<button>ابدأ الآن</button>",
+    "negativeExample": "<button>احجز موعد معاينة للموقع</button>"
+  },
+  {
+    "id": "ar-fi-khitam-al-mataf",
+    "severity": "S2",
+    "pattern": "وفي\\s+(ختام\\s+المطاف|نهاية\\s+المطاف)\\s*،",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "رابط إنشائي مترجم عن At the end of the day.",
+    "fix": "ادخل في الخلاصة مباشرة.",
+    "positiveExample": "وفي نهاية المطاف، تبقى الجودة هي الأساس.",
+    "negativeExample": "الفحص المعملي لكل تشغيلة يمنع مرتجعات التصدير."
+  },
+  {
+    "id": "ar-jadir-bil-dhikr",
+    "severity": "S2",
+    "pattern": "ومن\\s+الجدير\\s+بالذكر\\s+أن",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مقدمة جملة مدرسية.",
+    "fix": "اذكر المعلومة مباشرة دون تمهيد.",
+    "positiveExample": "ومن الجدير بالذكر أن الخدمة تدعم العربية.",
+    "negativeExample": "يدعم النظام طباعة الفواتير الضريبية بالعربية والإنجليزية."
+  },
+  {
+    "id": "ar-mimma-la-shakka",
+    "severity": "S1",
+    "pattern": "مما\\s+لا\\s+شك\\s+فيه\\s+أن",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مقدمة إنشائية مستهلكة.",
+    "fix": "احذفها وابدأ بالحقائق.",
+    "positiveExample": "مما لا شك فيه أن سرعة الموقع مهمة.",
+    "negativeExample": "كل ثانية تأخير في تحميل صفحة الدفع تخفض المبيعات بنسبة 7%."
+  },
+  {
+    "id": "ar-yalab-dawran",
+    "severity": "S1",
+    "pattern": "يلعب\\s+([^\\s]+\\s+)?دورًا\\s+(محوريًا|حيويًا|بارزًا)\\s+في",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Plays a pivotal role in.",
+    "fix": "استخدم فعلًا عربيًا مباشرًا يصف الأثر.",
+    "positiveExample": "يلعب التصميم دورًا محوريًا في زيادة المبيعات.",
+    "negativeExample": "وضوح صور المنتج وجدول المقاسات يقلل طلبات الاستبدال إلى النصف."
+  },
+  {
+    "id": "ar-hajar-al-zawiya",
+    "severity": "S1",
+    "pattern": "يُعد\\s+حجر\\s+الزاوية\\s+في",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه بلاغي.",
+    "fix": "اشرح لماذا هذا العنصر أساسي.",
+    "positiveExample": "الأمان يُعد حجر الزاوية في منصتنا.",
+    "negativeExample": "نشفّر جميع بيانات المرضى قبل تخزينها في قاعدة البيانات."
+  },
+  {
+    "id": "ar-fusayfisa",
+    "severity": "S1",
+    "pattern": "فسيفساء\\s+من",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لكلمة Tapestry في نصوص الذكاء الاصطناعي.",
+    "fix": "صف المكونات بأسمائها الحقيقية.",
+    "positiveExample": "فسيفساء من الثقافات والنكهات.",
+    "negativeExample": "قائمة تجمع أطباق المطبخ الشامي والمصري الأصيل."
+  },
+  {
+    "id": "ar-ghaws-fi-amaq",
+    "severity": "S1",
+    "pattern": "نغوص\\s+في\\s+أعماق",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Dive deep into.",
+    "fix": "استخدم: نفحص، نراجع، نشرح.",
+    "positiveExample": "دعنا نغوص في أعماق إعدادات الخادم.",
+    "negativeExample": "فيما يلي خطوات ضبط ذاكرة التخزين المؤقت في Nginx."
+  },
+  {
+    "id": "ar-alawa-ala-dhalik",
+    "severity": "S2",
+    "pattern": "علاوة\\s+على\\s+ذلك\\s*،\\s*فإن",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "رابط مترجم حرفيًا عن Furthermore.",
+    "fix": "استخدم حرف العطف الواو أو جملة جديدة.",
+    "positiveExample": "علاوة على ذلك، فإن التطبيق يعمل دون إنترنت.",
+    "negativeExample": "ويعمل التطبيق دون اتصال بالإنترنت داخل المخازن."
+  },
+  {
+    "id": "ar-tamma-tasmimuhu",
+    "severity": "S1",
+    "pattern": "تم\\s+تصميم(ه|ها)\\s+بعناية\\s+لتلبية",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "بناء للمجهول مترجم عن Carefully designed to meet.",
+    "fix": "استخدم صيغة المبني للمعلوم واذكر الميزة.",
+    "positiveExample": "تم تصميمها بعناية لتلبية احتياجاتك.",
+    "negativeExample": "صمّمنا الحقيبة بجيوب مبطنة تتسع لحاسوب 16 بوصة."
+  },
+  {
+    "id": "ar-yatimmu-tawfir",
+    "severity": "S2",
+    "pattern": "يتم\\s+(توفير|تقديم|إنجاز)\\s+",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "الإكثار من (يتم + المصدر) بدل الفعل المضارع العربي الفصيح.",
+    "fix": "استخدم الفعل المضارع المباشر (نوفر، نقدم، ننجز).",
+    "positiveExample": "يتم توفير التقارير بشكل يومي.",
+    "negativeExample": "نرسل تقرير المبيعات يوميًا الساعة الثامنة مساءً."
+  },
+  {
+    "id": "ar-yaqumu-bitahsin",
+    "severity": "S2",
+    "pattern": "يقوم\\s+ب(تحسين|تطوير|تسهيل|إدارة)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "حشو فعل (يقوم بـ) المترجم عن الإنجليزية.",
+    "fix": "استخدم الفعل نفسه: يحسّن، يطوّر، يسهّل، يدير.",
+    "positiveExample": "النظام يقوم بإدارة المخزون تلقائيًا.",
+    "negativeExample": "يدير النظام أرصدة المخزون ويخصم المبيعات فورًا."
+  },
+  {
+    "id": "ar-bishaklin-kabir",
+    "severity": "S2",
+    "pattern": "يساهم\\s+بشكل\\s+كبير\\s+في",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تعبير عائم غير رقمي.",
+    "fix": "اذكر النسبة أو المقدار.",
+    "positiveExample": "يساهم بشكل كبير في تقليل التكاليف.",
+    "negativeExample": "يوفّر 30% من استهلاك الورق والأحبار شهريًا."
+  },
+  {
+    "id": "ar-ala-madar-al-saa",
+    "severity": "S2",
+    "pattern": "دعم\\s+فني\\s+متميز\\s+على\\s+مدار\\s+الساعة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "وعد عام غالبًا غير صحيح للشركات الصغيرة.",
+    "fix": "اذكر ساعات العمل الحقيقية وقنوات الدعم.",
+    "positiveExample": "دعم فني متميز على مدار الساعة.",
+    "negativeExample": "الرد على التذاكر الفنية من الأحد للخميس من 9 صباحًا إلى 5 مساءً."
+  },
+  {
+    "id": "ar-indamm-ila-alaf",
+    "severity": "S0",
+    "pattern": "انضم\\s+إلى\\s+(آلاف|ملايين)\\s+العملاء\\s+الراضين",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "دليل اجتماعي مختلق أو قالبي.",
+    "fix": "اذكر رقمًا حقيقيًا موثقًا أو احذف العبارة.",
+    "positiveExample": "انضم إلى آلاف العملاء الراضين.",
+    "negativeExample": "يعتمد علينا 140 مصنع ملابس في برج العرب والعبور."
+  },
+  {
+    "id": "ar-sunia-bihubb",
+    "severity": "S1",
+    "pattern": "صُنع\\s+بـ?\\s*(❤️|حب)\\s+في",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تذييل قالبي مترجم عن Made with love.",
+    "fix": "اكتب اسم الشركة والمدينة وسنة الحقوق.",
+    "positiveExample": "صُنع بـ ❤️ في القاهرة.",
+    "negativeExample": "شركة النيل للبرمجيات — القاهرة، 2026."
+  },
+  {
+    "id": "ar-jamia-al-huquq",
+    "severity": "S2",
+    "pattern": "جميع\\s+الحقوق\\s+محفوظة\\s+©\\s*202[0-9]\\s+اسم\\s+الشركة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "نص تذييل غير معدّل من القالب.",
+    "fix": "ضع الاسم القانوني الفعلي للجهة.",
+    "positiveExample": "جميع الحقوق محفوظة © 2026 اسم الشركة.",
+    "negativeExample": "© 2026 مكتب دار الهندسة الاستشارية."
+  },
+  {
+    "id": "ar-nass-tajribi",
+    "severity": "S0",
+    "pattern": "(هذا\\s+النص\\s+هو\\s+مثال\\s+لنص|لوريم\\s+إيبسوم|نص\\s+تجريبي\\s+هنا)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "نص وهمي صريح في الواجهة العربية.",
+    "fix": "استبدله بمحتوى حقيقي أو بوسم [مطلوب من العميل].",
+    "positiveExample": "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.",
+    "negativeExample": "نستورد حبوب البن الأخضر مباشرة من مزارع اليمن وإثيوبيا."
+  },
+  {
+    "id": "ar-ishtarick-fi-nashratina",
+    "severity": "S1",
+    "pattern": "اشترك\\s+في\\s+نشرتنا\\s+البريدية\\s+للحصول\\s+على\\s+أحدث\\s+الأخبار",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "نموذج نشرة بريدية قالبي.",
+    "fix": "وضح محتوى الرسائل ومعدل إرسالها.",
+    "positiveExample": "اشترك في نشرتنا البريدية للحصول على أحدث الأخبار.",
+    "negativeExample": "رسالة واحدة مطلع كل شهر تتضمن أسعار الخامات المحدثة."
+  },
+  {
+    "id": "ar-udhran-hadatha-khata",
+    "severity": "S1",
+    "pattern": "عذرًا!\\s+حدث\\s+خطأ\\s+ما\\s+غير\\s+متوقع",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "رسالة خطأ عامة لا تساعد المستخدم.",
+    "fix": "اذكر سبب الخطأ والخطوة البديلة.",
+    "positiveExample": "عذرًا! حدث خطأ ما غير متوقع.",
+    "negativeExample": "تعذر الاتصال ببوابة الدفع. لم يُخصم أي مبلغ، يرجى المحاولة بعد دقيقة."
+  },
+  {
+    "id": "ar-al-akthar-shabiya",
+    "severity": "S1",
+    "pattern": "الأكثر\\s+(شعبية|مبيعًا|طلبًا)\\s*!",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شارة تسعير قالبية على البطاقة الوسطى.",
+    "fix": "سمّ الفئة المناسبة للباقة (مثل: للفرق من 5 إلى 15 موظفًا).",
+    "positiveExample": "الأكثر شعبية!",
+    "negativeExample": "مناسب للعيادات متعددة التخصصات"
+  },
+  {
+    "id": "ar-tiknulujiya-mutatawwira",
+    "severity": "S1",
+    "pattern": "باستخدام\\s+أحدث\\s+التقنيات\\s+المتطورة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "حشو تقني بلا تحديد.",
+    "fix": "سمّ التقنية أو المعدات المستخدمة.",
+    "positiveExample": "نعمل باستخدام أحدث التقنيات المتطورة.",
+    "negativeExample": "نفحص اللحامات بالموجات فوق الصوتية الرقمية."
+  },
+  {
+    "id": "ar-rua-qabila-liltanfidh",
+    "severity": "S1",
+    "pattern": "رؤى\\s+قابلة\\s+للتنفيذ",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Actionable insights.",
+    "fix": "قولها بالعربية الطبيعية: تقارير تساعدك على اتخاذ القرار.",
+    "positiveExample": "احصل على رؤى قابلة للتنفيذ.",
+    "negativeExample": "اعرف الأصناف الراكدة التي لم تُبع منذ 60 يومًا."
+  },
+  {
+    "id": "ar-biat-amal-muhaffiza",
+    "severity": "S2",
+    "pattern": "نوفر\\s+بيئة\\s+عمل\\s+محفزة\\s+وملهمة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه توظيف عام.",
+    "fix": "اذكر مزايا العمل الحقيقية (التأمين، ساعات العمل، الإجازات).",
+    "positiveExample": "نوفر بيئة عمل محفزة وملهمة.",
+    "negativeExample": "عمل هجين يومين من المنزل، وتأمين طبي شامل للأسرة."
+  },
+  {
+    "id": "ar-nahnu-numin-bian",
+    "severity": "S2",
+    "pattern": "نحن\\s+في\\s+[^\\s]+\\s+نؤمن\\s+بأن",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "قالب بيان مهمة مترجم عن We at X believe that.",
+    "fix": "اذكر ما تفعله الشركة مباشرة.",
+    "positiveExample": "نحن في ألفا نؤمن بأن التعليم حق للجميع.",
+    "negativeExample": "توفّر منصة ألفا شروحات منهج الثانوية العامة مجانًا."
+  },
+  {
+    "id": "ar-qafza-haila",
+    "severity": "S1",
+    "pattern": "قفزة\\s+هائلة\\s+في\\s+(الأداء|الإنتاجية|المبيعات)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ادعاء مبالغ فيه.",
+    "fix": "اذكر النسبة المئوية الحقيقية.",
+    "positiveExample": "حقق قفزة هائلة في المبيعات.",
+    "negativeExample": "زادت طلبات المتجر الإلكتروني بنسبة 28% خلال الربع الثالث."
+  },
+  {
+    "id": "ar-bilamsa-sihriya",
+    "severity": "S1",
+    "pattern": "بلمسة\\s+سحرية\\s+واحدة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تعبير دعائي مبالغ فيه.",
+    "fix": "اشرح الأداة الفعلية.",
+    "positiveExample": "عدّل صورك بلمسة سحرية واحدة.",
+    "negativeExample": "أزل خلفية صور المنتجات تلقائيًا مع الحفاظ على الظلال الطبيعية."
+  },
+  {
+    "id": "ar-hall-shamil",
+    "severity": "S1",
+    "pattern": "الحل\\s+الشامل\\s+والأمثل\\s+ل",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تكديس صفات تفضيل.",
+    "fix": "صف وظيفة البرنامج بدقة.",
+    "positiveExample": "الحل الشامل والأمثل لإدارة المدارس.",
+    "negativeExample": "برنامج يسجّل غياب الطلاب، والرسوم الدراسية، ونتائج الاختبارات."
+  },
+  {
+    "id": "ar-musammam-khasisan",
+    "severity": "S1",
+    "pattern": "مصمم\\s+خصيصًا\\s+ليناسب\\s+احتياجاتك\\s+الفريدة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Tailored to your unique needs.",
+    "fix": "اذكر ما يمكن للمستخدم تخصيصه.",
+    "positiveExample": "مصمم خصيصًا ليناسب احتياجاتك الفريدة.",
+    "negativeExample": "اختر الحقول التي تظهر في فاتورتك ورتّب أعمدة التقرير."
+  },
+  {
+    "id": "ar-nuwakib-al-asr",
+    "severity": "S1",
+    "pattern": "لنواكب\\s+متطلبات\\s+العصر\\s+الحديث",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "حشو إنشائي.",
+    "fix": "اذكر التحديث الفعلي الذي قدمته.",
+    "positiveExample": "طورنا خدماتنا لنواكب متطلبات العصر الحديث.",
+    "negativeExample": "أضفنا الدفع عبر Apple Pay والتوقيع الإلكتروني للعقود."
+  },
+  {
+    "id": "ar-kafaa-la-mathil",
+    "severity": "S1",
+    "pattern": "كفاءة\\s+لا\\s+مثيل\\s+لها",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مبالغة غير مقاسة.",
+    "fix": "اذكر معدل الإنجاز أو توفير الوقت.",
+    "positiveExample": "أدر أسطولك بكفاءة لا مثيل لها.",
+    "negativeExample": "تتبع مواقع الشاحنات واستهلاك السولار لحظة بلحظة."
+  },
+  {
+    "id": "ar-khutuwat-basita",
+    "severity": "S1",
+    "pattern": "في\\s+ثلاث\\s+خطوات\\s+بسيطة\\s+وسريعة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عنوان قسم قالبي.",
+    "fix": "سمّ القسم باسم العملية نفسها.",
+    "positiveExample": "احصل على التمويل في ثلاث خطوات بسيطة وسريعة",
+    "negativeExample": "إجراءات تقديم طلب التمويل العقاري"
+  },
+  {
+    "id": "ar-nadman-laka-al-najah",
+    "severity": "S1",
+    "pattern": "نضمن\\s+لك\\s+النجاح\\s+الباهر",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "وعد غير واقعي.",
+    "fix": "اذكر ما تلتزم به فعليًا في العقد.",
+    "positiveExample": "نضمن لك النجاح الباهر في حملتك.",
+    "negativeExample": "نلتزم بتحقيق 500 طلب تسعير مؤهل أو إعادة إدارة الحملة مجانًا."
+  },
+  {
+    "id": "ar-alam-min-al-rafahiya",
+    "severity": "S1",
+    "pattern": "عالم\\s+من\\s+الفخامة\\s+والرفاهية",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه عقاري وسياحي.",
+    "fix": "صف المساحات والمرافق الحقيقية بالأرقام.",
+    "positiveExample": "استمتع بعالم من الفخامة والرفاهية.",
+    "negativeExample": "شقق بمساحات من 160 إلى 240 مترًا مطلة على حديقة بمساحة 4 أفدنة."
+  },
+  {
+    "id": "ar-ahdath-al-tiqniyat",
+    "severity": "S1",
+    "pattern": "أحدث\\s+التقنيات\\s+العالمية\\s+المبتكرة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تراكم صفات بلا معنى.",
+    "fix": "سمّ الجهاز أو البروتوكول.",
+    "positiveExample": "نستخدم أحدث التقنيات العالمية المبتكرة.",
+    "negativeExample": "نستخدم أجهزة ليزر الألياف الضوئية لقص الصاج بسمك يصل إلى 20 مم."
+  },
+  {
+    "id": "ar-tajawuz-al-tawaqquat",
+    "severity": "S1",
+    "pattern": "نسعى\\s+دائمًا\\s+لتجاوز\\s+توقعات\\s+عملائنا",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه خدمي.",
+    "fix": "اذكر التزامًا محددًا تجاه العميل.",
+    "positiveExample": "نسعى دائمًا لتجاوز توقعات عملائنا.",
+    "negativeExample": "إذا تأخر التسليم عن الموعد المتفق عليه نخصم 5% عن كل يوم تأخير."
+  },
+  {
+    "id": "ar-rihla-mumtia",
+    "severity": "S1",
+    "pattern": "نتمنى\\s+لك\\s+تجربة\\s+تصفح\\s+ممتعة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عبارة ترحيب قديمة أو مولدة.",
+    "fix": "احذفها وادخل في المحتوى.",
+    "positiveExample": "أهلاً بك، نتمنى لك تجربة تصفح ممتعة.",
+    "negativeExample": "تصفح كتالوج قطع الغيار الأصلية حسب طراز السيارة وسنة الصنع."
+  },
+  {
+    "id": "ar-quwwa-wal-basata",
+    "severity": "S1",
+    "pattern": "يجمع\\s+بين\\s+القوة\\s+والبساطة\\s+في\\s+آن\\s+واحد",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Simple yet powerful.",
+    "fix": "اشرح كيف يعمل ببساطة وما المهام المتقدمة التي يدعمها.",
+    "positiveExample": "يجمع بين القوة والبساطة في آن واحد.",
+    "negativeExample": "واجهة إدخال من شاشة واحدة مع محرك تقارير يدعم تجميع ملايين الصفوف."
+  },
+  {
+    "id": "ar-mustawa-jadid",
+    "severity": "S1",
+    "pattern": "ينقلك\\s+إلى\\s+مستوى\\s+جديد\\s+كليًا",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لـ Takes you to a whole new level.",
+    "fix": "اذكر التحسين المحدد.",
+    "positiveExample": "ينقلك إلى مستوى جديد كليًا من الأمان.",
+    "negativeExample": "يضيف مصادقة المفاتيح الصلبة وسجل تدقيق غير قابل للتعديل."
+  },
+  {
+    "id": "ar-fulan-al-fulani",
+    "severity": "S0",
+    "pattern": "(فلان\\s+الفلاني|شركة\\s+افتراضية|اسم\\s+العميل\\s+هنا)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "بيانات وهمية صريحة.",
+    "fix": "استبدلها ببيانات حقيقية أو بوسم [مطلوب من العميل].",
+    "positiveExample": "شهادة من فلان الفلاني، المدير التنفيذي.",
+    "negativeExample": "[مطلوب من العميل: شهادة موثقة من أحد عملاء القطاع الصناعي]"
+  },
+  {
+    "id": "ar-khiyaruka-al-amthal",
+    "severity": "S1",
+    "pattern": "خيارك\\s+الأمثل\\s+ل",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه إعلاني.",
+    "fix": "اذكر سبب ملاءمة المنتج لهذه الحالة.",
+    "positiveExample": "خيارك الأمثل للتغليف الصناعي.",
+    "negativeExample": "كرتون مضلع خماسي الطبقات يتحمل أوزانًا حتى 45 كجم."
+  },
+  {
+    "id": "ar-iadat-tarif",
+    "severity": "S1",
+    "pattern": "نعيد\\s+تعريف\\s+مفهوم",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Redefining the concept of.",
+    "fix": "اشرح ما تفعله بطريقة مختلفة.",
+    "positiveExample": "نعيد تعريف مفهوم الضيافة العربية.",
+    "negativeExample": "غرف فندقية في بيوت تراثية مرممة وسط جدة التاريخية."
+  },
+  {
+    "id": "ar-tahqiq-aqsa-istifada",
+    "severity": "S2",
+    "pattern": "تحقيق\\s+أقصى\\s+استفادة\\s+ممكنة\\s+من",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تعبير مطول.",
+    "fix": "استخدم فعلًا محددًا مثل: تقليل الهدر، مضاعفة الإنتاج.",
+    "positiveExample": "نساعدك على تحقيق أقصى استفادة ممكنة من وقتك.",
+    "negativeExample": "نجمع رسائل البريد وواتساب وتليجرام في صندوق وارد واحد."
+  },
+  {
+    "id": "ar-bawwabatuka-nahwa",
+    "severity": "S1",
+    "pattern": "بوابتك\\s+(الرقمية\\s+)?نحو\\s+عالم",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مجاز إعلاني مكرر.",
+    "fix": "عرّف المنصة بوظيفتها.",
+    "positiveExample": "بوابتك نحو عالم الاستثمار العقاري.",
+    "negativeExample": "منصة تعرض عوائد الإيجار الفعلية للعقارات التجارية في الرياض."
+  },
+  {
+    "id": "ar-nabtakir-linatamayyaz",
+    "severity": "S1",
+    "pattern": "نبتكر\\s+لنتميز",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار إنشائي خالٍ من المضمون.",
+    "fix": "استبدله بجملة تشرح تخصص الشركة.",
+    "positiveExample": "نبتكر لنتميز في كل ما نقدمه.",
+    "negativeExample": "تصنيع قوالب الحقن البلاستيكي الدقيقة للمستلزمات الطبية."
+  },
+  {
+    "id": "ar-mustaqbal-mushriq",
+    "severity": "S1",
+    "pattern": "نحو\\s+مستقبل\\s+(أكثر\\s+إشراقًا|مشرق\\s+ومستدام)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "خاتمة إنشائية عامة.",
+    "fix": "اذكر الهدف البيئي أو التشغيلي بالأرقام.",
+    "positiveExample": "معًا نحو مستقبل مشرق ومستدام.",
+    "negativeExample": "نولّد 65% من كهرباء المصنع عبر ألواح الطاقة الشمسية فوق السطح."
+  },
+  {
+    "id": "ar-hulul-dhakiya",
+    "severity": "S1",
+    "pattern": "حلول\\s+ذكية\\s+لأعمال\\s+أذكى",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "جناس إعلاني مستهلك (Smart solutions for smarter business).",
+    "fix": "اذكر ما يؤتمته النظام.",
+    "positiveExample": "حلول ذكية لأعمال أذكى.",
+    "negativeExample": "جدولة تلقائية لورديات الموظفين حسب ساعات الذروة."
+  },
+  {
+    "id": "ar-tahta-saqf-wahid",
+    "severity": "S1",
+    "pattern": "نجمع\\s+لك\\s+كل\\s+شيء\\s+تحت\\s+سقف\\s+واحد",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لـ One-stop shop.",
+    "fix": "عدّد الأقسام أو الخدمات المتوفرة.",
+    "positiveExample": "نجمع لك كل شيء تحت سقف واحد.",
+    "negativeExample": "التصميم المعماري، والتراخيص، والتنفيذ، وتوريد الأثاث المكتبي."
+  },
+  {
+    "id": "ar-lamsa-ibdaiya",
+    "severity": "S1",
+    "pattern": "نضيف\\s+لمسة\\s+(إبداعية|سحرية)\\s+إلى",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عبارة تجميلية عامة.",
+    "fix": "وضح المعالجة التصميمية أو الفنية.",
+    "positiveExample": "نضيف لمسة إبداعية إلى علامتك التجارية.",
+    "negativeExample": "نرسم خطوطًا طباعية مخصصة وعلب تغليف قابلة لإعادة الاستخدام."
+  },
+  {
+    "id": "ar-intaliq-bithiqa",
+    "severity": "S1",
+    "pattern": "انطلق\\s+بثقة\\s+نحو\\s+القمة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار تحفيزي عام.",
+    "fix": "اذكر الخدمة التي تحمي العميل أو تدعمه.",
+    "positiveExample": "انطلق بثقة نحو القمة مع خدماتنا القانونية.",
+    "negativeExample": "نراجع عقود التوريد والوكالات التجارية قبل التوقيع."
+  },
+  {
+    "id": "ar-imkaniyat-bila-hudud",
+    "severity": "S1",
+    "pattern": "إمكانيات\\s+لا\\s+(حدود\\s+لها|نهائية)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مبالغة غير تقنية (Limitless possibilities).",
+    "fix": "اذكر الحدود الفعلية أو القدرة الاستيعابية.",
+    "positiveExample": "إمكانيات لا حدود لها في التخزين.",
+    "negativeExample": "سعة تخزين تبدأ من 2 تيرابايت وتقبل التوسعة حتى 500 تيرابايت."
+  },
+  {
+    "id": "ar-surat-al-barq",
+    "severity": "S1",
+    "pattern": "بسرعة\\s+البرق",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Lightning fast.",
+    "fix": "اذكر الزمن بالمللي ثانية أو الدقائق.",
+    "positiveExample": "ابحث في ملفاتك بسرعة البرق.",
+    "negativeExample": "ابحث في 100 ألف وثيقة PDF خلال أقل من ثانية."
+  },
+  {
+    "id": "ar-misdaqiya-wa-shafafiya",
+    "severity": "S2",
+    "pattern": "نلتزم\\s+بأعلى\\s+درجات\\s+المصداقية\\s+والشفافية",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ادعاء أخلاقي عام.",
+    "fix": "أثبت الشفافية بنشر الأسعار أو التقارير.",
+    "positiveExample": "نلتزم بأعلى درجات المصداقية والشفافية.",
+    "negativeExample": "نعرض عمولة المكتب وتكلفة المصنع الأصلية في كل فاتورة."
+  },
+  {
+    "id": "ar-summima-min-ajlik",
+    "severity": "S1",
+    "pattern": "صُمم\\s+من\\s+أجلك\\s+أنت",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لـ Designed with you in mind.",
+    "fix": "اذكر الميزة التي تلائم المستخدم.",
+    "positiveExample": "تطبيق صُمم من أجلك أنت.",
+    "negativeExample": "يعمل بيد واحدة وبخط واضح مناسب للقراءة أثناء الحركة."
+  },
+  {
+    "id": "ar-as-asila-al-shaaia-qalab",
+    "severity": "S1",
+    "pattern": "كل\\s+ما\\s+تحتاج\\s+إلى\\s+معرفته\\s+حول\\s+المنتج\\s+والفوترة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لعنوان الأسئلة الشائعة في القوالب الجاهزة.",
+    "fix": "اكتب عنوانًا فرعيًا يخص أسئلة عملائك الفعلية أو احذفه.",
+    "positiveExample": "كل ما تحتاج إلى معرفته حول المنتج والفوترة.",
+    "negativeExample": "إجابات حول الضمان، وتوافر قطع الغيار، ومواعيد الصيانة الدورية."
+  },
+  {
+    "id": "ar-hal-ladayka-asila",
+    "severity": "S2",
+    "pattern": "هل\\s+لا\\s+تزال\\s+لديك\\s+أسئلة؟\\s+لا\\s+يمكنك\\s+العثور\\s+على\\s+الإجابة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لتذييل الأسئلة الشائعة.",
+    "fix": "اكتب: للاستفسارات الأخرى راسلنا على البريد أو الهاتف.",
+    "positiveExample": "هل لا تزال لديك أسئلة؟ لا يمكنك العثور على الإجابة؟",
+    "negativeExample": "للاستفسارات الفنية اتصل بقسم الصيانة على 19012."
+  },
+  {
+    "id": "ar-tahwil-al-tahaddiyat",
+    "severity": "S1",
+    "pattern": "تحويل\\s+التحديات\\s+إلى\\s+فرص\\s+حقيقية",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه استشارات إدارية.",
+    "fix": "سمّ المشكلة التشغيلية وكيف حُلّت.",
+    "positiveExample": "نساعدك على تحويل التحديات إلى فرص حقيقية.",
+    "negativeExample": "نعالج تكدس المرتجعات عبر فحص الطلبات قبل خروجها من المخزن."
+  },
+  {
+    "id": "ar-simfuniya-mutanaghima",
+    "severity": "S1",
+    "pattern": "سيمفونية\\s+(متناغمة\\s+)?من",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "استعارة مترجمة عن A symphony of.",
+    "fix": "صف العناصر بوضوح دون مجاز متكلف.",
+    "positiveExample": "سيمفونية متناغمة من الألوان والخامات.",
+    "negativeExample": "تنسيق بين الحجر الجيري الطبيعي وخشب البلوط غير اللامع."
+  },
+  {
+    "id": "ar-kanz-dafin",
+    "severity": "S1",
+    "pattern": "كنز\\s+دفين\\s+من\\s+(المعلومات|البيانات|المعرفة)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لـ Treasure trove of.",
+    "fix": "اذكر حجم الأرشيف ومحتواه.",
+    "positiveExample": "كنز دفين من المعلومات القانونية.",
+    "negativeExample": "قاعدة بيانات تضم 45 ألف حكم لمحكمة النقض مفهرسة بالموضوع."
+  },
+  {
+    "id": "ar-sadd-al-fajwa",
+    "severity": "S1",
+    "pattern": "سد\\s+الفجوة\\s+بين",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لـ Bridging the gap between.",
+    "fix": "اشرح كيف يتصل الطرفان.",
+    "positiveExample": "نعمل على سد الفجوة بين المزارع والمستهلك.",
+    "negativeExample": "ننقل الخضروات من مزارع الإسماعيلية إلى محلات التجزئة في نفس اليوم."
+  },
+  {
+    "id": "ar-fi-mutanawal-yadik",
+    "severity": "S1",
+    "pattern": "أصبح\\s+الآن\\s+في\\s+متناول\\s+يدك",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لـ At your fingertips.",
+    "fix": "وضح كيف يصل المستخدم إلى الخدمة.",
+    "positiveExample": "كل ما تريده أصبح الآن في متناول يدك.",
+    "negativeExample": "اطلب شهادة التحليل المعملي عبر تطبيق الهاتف فور صدورها."
+  },
+  {
+    "id": "ar-la-majal-liltakhmin",
+    "severity": "S1",
+    "pattern": "لا\\s+مجال\\s+للتخمين\\s+بعد\\s+اليوم",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة لـ Take the guesswork out.",
+    "fix": "اشرح طريقة القياس أو الحساب.",
+    "positiveExample": "لا مجال للتخمين بعد اليوم في تسعير الشقق.",
+    "negativeExample": "قارن سعر المتر بمتوسط عقود البيع المسجلة في نفس المربع السكني."
+  },
+  {
+    "id": "ar-sharik-mawthuq-10k",
+    "severity": "S2",
+    "pattern": "شريك\\s+موثوق\\s+لأكثر\\s+من\\s+10,?000",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "رقم ثقة قالبي غير موثق.",
+    "fix": "اذكر العدد الفعلي الموثق وأسماء عملاء حقيقيين بإذنهم.",
+    "positiveExample": "شريك موثوق لأكثر من 10,000 شركة.",
+    "negativeExample": "نخدم 85 مستشفى ومركز أشعة في الدلتا والصعيد."
+  },
+  {
+    "id": "ar-taghyir-qawaid-alluba",
+    "severity": "S1",
+    "pattern": "تغيير\\s+قواعد\\s+اللعبة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة حرفية لـ Game changer.",
+    "fix": "اذكر الأثر العملي بالأرقام.",
+    "positiveExample": "تطبيقنا يعمل على تغيير قواعد اللعبة.",
+    "negativeExample": "يقلل وقت جرد المخزن من ثلاثة أيام إلى أربع ساعات."
+  },
+  {
+    "id": "ar-hulul-mufassala",
+    "severity": "S1",
+    "pattern": "حلول\\s+مفصلة\\s+على\\s+مقاس\\s+أعمالك",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه تسويقي.",
+    "fix": "اذكر خيارات التخصيص المتاحة.",
+    "positiveExample": "نقدم حلول مفصلة على مقاس أعمالك.",
+    "negativeExample": "تعديل شجرة الحسابات ومراكز التكلفة حسب نشاط شركتك."
+  },
+  {
+    "id": "ar-nuqtat-tahawwul",
+    "severity": "S1",
+    "pattern": "نقطة\\s+تحول\\s+حقيقية\\s+في\\s+مسيرة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مبالغة إنشائية.",
+    "fix": "اذكر ما تغير فعليًا.",
+    "positiveExample": "يمثل البرنامج نقطة تحول حقيقية في مسيرة شركتك.",
+    "negativeExample": "يوحّد فواتير الفروع الخمسة في قاعدة بيانات مركزية."
+  },
+  {
+    "id": "ar-asr-jadid",
+    "severity": "S1",
+    "pattern": "ندشن\\s+عصرًا\\s+جديدًا\\s+من",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "خطاب دعائي متضخم.",
+    "fix": "صف الخدمة بلغة عملية.",
+    "positiveExample": "ندشن عصرًا جديدًا من الخدمات اللوجستية.",
+    "negativeExample": "تتبع الشحنات المبردة بدرجة الحرارة والموقع الجغرافي."
+  },
+  {
+    "id": "ar-bi-aydin-amina",
+    "severity": "S2",
+    "pattern": "أعمالك\\s+في\\s+أيدٍ\\s+أمينة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه تأميني عام.",
+    "fix": "اذكر الضمانات القانونية أو التقنية.",
+    "positiveExample": "معنا أعمالك في أيدٍ أمينة.",
+    "negativeExample": "عقود صيانة موثقة بغرامات تأخير واضحة."
+  },
+  {
+    "id": "ar-nasmu-biafkarik",
+    "severity": "S1",
+    "pattern": "نسمو\\s+بأفكارك\\s+إلى\\s+آفاق",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "إنشاء بلاغي فارغ.",
+    "fix": "وضح خطوات التنفيذ.",
+    "positiveExample": "نسمو بأفكارك إلى آفاق الإبداع.",
+    "negativeExample": "نحول الرسومات الأولية إلى نماذج أولية مطبوعة ثلاثية الأبعاد."
+  },
+  {
+    "id": "ar-tamayyuz-bila-hudud",
+    "severity": "S1",
+    "pattern": "تميز\\s+بلا\\s+حدود",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار عام يصلح لأي شيء.",
+    "fix": "اذكر ميزة محددة.",
+    "positiveExample": "تميز بلا حدود في خدمات الضيافة.",
+    "negativeExample": "تجهيز قاعات المؤتمرات بسعة تصل إلى 600 مقعد."
+  },
+  {
+    "id": "ar-ruya-asriya",
+    "severity": "S1",
+    "pattern": "برؤية\\s+عصرية\\s+متكاملة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "حشو وصفي.",
+    "fix": "سمّ الأسلوب المعماري أو التقني المتبع.",
+    "positiveExample": "نصمم المكاتب برؤية عصرية متكاملة.",
+    "negativeExample": "توزيع الإضاءة الطبيعية وعزل الصوت بين غرف الاجتماعات."
+  },
+  {
+    "id": "ar-nabd-al-asr",
+    "severity": "S1",
+    "pattern": "تصاميم\\s+تحاكي\\s+نبض\\s+العصر",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "كليشيه إعلاني.",
+    "fix": "صف الخامات والأبعاد.",
+    "positiveExample": "تصاميم تحاكي نبض العصر.",
+    "negativeExample": "واجهات زجاجية مزدوجة عازلة للحرارة والضوضاء."
+  },
+  {
+    "id": "ar-rihlat-al-najah",
+    "severity": "S1",
+    "pattern": "نرافقك\\s+في\\s+كل\\s+خطوة\\s+من\\s+رحلة\\s+نجاحك",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "ترجمة مطولة لـ Every step of your journey.",
+    "fix": "اذكر مراحل الخدمة بوضوح.",
+    "positiveExample": "نرافقك في كل خطوة من رحلة نجاحك.",
+    "negativeExample": "نتولى دراسة الجدوى، وترخيص المصنع، وتوريد خطوط الإنتاج."
+  },
+  {
+    "id": "ar-tawasul-bila-hudud",
+    "severity": "S1",
+    "pattern": "تواصل\\s+فعّال\\s+بلا\\s+حدود",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "عبارة عامة.",
+    "fix": "اشرح وسيلة التواصل.",
+    "positiveExample": "تواصل فعّال بلا حدود مع فريقك.",
+    "negativeExample": "مكالمات صوتية ومشاركة شاشة داخل المتصفح دون تثبيت برامج."
+  },
+  {
+    "id": "ar-istathmir-fil-mustaqbal",
+    "severity": "S1",
+    "pattern": "استثمر\\s+في\\s+المستقبل\\s+اليوم",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار مالي عام.",
+    "fix": "اعرض العائد التاريخي والمخاطر بوضوح.",
+    "positiveExample": "استثمر في المستقبل اليوم.",
+    "negativeExample": "صندوق سندات خزانة بعائد شهري متغير وإمكانية استرداد يومية."
+  },
+  {
+    "id": "ar-ibda-yatakhatta",
+    "severity": "S1",
+    "pattern": "إبداع\\s+يتخطى\\s+(الحدود|التوقعات)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مبالغة دعائية.",
+    "fix": "اعرض نماذج من الأعمال السابقة.",
+    "positiveExample": "إبداع يتخطى التوقعات.",
+    "negativeExample": "شاهد 12 مشروع هوية بصرية نفذناها لمصانع الأغذية."
+  },
+  {
+    "id": "ar-quwwat-al-ibtikar",
+    "severity": "S1",
+    "pattern": "نؤمن\\s+بقوة\\s+الابتكار",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "جملة عامة.",
+    "fix": "اذكر براءة الاختراع أو الطريقة المطورة.",
+    "positiveExample": "نؤمن بقوة الابتكار في الزراعة.",
+    "negativeExample": "نصنّع حساسات رطوبة تربة توفر 35% من مياه الري."
+  },
+  {
+    "id": "ar-shaghaf-al-injaz",
+    "severity": "S1",
+    "pattern": "يدفعنا\\s+شغف\\s+الإنجاز",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تعبير عاطفي عام.",
+    "fix": "اذكر معدل التسليم في الموعد.",
+    "positiveExample": "يدفعنا شغف الإنجاز في كل مشروع.",
+    "negativeExample": "سلّمنا 96% من مشاريع العام الماضي قبل الموعد التعاقدي."
+  },
+  {
+    "id": "ar-khiyaruka-al-awwal",
+    "severity": "S1",
+    "pattern": "خيارك\\s+الأول\\s+والأفضل\\s+دائمًا",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تفضيل ذاتي بلا دليل.",
+    "fix": "اذكر ما يميزك بالأرقام.",
+    "positiveExample": "نحن خيارك الأول والأفضل دائمًا.",
+    "negativeExample": "أقرب مستودع قطع غيار أصلية للمنطقة الصناعية بالسادس من أكتوبر."
+  },
+  {
+    "id": "ar-baqa-mutanawwia",
+    "severity": "S2",
+    "pattern": "نقدم\\s+باقة\\s+متنوعة\\s+من\\s+الخدمات\\s+المتميزة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "مقدمة قسم خدمات عامة.",
+    "fix": "سمّ الخدمات مباشرة في العناوين.",
+    "positiveExample": "نقدم باقة متنوعة من الخدمات المتميزة.",
+    "negativeExample": "خدماتنا: الخراطة الرقمية، والقطع بالليزر، والدهان الإلكتروستاتيكي."
+  },
+  {
+    "id": "ar-ahdafuka-al-istratijiya",
+    "severity": "S2",
+    "pattern": "تحقيق\\s+أهدافك\\s+الاستراتيجية\\s+بكفاءة",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "لغة تقارير عامة.",
+    "fix": "سمّ الهدف بوضوح.",
+    "positiveExample": "نساعدك على تحقيق أهدافك الاستراتيجية بكفاءة.",
+    "negativeExample": "نساعدك على خفض تكلفة شحن الطرد الواحد بنسبة 18%."
+  },
+  {
+    "id": "ar-nada-bayna-yadayk",
+    "severity": "S2",
+    "pattern": "نضع\\s+بين\\s+يديك\\s+خلاصة\\s+خبرتنا",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "تعبير إنشائي.",
+    "fix": "اعرض المحتوى أو الدليل مباشرة.",
+    "positiveExample": "نضع بين يديك خلاصة خبرتنا الطويلة.",
+    "negativeExample": "دليل عملي من 24 صفحة لفحص الخرسانة الجاهزة في الموقع."
+  },
+  {
+    "id": "ar-mustaqbal-amalik",
+    "severity": "S1",
+    "pattern": "اصنع\\s+مستقبل\\s+أعمالك\\s+معنا",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "شعار ختامي عام.",
+    "fix": "اكتب دعوة لإجراء محدد.",
+    "positiveExample": "اصنع مستقبل أعمالك معنا.",
+    "negativeExample": "احجز جلسة فحص مجانية لحسابات شركتك الضريبية."
+  },
+  {
+    "id": "ar-nataij-mudhhila",
+    "severity": "S1",
+    "pattern": "احصل\\s+على\\s+نتائج\\s+مذهلة\\s+في\\s+وقت\\s+قياسي",
+    "flags": "i",
+    "scope": [
+      "html",
+      "md",
+      "jsx",
+      "tsx",
+      "json",
+      "txt"
+    ],
+    "message": "وعد إعلاني مبالغ فيه.",
+    "fix": "اذكر النتيجة والمدة المتوقعة بصدق.",
+    "positiveExample": "احصل على نتائج مذهلة في وقت قياسي.",
+    "negativeExample": "استلم تقرير فحص التربة المعتمد خلال خمسة أيام عمل."
+  }
+]

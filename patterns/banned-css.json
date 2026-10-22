@@ -1,0 +1,1180 @@
+[
+  {
+    "id": "css-indigo-purple-pink",
+    "severity": "S1",
+    "pattern": "from-indigo-500\\s+via-purple-500\\s+to-pink-500",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Canonical default AI hero gradient.",
+    "fix": "Use a solid surface or a two-stop gradient sampled from brand photography.",
+    "positiveExample": "class='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'",
+    "negativeExample": "class='bg-stone-900 text-stone-100'"
+  },
+  {
+    "id": "css-purple-pink-clip",
+    "severity": "S1",
+    "pattern": "bg-clip-text\\s+text-transparent\\s+bg-gradient-to-r",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Gradient-clipped headline text tell.",
+    "fix": "Set headlines in a high-contrast solid ink color and let weight carry hierarchy.",
+    "positiveExample": "class='bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600'",
+    "negativeExample": "class='text-slate-950 font-semibold tracking-tight'"
+  },
+  {
+    "id": "css-webkit-text-fill-transparent",
+    "severity": "S1",
+    "pattern": "-webkit-text-fill-color\\s*:\\s*transparent",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "CSS gradient text fill tell.",
+    "fix": "Use solid color tokens on headings.",
+    "positiveExample": "h1 { -webkit-background-clip: text; -webkit-text-fill-color: transparent; }",
+    "negativeExample": "h1 { color: var(--color-ink); }"
+  },
+  {
+    "id": "css-linear-gradient-indigo-violet",
+    "severity": "S1",
+    "pattern": "linear-gradient\\([^)]*#6366f1[^)]*#8b5cf6",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hardcoded Tailwind indigo-to-violet linear gradient.",
+    "fix": "Replace with a domain-grounded color token from tokens.css.",
+    "positiveExample": "background: linear-gradient(135deg, #6366f1, #8b5cf6);",
+    "negativeExample": "background-color: var(--surface-primary);"
+  },
+  {
+    "id": "css-linear-gradient-purple-pink",
+    "severity": "S1",
+    "pattern": "linear-gradient\\([^)]*#a855f7[^)]*#ec4899",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hardcoded purple-to-pink linear gradient.",
+    "fix": "Replace with a solid surface or subtle tint.",
+    "positiveExample": "background: linear-gradient(90deg, #a855f7, #ec4899);",
+    "negativeExample": "background-color: var(--surface-accent);"
+  },
+  {
+    "id": "css-blur-3xl-blob",
+    "severity": "S1",
+    "pattern": "blur-3xl\\s+opacity-(20|30|40)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Floating glowing background blob tell.",
+    "fix": "Remove decorative neon blobs; use architectural grid lines or photography.",
+    "positiveExample": "<div class='absolute -top-40 blur-3xl opacity-30 bg-purple-600'>",
+    "negativeExample": "<div class='border-b border-stone-200'>"
+  },
+  {
+    "id": "css-backdrop-blur-card-spam",
+    "severity": "S1",
+    "pattern": "backdrop-blur-(md|lg|xl)\\s+bg-white/(5|10|20)\\s+border\\s+border-white/(10|20)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unmotivated glassmorphism card stack.",
+    "fix": "Use solid surface tokens with crisp 1px borders.",
+    "positiveExample": "class='backdrop-blur-xl bg-white/10 border border-white/20'",
+    "negativeExample": "class='bg-neutral-900 border border-neutral-800'"
+  },
+  {
+    "id": "css-rounded-2xl-shadow-lg",
+    "severity": "S2",
+    "pattern": "rounded-2xl\\s+shadow-(lg|xl)\\s+p-(6|8)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Uniform rounded-2xl shadow-lg card recipe.",
+    "fix": "Vary card treatments or use sharp architectural borders without drop shadows.",
+    "positiveExample": "class='rounded-2xl shadow-lg p-6 bg-white'",
+    "negativeExample": "class='border-t border-stone-300 pt-4'"
+  },
+  {
+    "id": "css-hover-scale-105",
+    "severity": "S2",
+    "pattern": "hover:scale-105\\s+transition-transform",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Generic whole-card zoom on hover.",
+    "fix": "Change border color, underline the title, or shift an arrow 2px on hover.",
+    "positiveExample": "class='hover:scale-105 transition-transform duration-300'",
+    "negativeExample": "class='hover:border-stone-900 transition-colors duration-150'"
+  },
+  {
+    "id": "css-hover-translate-y-1",
+    "severity": "S2",
+    "pattern": "hover:-translate-y-(1|2)\\s+hover:shadow-(xl|2xl)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Bouncy levitating card hover tell.",
+    "fix": "Keep static cards grounded on the page plane.",
+    "positiveExample": "class='hover:-translate-y-1 hover:shadow-xl transition-all'",
+    "negativeExample": "class='hover:bg-stone-50 transition-colors'"
+  },
+  {
+    "id": "css-transition-all-ease-in-out",
+    "severity": "S2",
+    "pattern": "transition:\\s*all\\s+0\\.[235]s\\s+ease(-in-out)?",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Blanket transition: all causing layout and paint thrashing.",
+    "fix": "Transition only specific compositor or color properties (`opacity`, `transform`, `color`).",
+    "positiveExample": "transition: all 0.3s ease-in-out;",
+    "negativeExample": "transition: opacity 160ms cubic-bezier(0.22, 1, 0.36, 1);"
+  },
+  {
+    "id": "css-tailwind-transition-all",
+    "severity": "S2",
+    "pattern": "\\btransition-all\\s+duration-300\\s+ease-in-out\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Default utility transition-all string.",
+    "fix": "Use `transition-colors` or `transition-transform` with an explicit duration.",
+    "positiveExample": "class='transition-all duration-300 ease-in-out'",
+    "negativeExample": "class='transition-colors duration-150'"
+  },
+  {
+    "id": "css-animate-pulse-blob",
+    "severity": "S1",
+    "pattern": "animate-pulse\\s+[^\\\"]*blur-(2xl|3xl)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Pulsing neon background orb.",
+    "fix": "Remove ambient pulsing blobs.",
+    "positiveExample": "class='animate-pulse bg-indigo-500/30 blur-3xl'",
+    "negativeExample": "class='bg-stone-100'"
+  },
+  {
+    "id": "css-animate-bounce-cta",
+    "severity": "S1",
+    "pattern": "animate-bounce",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Continuously bouncing button or scroll arrow.",
+    "fix": "Remove continuous bounce animations; let layout hierarchy guide the eye.",
+    "positiveExample": "class='animate-bounce text-indigo-600'",
+    "negativeExample": "class='text-stone-700'"
+  },
+  {
+    "id": "css-dot-grid-bg",
+    "severity": "S2",
+    "pattern": "radial-gradient\\(#e5e7eb_1px,transparent_1px\\)\\]\\s*\\[background-size:16px_16px\\]",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Copy-pasted dot-matrix background snippet.",
+    "fix": "Use a clean paper tone or a domain-specific diagram.",
+    "positiveExample": "class='bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]'",
+    "negativeExample": "class='bg-[#faf8f5]'"
+  },
+  {
+    "id": "css-neon-box-shadow",
+    "severity": "S1",
+    "pattern": "box-shadow:\\s*0\\s+0\\s+[2345][0-9]px\\s+rgba?\\((99,\\s*102,\\s*241|139,\\s*92,\\s*246|168,\\s*85,\\s*247)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Neon purple/indigo outer glow shadow.",
+    "fix": "Use subtle ambient elevation or crisp 1px borders.",
+    "positiveExample": "box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);",
+    "negativeExample": "box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);"
+  },
+  {
+    "id": "css-arabic-letter-spacing",
+    "severity": "S0",
+    "pattern": "(\\[dir=['\\\"]?rtl['\\\"]?\\][^{]*\\{[^}]*letter-spacing\\s*:\\s*[1-9]|font-family:[^;]*(Cairo|Tajawal|Amiri|Almarai|IBM Plex Sans Arabic)[^}]*letter-spacing\\s*:\\s*0\\.[0-9]+em)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Positive letter-spacing applied to Arabic script disconnects cursive letterforms.",
+    "fix": "Set `letter-spacing: 0` on all Arabic text.",
+    "positiveExample": "[dir='rtl'] h1 { letter-spacing: 2px; }",
+    "negativeExample": "[dir='rtl'] h1 { letter-spacing: 0; }"
+  },
+  {
+    "id": "css-rtl-uppercase",
+    "severity": "S1",
+    "pattern": "\\[dir=['\\\"]?rtl['\\\"]?\\][^{]*\\{[^}]*text-transform\\s*:\\s*uppercase",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Uppercase transform inside RTL selector.",
+    "fix": "Remove text-transform on Arabic rules.",
+    "positiveExample": "[dir='rtl'] .badge { text-transform: uppercase; }",
+    "negativeExample": "[dir='rtl'] .badge { font-weight: 600; }"
+  },
+  {
+    "id": "css-hardcoded-indigo-hex",
+    "severity": "S1",
+    "pattern": "#6366f1\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Raw Tailwind indigo-500 hex literal in stylesheet.",
+    "fix": "Define a brand-specific semantic token in tokens.css.",
+    "positiveExample": "color: #6366f1;",
+    "negativeExample": "color: var(--color-accent);"
+  },
+  {
+    "id": "css-hardcoded-violet-hex",
+    "severity": "S1",
+    "pattern": "#8b5cf6\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Raw Tailwind violet-500 hex literal in stylesheet.",
+    "fix": "Define a brand-specific semantic token in tokens.css.",
+    "positiveExample": "background: #8b5cf6;",
+    "negativeExample": "background: var(--color-brand);"
+  },
+  {
+    "id": "css-hardcoded-purple-hex",
+    "severity": "S1",
+    "pattern": "#a855f7\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Raw Tailwind purple-500 hex literal in stylesheet.",
+    "fix": "Use a token derived from client assets.",
+    "positiveExample": "border-color: #a855f7;",
+    "negativeExample": "border-color: var(--border-strong);"
+  },
+  {
+    "id": "css-hardcoded-pink-hex",
+    "severity": "S1",
+    "pattern": "#ec4899\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Raw Tailwind pink-500 hex literal in stylesheet.",
+    "fix": "Use a token derived from client assets.",
+    "positiveExample": "color: #ec4899;",
+    "negativeExample": "color: var(--color-highlight);"
+  },
+  {
+    "id": "css-default-inter-stack",
+    "severity": "S2",
+    "pattern": "font-family:\\s*['\\\"]?Inter['\\\"]?,\\s*sans-serif",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unexamined default Inter font stack without fallback calibration.",
+    "fix": "Choose a deliberate typeface in the Direction Statement and define metric-matched fallbacks.",
+    "positiveExample": "font-family: 'Inter', sans-serif;",
+    "negativeExample": "font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;"
+  },
+  {
+    "id": "css-default-poppins-stack",
+    "severity": "S2",
+    "pattern": "font-family:\\s*['\\\"]?Poppins['\\\"]?,\\s*sans-serif",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Default geometric Poppins stack common in generated templates.",
+    "fix": "Select a typeface suited to the brand voice.",
+    "positiveExample": "font-family: 'Poppins', sans-serif;",
+    "negativeExample": "font-family: 'Source Serif 4', Georgia, serif;"
+  },
+  {
+    "id": "css-default-cairo-stack",
+    "severity": "S2",
+    "pattern": "font-family:\\s*['\\\"]?Cairo['\\\"]?,\\s*sans-serif",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unexamined default Cairo Arabic stack.",
+    "fix": "Pick IBM Plex Sans Arabic, Noto Naskh Arabic, Readex Pro, or document why Cairo is required.",
+    "positiveExample": "font-family: 'Cairo', sans-serif;",
+    "negativeExample": "font-family: 'IBM Plex Sans Arabic', sans-serif;"
+  },
+  {
+    "id": "css-default-tajawal-stack",
+    "severity": "S2",
+    "pattern": "font-family:\\s*['\\\"]?Tajawal['\\\"]?,\\s*sans-serif",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unexamined default Tajawal Arabic stack.",
+    "fix": "Use a typeface chosen in the Direction Statement with proper line-height (1.75).",
+    "positiveExample": "font-family: 'Tajawal', sans-serif;",
+    "negativeExample": "font-family: 'Readex Pro', sans-serif;"
+  },
+  {
+    "id": "css-import-google-fonts-inter",
+    "severity": "S2",
+    "pattern": "@import\\s+url\\(['\\\"]https://fonts\\.googleapis\\.com/css2\\?family=Inter:",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Render-blocking @import for default Inter font.",
+    "fix": "Self-host subsetted WOFF2 files with `font-display: swap`.",
+    "positiveExample": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');",
+    "negativeExample": "@font-face { font-family: 'Newsreader'; src: url('/fonts/newsreader.woff2') format('woff2'); font-display: swap; }"
+  },
+  {
+    "id": "css-100vh-mobile-bug",
+    "severity": "S2",
+    "pattern": "(?<![-\\w])height:\\s*100vh\\s*;",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "100vh clips content behind mobile browser toolbars.",
+    "fix": "Use `min-height: 100dvh` with a `100vh` fallback.",
+    "positiveExample": ".hero { height: 100vh; }",
+    "negativeExample": ".hero { min-height: 100vh; min-height: 100dvh; }"
+  },
+  {
+    "id": "css-outline-none-no-replacement",
+    "severity": "S0",
+    "pattern": "outline:\\s*(none|0)\\s*;(?![^}]*focus-visible|[^}]*box-shadow|[^}]*border)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Removes keyboard focus ring without providing a visible replacement.",
+    "fix": "Use `:focus-visible` with a high-contrast 2px outline and offset.",
+    "positiveExample": "button:focus { outline: none; }",
+    "negativeExample": "button:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }"
+  },
+  {
+    "id": "css-z-index-99999",
+    "severity": "S2",
+    "pattern": "z-index:\\s*99999+\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Arbitrary nine-spam z-index value.",
+    "fix": "Define a 4-step z-index scale in tokens.css (`--z-nav: 20`, `--z-modal: 40`).",
+    "positiveExample": ".modal { z-index: 999999; }",
+    "negativeExample": ".modal { z-index: var(--z-modal); }"
+  },
+  {
+    "id": "css-important-spam",
+    "severity": "S2",
+    "pattern": "![\\s]*important[\\s]*;[^}]*![\\s]*important",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Multiple !important overrides in a single rule block.",
+    "fix": "Fix selector specificity instead of stacking !important.",
+    "positiveExample": ".card { color: red !important; padding: 10px !important; }",
+    "negativeExample": ".card { color: var(--color-danger); padding: var(--space-3); }"
+  },
+  {
+    "id": "css-universal-box-shadow-glow",
+    "severity": "S1",
+    "pattern": "drop-shadow\\(0\\s+0\\s+1[0-9]px\\s+rgba\\(139,\\s*92,\\s*246",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Violet SVG drop-shadow glow tell.",
+    "fix": "Use crisp vector strokes without neon filters.",
+    "positiveExample": "filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.6));",
+    "negativeExample": "stroke: currentColor;"
+  },
+  {
+    "id": "css-keyframe-float-infinite",
+    "severity": "S1",
+    "pattern": "@keyframes\\s+float\\s*\\{[\\s\\S]*?translateY\\(-1[0-9]px\\)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Infinite bobbing float keyframe used on hero illustrations.",
+    "fix": "Keep hero product visuals stationary or trigger motion on user scroll/interaction.",
+    "positiveExample": "@keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-12px); } }",
+    "negativeExample": "@keyframes reveal { from { opacity: 0; } to { opacity: 1; } }"
+  },
+  {
+    "id": "css-animation-infinite-linear-marquee",
+    "severity": "S2",
+    "pattern": "animation:\\s*marquee\\s+[0-9]+s\\s+linear\\s+infinite",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Infinite logo ticker marquee.",
+    "fix": "Display client logos or partners in a static, scannable grid.",
+    "positiveExample": "animation: marquee 25s linear infinite;",
+    "negativeExample": "display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));"
+  },
+  {
+    "id": "css-fade-in-up-default",
+    "severity": "S2",
+    "pattern": "@keyframes\\s+fadeInUp\\s*\\{[^}]*translateY\\(20px\\)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Boilerplate fadeInUp 20px keyframe applied to every block.",
+    "fix": "Reserve entrance motion for primary narrative transitions and respect prefers-reduced-motion.",
+    "positiveExample": "@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } }",
+    "negativeExample": "@media (prefers-reduced-motion: no-preference) { .panel-enter { opacity: 1; } }"
+  },
+  {
+    "id": "css-glass-card-class",
+    "severity": "S1",
+    "pattern": "\\.glass-card\\s*\\{",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Explicit `.glass-card` template class.",
+    "fix": "Name classes after their semantic content role (`.invoice-summary`, `.spec-table`).",
+    "positiveExample": ".glass-card { backdrop-filter: blur(12px); }",
+    "negativeExample": ".spec-table { background: var(--surface-raised); }"
+  },
+  {
+    "id": "css-gradient-text-class",
+    "severity": "S1",
+    "pattern": "\\.gradient-text\\s*\\{",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Explicit `.gradient-text` utility class.",
+    "fix": "Remove gradient text classes and use typographic weight and scale.",
+    "positiveExample": ".gradient-text { background: linear-gradient(to right, #ec4899, #8b5cf6); }",
+    "negativeExample": ".section-lead { font-size: var(--text-xl); }"
+  },
+  {
+    "id": "css-hero-blob-class",
+    "severity": "S1",
+    "pattern": "\\.(hero-blob|bg-blob|glow-orb)\\s*\\{",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Decorative blob class name.",
+    "fix": "Remove ambient blob elements.",
+    "positiveExample": ".hero-blob { position: absolute; filter: blur(80px); }",
+    "negativeExample": ".hero-grid { display: grid; }"
+  },
+  {
+    "id": "css-bento-grid-template",
+    "severity": "S2",
+    "pattern": "\\.bento-(grid|card|item)\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Explicit `.bento-grid` template class.",
+    "fix": "Name layout containers after the content they hold (`.capability-matrix`, `.case-grid`).",
+    "positiveExample": ".bento-grid { display: grid; gap: 1.5rem; }",
+    "negativeExample": ".capability-matrix { display: grid; gap: var(--space-5); }"
+  },
+  {
+    "id": "css-pricing-popular-scale",
+    "severity": "S1",
+    "pattern": "\\.pricing-card\\.popular\\s*\\{[^}]*transform:\\s*scale\\(1\\.05\\)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Middle pricing card permanently scaled up by 1.05x.",
+    "fix": "Keep pricing columns aligned on the same baseline; differentiate with a top border or subtle surface tint.",
+    "positiveExample": ".pricing-card.popular { transform: scale(1.05); }",
+    "negativeExample": ".pricing-tier--recommended { border-top: 3px solid var(--color-ink); }"
+  },
+  {
+    "id": "css-fixed-section-padding-80",
+    "severity": "S2",
+    "pattern": "section\\s*\\{\\s*padding:\\s*80px\\s+0\\s*;\\s*\\}",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Identical 80px vertical padding forced onto every `<section>`.",
+    "fix": "Vary vertical spacing by section density (`--space-section-compact`, `--space-section-open`).",
+    "positiveExample": "section { padding: 80px 0; }",
+    "negativeExample": ".section--dense { padding-block: var(--space-7); }"
+  },
+  {
+    "id": "css-max-w-7xl-mx-auto-spam",
+    "severity": "S2",
+    "pattern": "max-w-7xl\\s+mx-auto\\s+px-4\\s+sm:px-6\\s+lg:px-8",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Default Tailwind UI container wrapper pasted on every section.",
+    "fix": "Extract a layout token or vary container widths between narrow reading columns (`65ch`) and wide data tables.",
+    "positiveExample": "class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'",
+    "negativeExample": "class='layout-shell'"
+  },
+  {
+    "id": "css-shadow-indigo-500",
+    "severity": "S1",
+    "pattern": "shadow-indigo-500/(20|25|30|40|50)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Colored indigo glow shadow on buttons.",
+    "fix": "Use a neutral shadow or crisp border.",
+    "positiveExample": "class='bg-indigo-600 shadow-lg shadow-indigo-500/30'",
+    "negativeExample": "class='bg-stone-900 text-white'"
+  },
+  {
+    "id": "css-shadow-purple-500",
+    "severity": "S1",
+    "pattern": "shadow-purple-500/(20|25|30|40|50)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Colored purple glow shadow on buttons.",
+    "fix": "Use a neutral shadow or crisp border.",
+    "positiveExample": "class='bg-purple-600 shadow-lg shadow-purple-500/40'",
+    "negativeExample": "class='bg-teal-900 text-white'"
+  },
+  {
+    "id": "css-ring-indigo-500",
+    "severity": "S2",
+    "pattern": "focus:ring-indigo-500\\s+focus:border-indigo-500",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unmodified default Tailwind form focus ring.",
+    "fix": "Match focus rings to the project's primary ink or accent token.",
+    "positiveExample": "class='focus:ring-indigo-500 focus:border-indigo-500'",
+    "negativeExample": "class='focus-visible:outline-stone-900'"
+  },
+  {
+    "id": "css-bg-slate-900-text-slate-100-ai",
+    "severity": "S2",
+    "pattern": "bg-slate-950\\s+text-slate-50\\s+selection:bg-indigo-500",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Default dark-mode SaaS body classes with indigo selection.",
+    "fix": "Use a bespoke dark surface palette tuned to the brand.",
+    "positiveExample": "class='bg-slate-950 text-slate-50 selection:bg-indigo-500'",
+    "negativeExample": "class='bg-[#141413] text-[#f0ede6]'"
+  },
+  {
+    "id": "css-physical-margin-left-rtl",
+    "severity": "S2",
+    "pattern": "\\bmargin-left:\\s*[0-9]+(px|rem)\\s*;\\s*/\\*\\s*rtl",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Physical margin-left used where logical margin-inline-start belongs.",
+    "fix": "Use `margin-inline-start` so LTR and RTL layouts flip automatically.",
+    "positiveExample": "margin-left: 16px; /* rtl */",
+    "negativeExample": "margin-inline-start: 1rem;"
+  },
+  {
+    "id": "css-physical-padding-right-rtl",
+    "severity": "S2",
+    "pattern": "\\bpadding-right:\\s*[0-9]+(px|rem)\\s*;\\s*/\\*\\s*rtl",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Physical padding-right used in bilingual stylesheet.",
+    "fix": "Use `padding-inline-end`.",
+    "positiveExample": "padding-right: 24px; /* rtl */",
+    "negativeExample": "padding-inline-end: 1.5rem;"
+  },
+  {
+    "id": "css-physical-text-align-left",
+    "severity": "S2",
+    "pattern": "body\\s*\\{[^}]*text-align:\\s*left\\s*;",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Forcing `text-align: left` on `body` breaks RTL pages.",
+    "fix": "Use `text-align: start` or let document `dir` control alignment.",
+    "positiveExample": "body { text-align: left; }",
+    "negativeExample": "body { text-align: start; }"
+  },
+  {
+    "id": "css-will-change-all",
+    "severity": "S1",
+    "pattern": "will-change:\\s*(all|transform,\\s*opacity,\\s*filter,\\s*background)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Overbroad `will-change` allocates excessive GPU memory.",
+    "fix": "Apply `will-change: transform` only right before an active gesture and remove it after.",
+    "positiveExample": "will-change: all;",
+    "negativeExample": "will-change: transform;"
+  },
+  {
+    "id": "css-blur-filter-transition",
+    "severity": "S2",
+    "pattern": "transition:[^;]*\\bfilter\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Transitioning CSS `filter: blur()` triggers expensive per-frame repaints.",
+    "fix": "Transition `opacity` and `transform` on a pre-rendered layer instead.",
+    "positiveExample": "transition: filter 0.4s ease;",
+    "negativeExample": "transition: opacity 0.2s ease, transform 0.2s ease;"
+  },
+  {
+    "id": "css-scroll-behavior-smooth-universal",
+    "severity": "S2",
+    "pattern": "\\*\\s*\\{\\s*scroll-behavior:\\s*smooth",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Applying `scroll-behavior: smooth` on `*` overrides reduced-motion preferences and breaks find-in-page.",
+    "fix": "Scope `scroll-behavior: smooth` to `html` inside `@media (prefers-reduced-motion: no-preference)`.",
+    "positiveExample": "* { scroll-behavior: smooth; }",
+    "negativeExample": "@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }"
+  },
+  {
+    "id": "css-universal-transition",
+    "severity": "S0",
+    "pattern": "\\*\\s*\\{[^}]*transition\\s*:",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Applying `transition` to the universal selector `*` causes severe layout jitter.",
+    "fix": "Attach transitions only to interactive elements.",
+    "positiveExample": "* { transition: all 0.2s ease; }",
+    "negativeExample": ".btn { transition: background-color 150ms ease; }"
+  },
+  {
+    "id": "css-font-size-px-body",
+    "severity": "S2",
+    "pattern": "body\\s*\\{[^}]*font-size:\\s*1[0-9]px\\s*;",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hardcoding body font-size in pixels ignores user browser zoom preferences.",
+    "fix": "Use `rem` (`font-size: 1rem` or `1.0625rem`).",
+    "positiveExample": "body { font-size: 14px; }",
+    "negativeExample": "body { font-size: 1rem; }"
+  },
+  {
+    "id": "css-line-height-tight-arabic",
+    "severity": "S1",
+    "pattern": ":lang\\(ar\\)\\s*\\{[^}]*line-height:\\s*1\\.[123]\\b",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Tight line-height on Arabic body copy causes diacritics and ascenders to collide.",
+    "fix": "Set Arabic body line-height between 1.7 and 1.9.",
+    "positiveExample": ":lang(ar) { line-height: 1.2; }",
+    "negativeExample": ":lang(ar) { line-height: 1.8; }"
+  },
+  {
+    "id": "css-unscoped-button-gradient",
+    "severity": "S1",
+    "pattern": "button\\s*\\{\\s*background:\\s*linear-gradient\\(90deg,\\s*#4f46e5,\\s*#7c3aed\\)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Global button gradient styling every button as an indigo-violet pill.",
+    "fix": "Style primary, secondary, and ghost buttons with distinct semantic classes.",
+    "positiveExample": "button { background: linear-gradient(90deg, #4f46e5, #7c3aed); }",
+    "negativeExample": ".btn-primary { background-color: var(--color-ink); }"
+  },
+  {
+    "id": "css-card-hover-glow-border",
+    "severity": "S1",
+    "pattern": "border-image:\\s*linear-gradient\\([^)]*#6366f1[^)]*#ec4899\\)\\s*1",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Gradient border-image in indigo-to-pink.",
+    "fix": "Use a solid subtle border token.",
+    "positiveExample": "border-image: linear-gradient(to right, #6366f1, #ec4899) 1;",
+    "negativeExample": "border: 1px solid var(--border-subtle);"
+  },
+  {
+    "id": "css-fake-3d-perspective-card",
+    "severity": "S2",
+    "pattern": "transform:\\s*perspective\\(1000px\\)\\s+rotateX\\([0-9]+deg\\)\\s+rotateY\\(",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Gratuitous 3D tilted hero screenshot tell.",
+    "fix": "Show product interfaces flat and legible so users can read the UI.",
+    "positiveExample": "transform: perspective(1000px) rotateX(12deg) rotateY(-15deg);",
+    "negativeExample": "border: 1px solid var(--border-default);"
+  },
+  {
+    "id": "css-text-shadow-neon",
+    "severity": "S1",
+    "pattern": "text-shadow:\\s*0\\s+0\\s+[12][0-9]px\\s+#(6366f1|8b5cf6|a855f7|ec4899)",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Neon glowing headline text-shadow.",
+    "fix": "Remove text-shadow; rely on clean contrast.",
+    "positiveExample": "text-shadow: 0 0 20px #8b5cf6;",
+    "negativeExample": "color: var(--color-ink);"
+  },
+  {
+    "id": "css-scrollbar-hidden-global",
+    "severity": "S2",
+    "pattern": "::-webkit-scrollbar\\s*\\{\\s*display:\\s*none\\s*;\\s*\\}",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hiding scrollbars globally harms desktop discoverability and accessibility.",
+    "fix": "Keep native scrollbars on document and data containers.",
+    "positiveExample": "::-webkit-scrollbar { display: none; }",
+    "negativeExample": ".code-pane { overflow-x: auto; }"
+  },
+  {
+    "id": "css-placeholder-gray-low-contrast",
+    "severity": "S2",
+    "pattern": "::placeholder\\s*\\{\\s*color:\\s*#(e5e7eb|f3f4f6|d1d5db)\\s*;\\s*\\}",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Ultra-low-contrast placeholder text.",
+    "fix": "Use visible labels above inputs and keep placeholder contrast >= 4.5:1 if used.",
+    "positiveExample": "::placeholder { color: #e5e7eb; }",
+    "negativeExample": "::placeholder { color: #57534e; }"
+  },
+  {
+    "id": "css-cursor-none-custom",
+    "severity": "S1",
+    "pattern": "body\\s*\\{[^}]*cursor:\\s*none\\s*;",
+    "flags": "i",
+    "scope": [
+      "css",
+      "scss",
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hiding the native system cursor for a custom trailing orb breaks assistive tech and adds input lag.",
+    "fix": "Keep the native OS cursor.",
+    "positiveExample": "body { cursor: none; }",
+    "negativeExample": "button { cursor: pointer; }"
+  }
+]

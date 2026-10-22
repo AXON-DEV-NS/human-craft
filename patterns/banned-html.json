@@ -1,0 +1,716 @@
+[
+  {
+    "id": "html-href-hash-empty",
+    "severity": "S0",
+    "pattern": "href=['\\\"]#['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Dead placeholder anchor `href=\"#\"`.",
+    "fix": "Point to a real route, a real section ID (`#pricing`), or use a `<button type=\"button\">` for actions.",
+    "positiveExample": "<a href=\"#\">Pricing</a>",
+    "negativeExample": "<a href=\"/pricing\">Pricing</a>"
+  },
+  {
+    "id": "html-href-javascript-void",
+    "severity": "S0",
+    "pattern": "href=['\\\"]javascript:void\\(0\\);?['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Legacy `javascript:void(0)` pseudo-link.",
+    "fix": "Use a `<button type=\"button\">` for JavaScript actions.",
+    "positiveExample": "<a href=\"javascript:void(0)\" onclick=\"openModal()\">Open</a>",
+    "negativeExample": "<button type=\"button\" data-action=\"open-modal\">Open</button>"
+  },
+  {
+    "id": "html-href-example-com",
+    "severity": "S0",
+    "pattern": "href=['\\\"]https?://(www\\.)?example\\.(com|org|net)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Placeholder `example.com` link left in markup.",
+    "fix": "Replace with the real production URL or remove the link.",
+    "positiveExample": "<a href=\"https://example.com/terms\">Terms</a>",
+    "negativeExample": "<a href=\"/legal/terms\">Terms of Service</a>"
+  },
+  {
+    "id": "html-href-localhost",
+    "severity": "S0",
+    "pattern": "href=['\\\"]https?://(localhost|127\\.0\\.0\\.1)(:[0-9]+)?",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hardcoded localhost URL in markup.",
+    "fix": "Use a relative path or environment-configured base URL.",
+    "positiveExample": "<a href=\"http://localhost:3000/login\">Log in</a>",
+    "negativeExample": "<a href=\"/login\">Log in</a>"
+  },
+  {
+    "id": "html-title-vite-default",
+    "severity": "S0",
+    "pattern": "<title>\\s*(Vite\\s*\\+\\s*(React|Vue|Svelte|Lit|Preact)(\\s*\\+\\s*TS)?|React\\s+App|Create\\s+Next\\s+App|Document)\\s*</title>",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unedited framework starter `<title>`.",
+    "fix": "Write a specific page title (`Page Name — Brand Name`).",
+    "positiveExample": "<title>Vite + React + TS</title>",
+    "negativeExample": "<title>Freight Rate Calculator — PortSaid Logistics</title>"
+  },
+  {
+    "id": "html-meta-generator-ai",
+    "severity": "S0",
+    "pattern": "<meta\\s+name=['\\\"]generator['\\\"]\\s+content=['\\\"][^'\\\"]*(Lovable|v0|Bolt|GPT|Cursor|Claude|Webflow\\s+AI)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Generator meta tag exposing an AI scaffolding tool.",
+    "fix": "Remove the `<meta name=\"generator\">` tag.",
+    "positiveExample": "<meta name=\"generator\" content=\"Lovable AI\">",
+    "negativeExample": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+  },
+  {
+    "id": "html-img-alt-image-of",
+    "severity": "S1",
+    "pattern": "<img\\b[^>]*\\balt=['\\\"](Image|Picture|Photo|Graphic|Icon)\\s+of\\s+",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Redundant `Image of` / `Photo of` prefix in alt text.",
+    "fix": "Describe what the image shows directly without saying 'Image of'.",
+    "positiveExample": "<img src=\"press.jpg\" alt=\"Photo of a hydraulic press\">",
+    "negativeExample": "<img src=\"press.jpg\" alt=\"200-ton hydraulic press stamping brass fittings\">"
+  },
+  {
+    "id": "html-img-alt-placeholder",
+    "severity": "S0",
+    "pattern": "<img\\b[^>]*\\balt=['\\\"](placeholder|image|photo|img|banner|hero|todo)['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Meaningless single-word placeholder `alt` attribute.",
+    "fix": "Write a specific description or use `alt=\"\"` if purely decorative.",
+    "positiveExample": "<img src=\"hero.jpg\" alt=\"hero\">",
+    "negativeExample": "<img src=\"hero.jpg\" alt=\"Technician calibrating a CNC lathe\">"
+  },
+  {
+    "id": "html-img-src-unsplash-random",
+    "severity": "S1",
+    "pattern": "src=['\\\"]https://images\\.unsplash\\.com/photo-(1522071820081-009f0129c71c|1551434678-e076c223a692|1498050108023-c5249f4df085|1534528741775-53994a69daeb|1507003211169-0a1dd7228f2d)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Overused top-5 Unsplash stock photo URL used by LLMs across thousands of generated sites.",
+    "fix": "Use authentic client photography or domain-specific diagrams.",
+    "positiveExample": "<img src=\"https://images.unsplash.com/photo-1522071820081-009f0129c71c\">",
+    "negativeExample": "<img src=\"/images/workshop-floor-cairo.jpg\" alt=\"Machining floor in Obour City\">"
+  },
+  {
+    "id": "html-img-src-pravatar-placeholder",
+    "severity": "S0",
+    "pattern": "src=['\\\"]https?://(i\\.pravatar\\.cc|randomuser\\.me|placehold\\.co|via\\.placeholder\\.com|picsum\\.photos|dummyimage\\.com)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Placeholder avatar or dummy image service URL.",
+    "fix": "Use real team/product photos or remove the avatar.",
+    "positiveExample": "<img src=\"https://i.pravatar.cc/150?img=3\">",
+    "negativeExample": "<img src=\"/images/team/nadia-hassan.jpg\" alt=\"Nadia Hassan\">"
+  },
+  {
+    "id": "html-div-onclick-button",
+    "severity": "S1",
+    "pattern": "<div\\b[^>]*\\bonclick=['\\\"][^'\\\"]+['\\\"](?![^>]*role=['\\\"]button['\\\"])",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Clickable `<div>` without button semantics or keyboard handler.",
+    "fix": "Use a native `<button type=\"button\">` element.",
+    "positiveExample": "<div class=\"btn\" onclick=\"submitForm()\">Send</div>",
+    "negativeExample": "<button type=\"button\" class=\"btn\">Send</button>"
+  },
+  {
+    "id": "html-span-onclick-button",
+    "severity": "S1",
+    "pattern": "<span\\b[^>]*\\bonclick=['\\\"][^'\\\"]+['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Clickable `<span>` element inaccessible to keyboard navigation.",
+    "fix": "Use a `<button type=\"button\">` or `<a href=\"...\">`.",
+    "positiveExample": "<span onclick=\"toggleMenu()\">Menu</span>",
+    "negativeExample": "<button type=\"button\" aria-expanded=\"false\">Menu</button>"
+  },
+  {
+    "id": "html-missing-lang-attr",
+    "severity": "S1",
+    "pattern": "<html(?![^>]*\\blang=['\\\"][a-zA-Z-]+['\\\"])[^>]*>",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "`<html>` root tag missing `lang` attribute.",
+    "fix": "Add `lang=\"en\"` or `lang=\"ar\" dir=\"rtl\"` to `<html>`.",
+    "positiveExample": "<html>",
+    "negativeExample": "<html lang=\"ar\" dir=\"rtl\">"
+  },
+  {
+    "id": "html-ar-missing-dir-rtl",
+    "severity": "S0",
+    "pattern": "<html\\b[^>]*\\blang=['\\\"]ar(-[A-Z]{2})?['\\\"](?![^>]*\\bdir=['\\\"]rtl['\\\"])[^>]*>",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Arabic `<html lang=\"ar\">` missing `dir=\"rtl\"`.",
+    "fix": "Add `dir=\"rtl\"` whenever `lang=\"ar\"` is set.",
+    "positiveExample": "<html lang=\"ar\">",
+    "negativeExample": "<html lang=\"ar\" dir=\"rtl\">"
+  },
+  {
+    "id": "html-hero-sparkle-badge",
+    "severity": "S1",
+    "pattern": "<span[^>]*>\\s*(✨|🚀|🎉|🔥)\\s*(New|Introducing|Announcing|Beta|AI-Powered)[:\\s]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Emoji sparkle pill badge above the hero H1.",
+    "fix": "Remove the decorative pill or use a plain dated changelog link (`v2.4 released Oct 12`).",
+    "positiveExample": "<span class=\"rounded-full\">✨ Introducing Acme AI 2.0</span>",
+    "negativeExample": "<a href=\"/changelog/v2-4\" class=\"text-sm\">Release 2.4: Batch PDF export</a>"
+  },
+  {
+    "id": "html-heading-emoji-prefix",
+    "severity": "S1",
+    "pattern": "<h[1-4][^>]*>\\s*(🚀|✨|💡|⚡|🔥|🎯|🌟|💎)\\s+",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Emoji prefix inside section heading.",
+    "fix": "Remove the emoji and let the heading text carry the meaning.",
+    "positiveExample": "<h2>🚀 Supercharge Your Workflow</h2>",
+    "negativeExample": "<h2>Automated bank feed reconciliation</h2>"
+  },
+  {
+    "id": "html-fake-rating-stars",
+    "severity": "S1",
+    "pattern": "★★★★★\\s*<span>\\s*4\\.9/5\\s+from\\s+[0-9,]+\\+\\s+reviews",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unlinked hardcoded star rating banner.",
+    "fix": "Link to verified reviews on an independent platform or remove.",
+    "positiveExample": "<div>★★★★★ <span>4.9/5 from 2,000+ reviews</span></div>",
+    "negativeExample": "<a href=\"https://g2.com/products/northwind\">Rated 4.7/5 across 64 verified G2 reviews</a>"
+  },
+  {
+    "id": "html-input-missing-type-or-label",
+    "severity": "S2",
+    "pattern": "<input\\s+placeholder=['\\\"]Enter your email['\\\"](?![^>]*aria-label)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Email input relying solely on 'Enter your email' placeholder without a label.",
+    "fix": "Pair every `<input>` with an explicit `<label for=\"...\">`.",
+    "positiveExample": "<input placeholder=\"Enter your email\">",
+    "negativeExample": "<label for=\"work-email\">Work email</label><input id=\"work-email\" type=\"email\" autocomplete=\"email\">"
+  },
+  {
+    "id": "html-generic-aria-label-button",
+    "severity": "S2",
+    "pattern": "aria-label=['\\\"](button|icon|link|click|action)['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Meaningless `aria-label` repeating the element role.",
+    "fix": "Write an `aria-label` that states the action (`Close dialog`, `Delete invoice`).",
+    "positiveExample": "<button aria-label=\"button\"><svg></svg></button>",
+    "negativeExample": "<button type=\"button\" aria-label=\"Close invoice preview\"><svg></svg></button>"
+  },
+  {
+    "id": "html-tabindex-positive",
+    "severity": "S1",
+    "pattern": "tabindex=['\\\"][1-9][0-9]*['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Positive `tabindex` disrupts natural DOM focus order.",
+    "fix": "Use `tabindex=\"0\"` or `tabindex=\"-1\"` and fix DOM order instead.",
+    "positiveExample": "<input tabindex=\"3\">",
+    "negativeExample": "<input tabindex=\"0\">"
+  },
+  {
+    "id": "html-autoplay-unmuted-video",
+    "severity": "S1",
+    "pattern": "<video\\b[^>]*\\bautoplay\\b(?![^>]*\\bmuted\\b)[^>]*>",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Autoplaying video without `muted` attribute.",
+    "fix": "Add `muted playsinline` and provide a pause button, or require user click.",
+    "positiveExample": "<video src=\"demo.mp4\" autoplay loop></video>",
+    "negativeExample": "<video src=\"demo.mp4\" muted playsinline controls></video>"
+  },
+  {
+    "id": "html-marquee-tag",
+    "severity": "S0",
+    "pattern": "<marquee\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Obsolete `<marquee>` element.",
+    "fix": "Replace with a static layout.",
+    "positiveExample": "<marquee>Breaking news</marquee>",
+    "negativeExample": "<p class=\"notice\">Scheduled maintenance Sunday 02:00 UTC.</p>"
+  },
+  {
+    "id": "html-nested-div-soup-6",
+    "severity": "S2",
+    "pattern": "<div>\\s*<div>\\s*<div>\\s*<div>\\s*<div>\\s*<div>",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Six levels of unsemantic nested `<div>` tags.",
+    "fix": "Use semantic landmarks (`<main>`, `<section>`, `<article>`, `<nav>`, `<aside>`) and flatten wrapper divs.",
+    "positiveExample": "<div><div><div><div><div><div>Text</div></div></div></div></div></div>",
+    "negativeExample": "<section class=\"article-body\"><p>Text</p></section>"
+  },
+  {
+    "id": "html-empty-heading",
+    "severity": "S0",
+    "pattern": "<h[1-6][^>]*>\\s*</h[1-6]>",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Empty heading element `<h1-h6>`.",
+    "fix": "Populate the heading or remove the element.",
+    "positiveExample": "<h3></h3>",
+    "negativeExample": "<h3>Technical specifications</h3>"
+  },
+  {
+    "id": "html-empty-link-no-aria",
+    "severity": "S0",
+    "pattern": "<a\\b(?![^>]*\\baria-label=)[^>]*>\\s*</a>",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Empty `<a>` link with no text or `aria-label`.",
+    "fix": "Add descriptive text inside the link.",
+    "positiveExample": "<a href=\"/twitter\"></a>",
+    "negativeExample": "<a href=\"https://x.com/northwind\">Northwind on X</a>"
+  },
+  {
+    "id": "html-social-dead-links",
+    "severity": "S0",
+    "pattern": "href=['\\\"]https?://(twitter\\.com|x\\.com|linkedin\\.com|github\\.com|facebook\\.com|instagram\\.com)/?#?['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Social icon linking to the platform root instead of an account profile.",
+    "fix": "Link to the real organization profile or delete the icon.",
+    "positiveExample": "<a href=\"https://twitter.com/\">Twitter</a>",
+    "negativeExample": "<a href=\"https://github.com/northwind-tools\">GitHub</a>"
+  },
+  {
+    "id": "html-comment-section-divider-ai",
+    "severity": "S2",
+    "pattern": "<!--\\s*={3,}\\s*(HERO|FEATURES|TESTIMONIALS|PRICING|CTA|FOOTER)\\s*SECTION\\s*={3,}\\s*-->",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Template banner comment (`<!-- === HERO SECTION === -->`).",
+    "fix": "Remove section-banner comments; clean semantic markup is self-documenting.",
+    "positiveExample": "<!-- === HERO SECTION === -->",
+    "negativeExample": "<section aria-labelledby=\"hero-heading\">"
+  },
+  {
+    "id": "html-comment-generated-by",
+    "severity": "S0",
+    "pattern": "<!--\\s*(Generated\\s+by|Created\\s+with|Built\\s+with)\\s+(v0|Lovable|Bolt|ChatGPT|Claude|Cursor)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "HTML comment disclosing AI scaffolding generator.",
+    "fix": "Remove generator attribution comments.",
+    "positiveExample": "<!-- Generated by v0.dev -->",
+    "negativeExample": "<!doctype html>"
+  },
+  {
+    "id": "html-data-v0-attr",
+    "severity": "S0",
+    "pattern": "\\bdata-v0-[a-z-]+=",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "v0 generator `data-v0-*` attribute left in DOM.",
+    "fix": "Strip generator attributes.",
+    "positiveExample": "<div data-v0-t=\"card\">",
+    "negativeExample": "<article class=\"spec-card\">"
+  },
+  {
+    "id": "html-data-lovable-attr",
+    "severity": "S0",
+    "pattern": "\\bdata-lov-(id|name)=",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Lovable tagger attribute left in DOM.",
+    "fix": "Remove `lovable-tagger` and strip `data-lov-*` attributes.",
+    "positiveExample": "<section data-lov-id=\"src/Hero.tsx:12\">",
+    "negativeExample": "<section class=\"hero\">"
+  },
+  {
+    "id": "html-script-gptengineer",
+    "severity": "S0",
+    "pattern": "src=['\\\"][^'\\\"]*gptengineer\\.js['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "gptengineer.js script tag left in `index.html`.",
+    "fix": "Remove the external `gptengineer.js` script tag.",
+    "positiveExample": "<script src=\"https://cdn.gpteng.co/gptengineer.js\" type=\"module\"></script>",
+    "negativeExample": "<script type=\"module\" src=\"/src/main.ts\"></script>"
+  },
+  {
+    "id": "html-badge-made-with-ai",
+    "severity": "S0",
+    "pattern": ">\\s*(Made|Built|Created)\\s+with\\s+(Lovable|Bolt\\.new|v0|Framer\\s+AI|Cursor)\\s*<",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Visible 'Made with [Tool]' badge in markup.",
+    "fix": "Remove the tool badge.",
+    "positiveExample": "<a class=\"badge\">Made with Lovable</a>",
+    "negativeExample": "<p class=\"copyright\">© 2026 Northwind Tools</p>"
+  },
+  {
+    "id": "html-fake-trust-logos-comment",
+    "severity": "S1",
+    "pattern": "<!--\\s*(Placeholder|Fake|Dummy)\\s+logos?\\s*-->",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Comment admitting placeholder client logos.",
+    "fix": "Remove unverified logo strips or mark `[CLIENT INPUT NEEDED]`.",
+    "positiveExample": "<!-- Placeholder logos -->",
+    "negativeExample": "<section aria-label=\"Case studies\">"
+  },
+  {
+    "id": "html-svg-placeholder-circle-logo",
+    "severity": "S1",
+    "pattern": "<svg[^>]*>\\s*<circle\\s+cx=['\\\"]12['\\\"]\\s+cy=['\\\"]12['\\\"]\\s+r=['\\\"]10['\\\"]\\s*/>\\s*</svg>\\s*<span>\\s*(Acme|LogoIpsum|Company\\s*[1-6])\\s*</span>",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Generic circle SVG paired with `Acme` or `Company 1` in a logo bar.",
+    "fix": "Use real client SVG wordmarks with permission or remove the logo bar.",
+    "positiveExample": "<svg><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg><span>Company 1</span>",
+    "negativeExample": "<span>Used by 14 municipal water authorities</span>"
+  },
+  {
+    "id": "html-lorem-picsum-url",
+    "severity": "S0",
+    "pattern": "https?://picsum\\.photos/[0-9]+/[0-9]+",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Picsum random placeholder image URL.",
+    "fix": "Replace with a real asset.",
+    "positiveExample": "<img src=\"https://picsum.photos/800/600\" alt=\"Product\">",
+    "negativeExample": "<img src=\"/assets/lathe-spindle.webp\" width=\"800\" height=\"600\" alt=\"Spindle assembly\">"
+  },
+  {
+    "id": "html-meta-description-todo",
+    "severity": "S0",
+    "pattern": "<meta\\s+name=['\\\"]description['\\\"]\\s+content=['\\\"](TODO|Web site created using|My awesome app|Lorem ipsum)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Default or placeholder meta description.",
+    "fix": "Write a concrete 120-155 character summary of the page.",
+    "positiveExample": "<meta name=\"description\" content=\"Web site created using create-react-app\">",
+    "negativeExample": "<meta name=\"description\" content=\"Calculate sheet-metal bend deductions and export DXF flat patterns in the browser.\">"
+  },
+  {
+    "id": "html-og-image-example",
+    "severity": "S0",
+    "pattern": "<meta\\s+property=['\\\"]og:image['\\\"]\\s+content=['\\\"]https?://(example\\.com|placehold\\.co|via\\.placeholder\\.com)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Placeholder `og:image` URL.",
+    "fix": "Point `og:image` to a real 1200x630 image hosted on the production domain.",
+    "positiveExample": "<meta property=\"og:image\" content=\"https://example.com/og.png\">",
+    "negativeExample": "<meta property=\"og:image\" content=\"https://portsaidlogistics.com/og-card.png\">"
+  },
+  {
+    "id": "html-viewport-user-scalable-no",
+    "severity": "S1",
+    "pattern": "user-scalable\\s*=\\s*(no|0)|maximum-scale\\s*=\\s*1(\\.0)?\\b",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Disabling pinch-to-zoom violates WCAG 1.4.4.",
+    "fix": "Use `width=device-width, initial-scale=1` without locking zoom.",
+    "positiveExample": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+    "negativeExample": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+  },
+  {
+    "id": "html-bento-three-equal-icon-cards",
+    "severity": "S2",
+    "pattern": "lucide-(sparkles|zap|shield-check|rocket|cpu|globe)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Overused default Lucide hero/feature icon (`sparkles`, `zap`, `rocket`).",
+    "fix": "Use custom technical diagrams, numbers, or domain-specific icons.",
+    "positiveExample": "<svg class=\"lucide lucide-sparkles\"></svg>",
+    "negativeExample": "<svg class=\"icon-caliper\" aria-hidden=\"true\"></svg>"
+  },
+  {
+    "id": "html-mailto-example",
+    "severity": "S0",
+    "pattern": "href=['\\\"]mailto:(info|contact|hello|support)@(example\\.com|yourcompany\\.com|domain\\.com)['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Placeholder `mailto:` address.",
+    "fix": "Use the real monitored support or sales address.",
+    "positiveExample": "<a href=\"mailto:hello@example.com\">Email us</a>",
+    "negativeExample": "<a href=\"mailto:dispatch@portsaidlogistics.com\">dispatch@portsaidlogistics.com</a>"
+  },
+  {
+    "id": "html-tel-placeholder",
+    "severity": "S0",
+    "pattern": "href=['\\\"]tel:\\+?1?[-.\\s]?(555[-.\\s]?[0-9]{3}[-.\\s]?[0-9]{4}|123[-.\\s]?456[-.\\s]?7890)['\\\"]",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Fictional 555 or 123-456-7890 phone link.",
+    "fix": "Use the real business phone number or `[CLIENT INPUT NEEDED: phone]`.",
+    "positiveExample": "<a href=\"tel:+1-555-234-5678\">Call</a>",
+    "negativeExample": "<a href=\"tel:+20227940112\">+20 2 2794 0112</a>"
+  },
+  {
+    "id": "html-form-action-hash",
+    "severity": "S0",
+    "pattern": "<form\\b[^>]*\\baction=['\\\"]#['\\\"](?![^>]*\\bonsubmit)",
+    "flags": "i",
+    "scope": [
+      "html",
+      "jsx",
+      "tsx",
+      "vue",
+      "svelte"
+    ],
+    "message": "Form with `action=\"#\"` and no submit handler.",
+    "fix": "Wire the form to a real endpoint or explicit handler.",
+    "positiveExample": "<form action=\"#\"><button>Send</button></form>",
+    "negativeExample": "<form action=\"/api/quote-request\" method=\"post\"><button type=\"submit\">Request quote</button></form>"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "name": "vite-project",
+  "dependencies": {
+    "lovable-tagger": "^1.0.0"
+  }
+}

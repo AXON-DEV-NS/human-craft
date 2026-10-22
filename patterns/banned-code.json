@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "code-console-log-emoji",
+    "severity": "S1",
+    "pattern": "console\\.(log|info|warn|error)\\s*\\(\\s*['\\\"`]\\s*(🚀|✅|❌|⚠️|🔥|🎉|💡|🔍|📦|✨)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Emoji-prefixed `console.log` statement typical of LLM debugging output.",
+    "fix": "Use structured logger calls or remove debug logs before committing.",
+    "positiveExample": "console.log('🚀 Server started on port 3000');",
+    "negativeExample": "logger.info({ port: 3000 }, 'http_server_listening');"
+  },
+  {
+    "id": "code-console-error-generic-catch",
+    "severity": "S2",
+    "pattern": "catch\\s*\\(\\s*(error|err|e)\\s*\\)\\s*\\{\\s*console\\.error\\(\\s*['\\\"]Error:?['\\\"],\\s*\\1\\s*\\)\\s*;\\s*\\}",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Swallowing exceptions with a generic `console.error('Error:', error)` block.",
+    "fix": "Surface a typed error to the caller or render an actionable recovery state.",
+    "positiveExample": "catch (error) { console.error('Error:', error); }",
+    "negativeExample": "catch (err) { return { ok: false, reason: 'payment_timeout', cause: err }; }"
+  },
+  {
+    "id": "code-todo-implement-later",
+    "severity": "S0",
+    "pattern": "//\\s*TODO:\\s*(implement|add|fix|replace)\\s+(this\\s+)?(later|in\\s+production|real\\s+logic)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unfinished LLM stub comment (`// TODO: implement later`).",
+    "fix": "Implement the required behavior before shipping.",
+    "positiveExample": "// TODO: implement real logic later",
+    "negativeExample": "const taxAmount = Math.round(subtotalCents * vatRate);"
+  },
+  {
+    "id": "code-placeholder-in-real-app",
+    "severity": "S0",
+    "pattern": "//\\s*In\\s+a\\s+real\\s+(app|application|world|production\\s+environment),\\s+you\\s+would",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Tutorial comment admitting fake implementation (`// In a real app, you would...`).",
+    "fix": "Write the production implementation directly.",
+    "positiveExample": "// In a real app, you would validate the signature here",
+    "negativeExample": "verifyWebhookSignature(rawBody, signatureHeader, webhookSecret);"
+  },
+  {
+    "id": "code-for-demonstration-purposes",
+    "severity": "S0",
+    "pattern": "//\\s*For\\s+(demonstration|simplicity|brevity)\\s+purposes\\s+only",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Comment indicating demo/stub code left in source.",
+    "fix": "Replace demonstration stubs with production logic.",
+    "positiveExample": "// For demonstration purposes only",
+    "negativeExample": "// Uses RFC 8785 canonical JSON serialization"
+  },
+  {
+    "id": "code-mock-settimeout-api",
+    "severity": "S0",
+    "pattern": "new\\s+Promise\\s*\\(\\s*\\(?resolve\\)?\\s*=>\\s*setTimeout\\(resolve,\\s*(1000|1500|2000)\\)\\s*\\)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Simulated network delay (`new Promise(r => setTimeout(r, 1000))`) standing in for a real request.",
+    "fix": "Connect to the actual data source or handler.",
+    "positiveExample": "await new Promise(resolve => setTimeout(resolve, 1000));",
+    "negativeExample": "const response = await fetch('/api/invoices', { method: 'POST', body });"
+  },
+  {
+    "id": "code-typescript-any-cast",
+    "severity": "S2",
+    "pattern": "\\bas\\s+any\\b",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unsafe `as any` type assertion bypassing TypeScript checks.",
+    "fix": "Define the narrow interface or use a type guard.",
+    "positiveExample": "const payload = (req as any).user;",
+    "negativeExample": "const payload = parseAuthenticatedUser(req);"
+  },
+  {
+    "id": "code-typescript-explicit-any",
+    "severity": "S2",
+    "pattern": ":\\s*any\\b(\\[\\])?",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Explicit `: any` type annotation.",
+    "fix": "Use `unknown` with validation or a concrete domain type.",
+    "positiveExample": "function formatRecord(item: any) { return item.id; }",
+    "negativeExample": "function formatInvoice(invoice: InvoiceSummary): string { return invoice.number; }"
+  },
+  {
+    "id": "code-ts-ignore-unexplained",
+    "severity": "S1",
+    "pattern": "//\\s*@ts-ignore\\s*$",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unexplained `@ts-ignore` directive.",
+    "fix": "Fix the underlying type mismatch or use `@ts-expect-error` with a reason.",
+    "positiveExample": "// @ts-ignore",
+    "negativeExample": "// @ts-expect-error -- Web Serial API types are not in lib.dom.d.ts yet"
+  },
+  {
+    "id": "code-eslint-disable-entire-file",
+    "severity": "S1",
+    "pattern": "/\\*\\s*eslint-disable\\s*\\*/",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Blanket `/* eslint-disable */` disabling all lint checks for a file.",
+    "fix": "Fix the lint errors or scope the disable comment to a single line with a reason.",
+    "positiveExample": "/* eslint-disable */",
+    "negativeExample": "export function parseWaybill(input: string): Waybill { return JSON.parse(input); }"
+  },
+  {
+    "id": "code-react-component-1",
+    "severity": "S0",
+    "pattern": "\\bfunction\\s+(Component1|MyComponent|ExampleComponent|TempComponent|TestComponent)\\s*\\(",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Placeholder React component name.",
+    "fix": "Name the component after its domain responsibility (`WaybillStatusBadge`).",
+    "positiveExample": "function MyComponent() { return <div />; }",
+    "negativeExample": "function WaybillStatusBadge({ status }: Props) { return <span>{status}</span>; }"
+  },
+  {
+    "id": "code-react-array-index-key",
+    "severity": "S2",
+    "pattern": "\\.map\\(\\s*\\([^,)]+,\\s*(index|idx|i)\\s*\\)\\s*=>\\s*<[A-Za-z0-9_.]+\\s+key=\\{\\s*\\1\\s*\\}",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Using array index `key={index}` on dynamic lists breaks state preservation on reorder.",
+    "fix": "Use a stable unique identifier from the item (`key={invoice.id}`).",
+    "positiveExample": "items.map((item, index) => <Row key={index} item={item} />)",
+    "negativeExample": "invoices.map((invoice) => <InvoiceRow key={invoice.id} invoice={invoice} />)"
+  },
+  {
+    "id": "code-react-useeffect-fetch-no-abort",
+    "severity": "S2",
+    "pattern": "useEffect\\(\\s*\\(\\)\\s*=>\\s*\\{\\s*fetch\\(",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Raw `fetch()` inside `useEffect` without an `AbortController` or race protection.",
+    "fix": "Pass an `AbortController` signal or load data in the route loader.",
+    "positiveExample": "useEffect(() => { fetch('/api/items').then(r => r.json()); }, []);",
+    "negativeExample": "useEffect(() => { const ctrl = new AbortController(); fetch('/api/items', { signal: ctrl.signal }); return () => ctrl.abort(); }, []);"
+  },
+  {
+    "id": "code-framer-motion-default-fade",
+    "severity": "S2",
+    "pattern": "initial=\\{\\{\\s*opacity:\\s*0,\\s*y:\\s*20\\s*\\}\\}\\s*animate=\\{\\{\\s*opacity:\\s*1,\\s*y:\\s*0\\s*\\}\\}",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Copy-pasted Framer Motion `opacity: 0, y: 20` on every element.",
+    "fix": "Use CSS transitions or coordinate a single parent stagger with reduced-motion support.",
+    "positiveExample": "<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>",
+    "negativeExample": "<div className='panel'>"
+  },
+  {
+    "id": "code-threejs-torus-knot-cliche",
+    "severity": "S1",
+    "pattern": "new\\s+THREE\\.TorusKnotGeometry\\(",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Default `THREE.TorusKnotGeometry` used as a generic hero 3D object.",
+    "fix": "Model geometry specific to the product or remove the 3D canvas.",
+    "positiveExample": "const geo = new THREE.TorusKnotGeometry(10, 3, 100, 16);",
+    "negativeExample": "const geo = loadCustomImpellerMesh('/models/impeller.glb');"
+  },
+  {
+    "id": "code-threejs-icosahedron-wireframe",
+    "severity": "S1",
+    "pattern": "new\\s+THREE\\.IcosahedronGeometry\\([^)]*\\).*wireframe:\\s*true",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Spinning wireframe icosahedron AI hero trope.",
+    "fix": "Use a domain diagram or real product visual.",
+    "positiveExample": "new THREE.IcosahedronGeometry(1, 1); const mat = new THREE.MeshBasicMaterial({ wireframe: true });",
+    "negativeExample": "renderSchematicSvg(container);"
+  },
+  {
+    "id": "code-canvas-particle-network",
+    "severity": "S1",
+    "pattern": "particles\\[i\\]\\.x\\s*-\\s*particles\\[j\\]\\.x",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "O(n^2) connecting-dots particle background script.",
+    "fix": "Remove decorative particle networks that drain laptop batteries.",
+    "positiveExample": "const dx = particles[i].x - particles[j].x;",
+    "negativeExample": "ctx.drawImage(chartBitmap, 0, 0);"
+  },
+  {
+    "id": "code-countup-fake-stats",
+    "severity": "S1",
+    "pattern": "setInterval\\(\\s*\\(\\)\\s*=>\\s*setCount\\(\\s*prev\\s*=>\\s*prev\\s*\\+",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Animated fake number ticker counting up from 0 on mount.",
+    "fix": "Render the actual number immediately in tabular numerals (`font-variant-numeric: tabular-nums`).",
+    "positiveExample": "setInterval(() => setCount(prev => prev + 1), 20);",
+    "negativeExample": "<dd className='tabular-nums'>1,420</dd>"
+  },
+  {
+    "id": "code-alert-window-form-submit",
+    "severity": "S0",
+    "pattern": "alert\\(\\s*['\\\"](Thank\\s+you\\s+for|Form\\s+submitted|Success!|Message\\s+sent)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Browser `alert('Thank you...')` used instead of inline form feedback.",
+    "fix": "Render an inline confirmation banner with a reference number.",
+    "positiveExample": "alert('Thank you for contacting us!');",
+    "negativeExample": "setSubmissionState({ status: 'sent', ticketId: res.id });"
+  },
+  {
+    "id": "code-dummy-data-array",
+    "severity": "S0",
+    "pattern": "const\\s+(dummyData|mockData|fakeData|sampleItems)\\s*=\\s*\\[",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hardcoded `dummyData` / `mockData` array in application code.",
+    "fix": "Load real records from the data layer or name domain fixtures accurately in test files.",
+    "positiveExample": "const dummyData = [{ id: 1, name: 'Item 1' }];",
+    "negativeExample": "const tariffSchedule = await loadTariffSchedule(portCode);"
+  },
+  {
+    "id": "code-lorem-in-js-string",
+    "severity": "S0",
+    "pattern": "['\\\"`]Lorem\\s+ipsum\\s+dolor\\s+sit\\s+amet",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Lorem ipsum literal inside JavaScript/TypeScript source.",
+    "fix": "Replace with real UI copy or a `[CLIENT INPUT NEEDED]` marker.",
+    "positiveExample": "const bio = 'Lorem ipsum dolor sit amet';",
+    "negativeExample": "const bio = 'Founded in 1998 in Tenth of Ramadan City.';"
+  },
+  {
+    "id": "code-hardcoded-api-key-placeholder",
+    "severity": "S0",
+    "pattern": "['\\\"](YOUR_API_KEY_HERE|sk-xxxx+|replace-with-your-key)['\\\"]",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hardcoded placeholder secret string in source code.",
+    "fix": "Read secrets from `process.env` and validate at startup.",
+    "positiveExample": "const apiKey = 'YOUR_API_KEY_HERE';",
+    "negativeExample": "const apiKey = process.env.STRIPE_SECRET_KEY;"
+  },
+  {
+    "id": "code-handle-click-generic",
+    "severity": "S2",
+    "pattern": "\\bconst\\s+handleClick\\s*=\\s*\\(\\)\\s*=>",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Generic `handleClick` identifier that hides what action occurs.",
+    "fix": "Name handlers after the domain effect (`handleApproveInvoice`, `handleExportCsv`).",
+    "positiveExample": "const handleClick = () => { save(); };",
+    "negativeExample": "const handleApproveInvoice = () => { approveInvoice(invoiceId); };"
+  },
+  {
+    "id": "code-handle-submit-console",
+    "severity": "S0",
+    "pattern": "const\\s+handleSubmit\\s*=\\s*\\([^)]*\\)\\s*=>\\s*\\{\\s*e\\.preventDefault\\(\\);\\s*console\\.log\\(",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Form submit handler that only calls `e.preventDefault()` and `console.log`.",
+    "fix": "Wire the submit handler to real validation and persistence.",
+    "positiveExample": "const handleSubmit = (e) => { e.preventDefault(); console.log(formData); };",
+    "negativeExample": "const handleQuoteRequest = async (e: SubmitEvent) => { e.preventDefault(); await submitQuote(formData); };"
+  },
+  {
+    "id": "code-variable-data1-data2",
+    "severity": "S2",
+    "pattern": "\\bconst\\s+(data1|data2|temp1|temp2|res1|res2)\\s*=",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Numbered temporary variables (`data1`, `data2`).",
+    "fix": "Name variables after what they hold (`rawManifest`, `parsedLineItems`).",
+    "positiveExample": "const data1 = await fetchUsers();",
+    "negativeExample": "const activeShipments = await fetchActiveShipments();"
+  },
+  {
+    "id": "code-comment-initialize-state",
+    "severity": "S2",
+    "pattern": "//\\s*(Initialize|Define|Set\\s+up)\\s+(state|variables|constants|refs)\\s*$",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Redundant comment restating syntax (`// Initialize state`).",
+    "fix": "Delete comments that merely narrate the next line of syntax.",
+    "positiveExample": "// Initialize state\nconst [open, setOpen] = useState(false);",
+    "negativeExample": "const [isDrawerOpen, setIsDrawerOpen] = useState(false);"
+  },
+  {
+    "id": "code-comment-render-component",
+    "severity": "S2",
+    "pattern": "//\\s*Render\\s+the\\s+component\\s*$",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Redundant `// Render the component` comment before `return (`.",
+    "fix": "Remove the comment.",
+    "positiveExample": "// Render the component\nreturn <div>...</div>;",
+    "negativeExample": "return <main className='ledger-view'>...</main>;"
+  },
+  {
+    "id": "code-comment-helper-function-to",
+    "severity": "S2",
+    "pattern": "//\\s*Helper\\s+function\\s+to\\s+",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Boilerplate `// Helper function to ...` comment.",
+    "fix": "Let the function name express what it does; use comments only to explain non-obvious constraints.",
+    "positiveExample": "// Helper function to format date",
+    "negativeExample": "// Egypt customs requires DD/MM/YYYY in Cairo local time (UTC+2/+3)"
+  },
+  {
+    "id": "code-comment-here-we",
+    "severity": "S2",
+    "pattern": "//\\s*Here\\s+we\\s+(are\\s+)?(fetching|creating|updating|checking)\\b",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Conversational LLM narration inside code comments (`// Here we are fetching...`).",
+    "fix": "Delete narration comments.",
+    "positiveExample": "// Here we are fetching the user profile",
+    "negativeExample": "const profile = await getAccountProfile(accountId);"
+  },
+  {
+    "id": "code-empty-catch-block",
+    "severity": "S1",
+    "pattern": "catch\\s*(\\([^)]*\\))?\\s*\\{\\s*\\}",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Completely empty `catch {}` block silently hiding failures.",
+    "fix": "Log or handle the error, or document why ignoring it is safe.",
+    "positiveExample": "try { JSON.parse(raw); } catch (e) {}",
+    "negativeExample": "try { return JSON.parse(raw); } catch { return null; }"
+  },
+  {
+    "id": "code-window-location-reload-hack",
+    "severity": "S2",
+    "pattern": "window\\.location\\.reload\\(\\)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Forcing a full page reload instead of updating local state.",
+    "fix": "Update state or invalidate the query cache.",
+    "positiveExample": "await deleteRow(id); window.location.reload();",
+    "negativeExample": "await deleteRow(id); setRows(rows => rows.filter(r => r.id !== id));"
+  },
+  {
+    "id": "code-eval-usage",
+    "severity": "S0",
+    "pattern": "\\beval\\s*\\(",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unsafe `eval()` execution.",
+    "fix": "Use `JSON.parse()` or a safe expression parser.",
+    "positiveExample": "const result = eval(userInput);",
+    "negativeExample": "const config = JSON.parse(rawConfig);"
+  },
+  {
+    "id": "code-dangerously-set-inner-html-unsanitized",
+    "severity": "S1",
+    "pattern": "dangerouslySetInnerHTML=\\{\\{\\s*__html:\\s*(?!DOMPurify\\.sanitize|sanitizeHtml)[a-zA-Z0-9_.]+",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Passing unsanitized variable into `dangerouslySetInnerHTML`.",
+    "fix": "Sanitize HTML with DOMPurify or render structured React nodes.",
+    "positiveExample": "<div dangerouslySetInnerHTML={{ __html: userBio }} />",
+    "negativeExample": "<div dangerouslySetInnerHTML={{ __html: sanitizeHtml(articleBody) }} />"
+  },
+  {
+    "id": "code-document-write",
+    "severity": "S0",
+    "pattern": "document\\.write\\s*\\(",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Obsolete `document.write()` call.",
+    "fix": "Use standard DOM APIs (`appendChild`, `textContent`).",
+    "positiveExample": "document.write('<h1>Hello</h1>');",
+    "negativeExample": "headingEl.textContent = 'Manifest #402';"
+  },
+  {
+    "id": "code-var-declaration-modern",
+    "severity": "S2",
+    "pattern": "^\\s*var\\s+[a-zA-Z_$][a-zA-Z0-9_$]*\\s*=",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Legacy `var` declaration in modern ES module.",
+    "fix": "Use `const` by default, or `let` when reassignment is needed.",
+    "positiveExample": "var total = 0;",
+    "negativeExample": "let runningTotalCents = 0;"
+  },
+  {
+    "id": "code-double-equals-loose",
+    "severity": "S2",
+    "pattern": "[^!=]==[^=]\\s*(null|undefined|0|''|\\\"\\\"|true|false)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Loose equality `==` comparison.",
+    "fix": "Use strict equality `===`.",
+    "positiveExample": "if (status == 0) {}",
+    "negativeExample": "if (status === 0) {}"
+  },
+  {
+    "id": "code-new-array-constructor",
+    "severity": "S3",
+    "pattern": "new\\s+Array\\(\\s*\\)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Using `new Array()` instead of array literal `[]`.",
+    "fix": "Use `[]`.",
+    "positiveExample": "const items = new Array();",
+    "negativeExample": "const items: string[] = [];"
+  },
+  {
+    "id": "code-react-useless-fragment",
+    "severity": "S3",
+    "pattern": "<>(\\s*<[a-zA-Z0-9_.]+[^>]*/>)\\s*</>",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Single-child React fragment `<> <Child /> </>`.",
+    "fix": "Return the child element directly.",
+    "positiveExample": "<><Header /></>",
+    "negativeExample": "<Header />"
+  },
+  {
+    "id": "code-fetch-localhost-hardcoded",
+    "severity": "S0",
+    "pattern": "fetch\\(\\s*['\\\"`]https?://(localhost|127\\.0\\.0\\.1)(:[0-9]+)?/",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hardcoded `localhost` URL inside `fetch()`.",
+    "fix": "Use a relative path (`/api/...`) or an environment variable.",
+    "positiveExample": "fetch('http://localhost:8080/api/orders')",
+    "negativeExample": "fetch('/api/orders')"
+  },
+  {
+    "id": "code-axios-example-com",
+    "severity": "S0",
+    "pattern": "(fetch|axios\\.(get|post))\\(\\s*['\\\"`]https?://(api\\.)?example\\.com",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Placeholder `api.example.com` endpoint in code.",
+    "fix": "Point to the real API route.",
+    "positiveExample": "await fetch('https://api.example.com/v1/users');",
+    "negativeExample": "await fetch('/api/v1/shipments');"
+  },
+  {
+    "id": "code-jwt-secret-fallback-hardcoded",
+    "severity": "S0",
+    "pattern": "process\\.env\\.JWT_SECRET\\s*\\|\\|\\s*['\\\"](secret|my-secret|super-secret-key|default_secret)['\\\"]",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Insecure fallback secret when `process.env.JWT_SECRET` is unset.",
+    "fix": "Throw a startup error if `JWT_SECRET` is missing.",
+    "positiveExample": "const secret = process.env.JWT_SECRET || 'super-secret-key';",
+    "negativeExample": "const secret = requireEnv('JWT_SECRET');"
+  },
+  {
+    "id": "code-math-random-id",
+    "severity": "S2",
+    "pattern": "Math\\.random\\(\\)\\.toString\\(36\\)\\.substring\\(",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Generating IDs with `Math.random().toString(36)` (collision-prone and predictable).",
+    "fix": "Use `crypto.randomUUID()`.",
+    "positiveExample": "const id = Math.random().toString(36).substring(2, 9);",
+    "negativeExample": "const id = crypto.randomUUID();"
+  },
+  {
+    "id": "code-setinterval-no-cleanup-react",
+    "severity": "S1",
+    "pattern": "useEffect\\(\\s*\\(\\)\\s*=>\\s*\\{\\s*setInterval\\([^;]+;\\s*\\}\\s*,",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "`setInterval` inside `useEffect` without returning a `clearInterval` cleanup function.",
+    "fix": "Store the timer ID and return `() => clearInterval(id)`.",
+    "positiveExample": "useEffect(() => { setInterval(tick, 1000); }, []);",
+    "negativeExample": "useEffect(() => { const id = setInterval(tick, 1000); return () => clearInterval(id); }, []);"
+  },
+  {
+    "id": "code-addeventlistener-no-remove-react",
+    "severity": "S2",
+    "pattern": "useEffect\\(\\s*\\(\\)\\s*=>\\s*\\{\\s*window\\.addEventListener\\([^;]+;\\s*\\}\\s*,",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "`window.addEventListener` in `useEffect` without a matching `removeEventListener` cleanup.",
+    "fix": "Return `() => window.removeEventListener(...)` from the effect.",
+    "positiveExample": "useEffect(() => { window.addEventListener('resize', onResize); }, []);",
+    "negativeExample": "useEffect(() => { window.addEventListener('resize', onResize); return () => window.removeEventListener('resize', onResize); }, []);"
+  },
+  {
+    "id": "code-tailwind-arbitrary-gradient-spam",
+    "severity": "S2",
+    "pattern": "bg-\\[linear-gradient\\([^\\]]*#6366f1[^\\]]*\\)\\]",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Arbitrary Tailwind JIT gradient with hardcoded indigo hex.",
+    "fix": "Move surface tokens to `tokens.css`.",
+    "positiveExample": "className='bg-[linear-gradient(135deg,#6366f1,#a855f7)]'",
+    "negativeExample": "className='surface-brand'"
+  },
+  {
+    "id": "code-lucide-react-bulk-import-cliche",
+    "severity": "S2",
+    "pattern": "import\\s*\\{[^}]*\\bSparkles\\b[^}]*\\bZap\\b[^}]*\\bShield\\b[^}]*\\}\\s*from\\s*['\\\"]lucide-react['\\\"]",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Importing the canonical AI landing-page icon trio (`Sparkles`, `Zap`, `Shield`) from `lucide-react`.",
+    "fix": "Use bespoke domain SVGs or omit decorative feature icons.",
+    "positiveExample": "import { Sparkles, Zap, Shield } from 'lucide-react';",
+    "negativeExample": "import { ContainerIcon, CraneIcon } from './icons/MaritimeIcons';"
+  },
+  {
+    "id": "code-shadcn-default-toast-lorem",
+    "severity": "S1",
+    "pattern": "toast\\(\\{\\s*title:\\s*['\\\"]Scheduled:\\s*Catch\\s+up['\\\"]",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unedited Shadcn UI documentation toast example left in app.",
+    "fix": "Write a message specific to the user action.",
+    "positiveExample": "toast({ title: 'Scheduled: Catch up', description: 'Friday, February 10, 2023 at 5:57 PM' });",
+    "negativeExample": "toast({ title: 'Invoice #1084 sent', description: 'Emailed PDF to accounts@client.eg' });"
+  },
+  {
+    "id": "code-zustand-bear-store",
+    "severity": "S0",
+    "pattern": "useBearStore|increasePopulation|removeAllBears",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unedited Zustand documentation `useBearStore` example left in codebase.",
+    "fix": "Name the store after the actual domain state.",
+    "positiveExample": "const bears = useBearStore((state) => state.bears);",
+    "negativeExample": "const selectedPort = useTariffStore((state) => state.selectedPort);"
+  },
+  {
+    "id": "code-redux-counter-slice-default",
+    "severity": "S0",
+    "pattern": "incrementByAmount|counterSlice\\.reducer",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Default Redux Toolkit `counterSlice` starter code left in project.",
+    "fix": "Remove starter boilerplate slices.",
+    "positiveExample": "export const { increment, decrement, incrementByAmount } = counterSlice.actions;",
+    "negativeExample": "export const { selectWaybill, clearSelection } = manifestSlice.actions;"
+  },
+  {
+    "id": "code-vite-counter-setup",
+    "severity": "S0",
+    "pattern": "export\\s+function\\s+setupCounter\\s*\\(\\s*element",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Default Vite vanilla starter `setupCounter` function.",
+    "fix": "Delete Vite starter scaffolding.",
+    "positiveExample": "export function setupCounter(element: HTMLButtonElement) {}",
+    "negativeExample": "export function mountCalculator(root: HTMLElement) {}"
+  },
+  {
+    "id": "code-nextjs-default-vercel-links",
+    "severity": "S0",
+    "pattern": "https://vercel\\.com/new\\?utm_source=create-next-app",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unedited `create-next-app` boilerplate link.",
+    "fix": "Replace the starter page with the project's actual home view.",
+    "positiveExample": "<a href='https://vercel.com/new?utm_source=create-next-app'>Deploy now</a>",
+    "negativeExample": "<a href='/calculator'>Open rate calculator</a>"
+  },
+  {
+    "id": "code-cra-learn-react-link",
+    "severity": "S0",
+    "pattern": ">\\s*Learn\\s+React\\s*</a>",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unedited Create React App `Learn React` starter link.",
+    "fix": "Replace starter template markup.",
+    "positiveExample": "<a className='App-link' href='https://reactjs.org'>Learn React</a>",
+    "negativeExample": "<a href='/manifests'>View active manifests</a>"
+  },
+  {
+    "id": "code-default-user-avatar-unsplash",
+    "severity": "S1",
+    "pattern": "https://images\\.unsplash\\.com/photo-1472099645785-5658abf4ff4e",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Famous Tailwind UI default bearded-man avatar URL hardcoded in component.",
+    "fix": "Use real user initials, a domain avatar, or an authenticated user photo.",
+    "positiveExample": "const avatarUrl = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e';",
+    "negativeExample": "const avatarInitials = formatInitials(user.fullName);"
+  },
+  {
+    "id": "code-ai-generated-header-comment",
+    "severity": "S0",
+    "pattern": "//\\s*(Generated|Created|Written)\\s+by\\s+(ChatGPT|Claude|Cursor|Copilot|v0|Bolt|AI)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Source header comment attributing file to an AI generator.",
+    "fix": "Remove generator attribution comments.",
+    "positiveExample": "// Generated by Claude 3.5 Sonnet",
+    "negativeExample": "// Waybill tariff calculation module"
+  },
+  {
+    "id": "code-lorem-picsum-in-jsx",
+    "severity": "S0",
+    "pattern": "src=\\{?['\\\"`]https://picsum\\.photos/seed/",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Seeded Picsum placeholder URL inside JSX.",
+    "fix": "Replace with real asset paths.",
+    "positiveExample": "<img src={`https://picsum.photos/seed/${item.id}/400/300`} />",
+    "negativeExample": "<img src={item.diagramPath} alt={item.partNumber} />"
+  },
+  {
+    "id": "code-fake-testimonial-array",
+    "severity": "S0",
+    "pattern": "Sarah\\s+Jenkins|Michael\\s+Chen|Emily\\s+Rodriguez",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Canonical LLM fictional testimonial persona names (`Sarah Jenkins`, `Michael Chen`, `Emily Rodriguez`).",
+    "fix": "Never invent testimonials. Use verified client quotes with permission or `[CLIENT INPUT NEEDED]`.",
+    "positiveExample": "const testimonials = [{ name: 'Sarah Jenkins', role: 'CTO at TechFlow' }];",
+    "negativeExample": "// [CLIENT INPUT NEEDED: 2 verified customer quotes with company permission]"
+  },
+  {
+    "id": "code-techflow-innovatecorp-names",
+    "severity": "S0",
+    "pattern": "\\b(TechFlow|InnovateCorp|NexusAI|QuantumLeap|SynergyTech|CloudScale|DataPulse)\\b",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Synthetic LLM company names used in fake case studies or testimonials.",
+    "fix": "Use real client names with permission or remove the fictional company.",
+    "positiveExample": "company: 'TechFlow Solutions'",
+    "negativeExample": "company: '[CLIENT INPUT NEEDED: verified client name]'"
+  },
+  {
+    "id": "code-gsap-default-bounce-all",
+    "severity": "S2",
+    "pattern": "gsap\\.from\\(\\s*['\\\"]\\.card['\\\"],\\s*\\{[^}]*ease:\\s*['\\\"]bounce\\.out['\\\"]",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Cartoonish `bounce.out` easing applied to UI cards.",
+    "fix": "Use a restrained deceleration curve (`power2.out` or `cubic-bezier(0.22, 1, 0.36, 1)`).",
+    "positiveExample": "gsap.from('.card', { y: 50, ease: 'bounce.out' });",
+    "negativeExample": "gsap.from('.panel', { opacity: 0, y: 8, duration: 0.24, ease: 'power2.out' });"
+  },
+  {
+    "id": "code-scrolltrigger-scrub-every-heading",
+    "severity": "S2",
+    "pattern": "gsap\\.utils\\.toArray\\(\\s*['\\\"]h2['\\\"]\\s*\\)\\.forEach",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Applying ScrollTrigger animations to every single `<h2>` across the document.",
+    "fix": "Keep section headings immediately readable without scroll-jacked entrance delays.",
+    "positiveExample": "gsap.utils.toArray('h2').forEach(h => gsap.from(h, { opacity: 0 }));",
+    "negativeExample": "// Headings render immediately without scroll-gated opacity"
+  },
+  {
+    "id": "code-canvas-requestanimationframe-no-cancel",
+    "severity": "S2",
+    "pattern": "function\\s+animate\\(\\)\\s*\\{\\s*requestAnimationFrame\\(animate\\);",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Infinite `requestAnimationFrame` loop with no visibility check or cleanup.",
+    "fix": "Pause the animation loop via `IntersectionObserver` and `document.hidden`, and cancel on unmount.",
+    "positiveExample": "function animate() { requestAnimationFrame(animate); render(); }",
+    "negativeExample": "function step() { if (!isVisible) return; rafId = requestAnimationFrame(step); renderFrame(); }"
+  },
+  {
+    "id": "code-unhandled-json-parse-localstorage",
+    "severity": "S2",
+    "pattern": "JSON\\.parse\\(\\s*localStorage\\.getItem\\([^)]+\\)\\s*!\\s*\\)",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Unchecked `JSON.parse(localStorage.getItem(...)!)` that crashes on corrupted storage.",
+    "fix": "Wrap storage parsing in a small validator with a safe fallback.",
+    "positiveExample": "const prefs = JSON.parse(localStorage.getItem('prefs')!);",
+    "negativeExample": "const prefs = readStoredPreferences('prefs', defaultPreferences);"
+  },
+  {
+    "id": "code-hardcoded-arabic-bidi-override",
+    "severity": "S1",
+    "pattern": "\\\\u202[deDE]",
+    "flags": "m",
+    "scope": [
+      "js",
+      "ts",
+      "jsx",
+      "tsx",
+      "mjs",
+      "cjs",
+      "vue",
+      "svelte"
+    ],
+    "message": "Hardcoded Unicode RLO/LRO bidi override characters in source strings.",
+    "fix": "Use HTML `<bdi>` or `dir=\"ltr\"` / `dir=\"rtl\"` attributes instead of invisible control characters.",
+    "positiveExample": "const label = '\\u202E1234';",
+    "negativeExample": "const label = '<bdi dir=\"ltr\">+20 2 2794 0112</bdi>';"
+  }
+]
