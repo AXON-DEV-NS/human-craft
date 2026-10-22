@@ -1,0 +1,14 @@
+{
+  "scanner": "scan-all",
+  "target": "examples/10-repo-scrub/after",
+  "timestamp": "2026-10-21T00:00:00.000Z",
+  "counts": {
+    "S0": 0,
+    "S1": 0,
+    "S2": 0,
+    "S3": 0,
+    "total": 0
+  },
+  "passed": true,
+  "findings": []
+}

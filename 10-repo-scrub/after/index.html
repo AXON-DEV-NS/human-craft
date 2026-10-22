@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warehouse Barcode Reconciler — Obour Logistics</title>
+  <meta name="description" content="Offline-capable USB and Bluetooth barcode scanner reconciliation utility for wholesale warehouses.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Primary">
+      <a href="#specifications">Specifications</a>
+      <a href="#estimator">Fee Estimator</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section id="specifications" class="section-compact">
+      <h1>Warehouse Barcode Reconciler — Obour Logistics</h1>
+      <p>Offline-capable USB and Bluetooth barcode scanner reconciliation utility for wholesale warehouses.</p>
+    </section>
+    <section id="estimator" class="section-open">
+      <h2>Rate Calculation</h2>
+      <form id="rate-form" action="/api/calculate" method="post">
+        <label for="units-input">Container count (20ft TEU)</label>
+        <input id="units-input" name="units" type="number" min="1" max="200" value="4">
+        <button type="submit" class="btn-primary">Calculate port handling fee</button>
+      </form>
+      <output id="rate-output" class="tabular-nums" for="units-input">EGP 2,040</output>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
