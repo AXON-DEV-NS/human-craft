@@ -1,0 +1,35 @@
+# AI tells master index
+
+Every entry across these 29 files follows a strict six-part schema: **Tell**, **Why it reads as machine-made**, **Severity (S0–S3)**, **Detection**, **Replace with**, and **Legitimate exception**.
+
+## Files by layer
+
+- [Visual design tells](visual.md)
+- [Layout and section order tells](layout-and-sections.md)
+- [Typography tells](typography.md)
+- [Color and gradient tells](color-and-gradients.md)
+- [Iconography and imagery tells](iconography-and-imagery.md)
+- [Illustration and 3D tells](illustration-and-3d.md)
+- [Motion and interaction tells](motion-and-interaction.md)
+- [Code-generated video and canvas tells](code-generated-video-and-canvas.md)
+- [English copy tells](copy-english.md)
+- [Arabic copy tells](copy-arabic.md)
+- [Microcopy and form tells](microcopy-and-forms.md)
+- [Information architecture tells](information-architecture.md)
+- [Links and navigation tells](links-and-navigation.md)
+- [SEO and metadata tells](seo-and-metadata.md)
+- [HTML markup tells](html-markup.md)
+- [CSS and Tailwind tells](css-and-tailwind.md)
+- [JavaScript and TypeScript tells](javascript-typescript.md)
+- [React, Next.js, Vue, and Svelte tells](react-next-vue-svelte.md)
+- [Naming and comment tells](naming-and-comments.md)
+- [Configuration, dependencies, and tooling tells](config-deps-and-tooling.md)
+- [Repository, git, and documentation tells](repo-git-and-docs.md)
+- [Asset metadata and provenance tells](asset-metadata-and-provenance.md)
+- [Network headers and runtime fingerprints](network-headers-and-fingerprints.md)
+- [Accessibility tells](accessibility.md)
+- [Performance tells](performance.md)
+- [Legal, trust, and social proof tells](legal-trust-and-social-proof.md)
+- [Email and transactional copy tells](email-and-transactional.md)
+- [Data and placeholder tells](data-and-placeholders.md)
+- [Tool and generator fingerprints](tool-fingerprints.md)
