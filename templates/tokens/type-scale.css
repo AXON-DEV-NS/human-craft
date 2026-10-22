@@ -1,0 +1,26 @@
+:root {
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', Tahoma, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Major Third (1.250) modular scale */
+  --text-xs: 0.800rem;
+  --text-sm: 0.900rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.250rem;
+  --text-xl: 1.563rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+
+  --leading-heading: 1.12;
+  --leading-body: 1.65;
+  --leading-arabic: 1.80;
+  --measure-prose: 64ch;
+}
+
+:lang(ar) {
+  font-family: var(--font-arabic);
+  line-height: var(--leading-arabic);
+  letter-spacing: 0;
+}

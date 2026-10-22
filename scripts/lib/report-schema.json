@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HumanCraftScanReport",
+  "type": "object",
+  "required": [
+    "scanner",
+    "target",
+    "timestamp",
+    "counts",
+    "passed",
+    "findings"
+  ],
+  "properties": {
+    "scanner": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "total"
+      ],
+      "properties": {
+        "S0": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "S1": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "S2": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "S3": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ruleId",
+          "severity",
+          "file",
+          "line",
+          "message",
+          "fix"
+        ],
+        "properties": {
+          "ruleId": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "S0",
+              "S1",
+              "S2",
+              "S3"
+            ]
+          },
+          "file": {
+            "type": "string"
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "excerpt": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "fix": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--surface-paper, #f6f4f0);
+  color: var(--color-ink, #181816);
+  font-family: var(--font-sans, sans-serif);
+  line-height: 1.6;
+  text-align: start;
+}
+img, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+:focus-visible {
+  outline: 2px solid var(--color-ink, #181816);
+  outline-offset: 2px;
+}
+.tabular-nums {
+  font-variant-numeric: tabular-nums lining-nums;
+}

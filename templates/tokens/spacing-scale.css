@@ -1,0 +1,15 @@
+:root {
+  --space-1: 0.25rem;
+  --space-2: 0.50rem;
+  --space-3: 0.75rem;
+  --space-4: 1.00rem;
+  --space-5: 1.50rem;
+  --space-6: 2.00rem;
+  --space-7: 3.00rem;
+  --space-8: 4.50rem;
+  --space-9: 6.50rem;
+
+  --space-section-compact: var(--space-7);
+  --space-section-standard: var(--space-8);
+  --space-section-open: var(--space-9);
+}
