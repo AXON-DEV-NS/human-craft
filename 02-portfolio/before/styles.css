@@ -1,0 +1,10 @@
+* {
+  transition: all 0.3s ease;
+}
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+button:focus {
+  outline: none;
+}

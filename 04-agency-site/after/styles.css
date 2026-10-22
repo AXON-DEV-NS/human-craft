@@ -1,0 +1,42 @@
+:root {
+  --surface-paper: #f6f4f0;
+  --color-ink: #181816;
+  --color-accent: #1d4d3c;
+  --border-subtle: #d8d3c8;
+}
+body {
+  background-color: #f6f4f0;
+  color: #181816;
+  font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0;
+  text-align: start;
+}
+.section-compact {
+  padding-block: 2.5rem;
+}
+.section-open {
+  padding-block: 5rem;
+  border-block-start: 1px solid #d8d3c8;
+}
+.btn-primary {
+  background-color: #1d4d3c;
+  color: #f6f4f0;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border: 1px solid #181816;
+  transition: background-color 140ms ease;
+}
+.btn-primary:focus-visible {
+  outline: 2px solid #181816;
+  outline-offset: 2px;
+}
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary {
+    transition: none;
+  }
+}
